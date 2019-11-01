@@ -28,43 +28,72 @@
 \newpage
 
 
-%Introduction
+%Introduction - Section 1
 \section{Introduction}
-The following RASD aims at providing an overview of the project {\it SafeStreets}. 
+This document represents the Requirements Analysis and Specification Document (RASD). It aims at providing an overview of the project {\it SafeStreets}. It illustrates the purpose of the project, starting from its goals and how these can be reached ensuring certain non functional requirements, functional requirements and constraints. This document is intended for all the people involved in the project life-cycle, from planning and estimation to development and validation.
 
 	
 	\subsection{Purpose}
-
-From this brief description of the functionalities we may extract the following goals for {\it SafeStreets}: 
+	
+	{\it SafeStreets} is a crowd-sourced application that aims at keeping safe the city's streets. The application goal is to allow {\it Users} to notify the {\it Municipality} when a violation occur on the streets under its jurisdiction. The {\it User} can notice and notify the violation by sending a photo of the violation including date, time and position. These violations are for the majority parking violation, such as double parking or vehicle parked in the middle of bike lanes. \\ \\
+	{\it SafesStreets}, once the {\it User} has notified the violation, stores all the data, completing them with all the necessary metadata. In order to be sure that the violation is correctly elaborated, the application uses a plate recognition algorithm. The {\it User} is notified if something goes wrong during the whole process, so an alternative solution can be found. All the data stored by {\it SafeStreets} are provided by the {\it Users} or they can be retrieved directly from the device, like the position from the GPS system.\\
+	All the data collected by {\it SafeStreets} can be mined by {\it Users} and the {\it Municipality}, so they can be provided with statistics built from this data. The application can show different statistics based on different level of visibility, so the {\it Municipality} can access to some information that the {\it Users} can not access, and viceversa. This is the purpose of the {\it Basic Service}. \\ \\
+	The application has also two specific {\it Advanced Functions}. In the {\bf AF1}, the application {\it SafeStreets} can cross the information about the road accident, thanks to a service offered by the {\it Municipality}, with the data stored and retrieved from the {\it User}. So {\it Municipality } elaborates them in order to identify potentially unsafe areas and suggest possibile interventions to solve founded issues. The suggestions can be various and depend on each case. \\ \\
+	In the   {\bf AF2}, {\it SafeStreets} allows the {\it Municipality} to generate traffic tickets directly from the application data, derived from the user notifications'. Additionally, starting from the application data about issued tickets, {\it SafeStreets} can build, looking for trends in the data, statistics and provide insights to the {\it Municipality}. This can help {\it Municipality} to improve the process of issued tickets and understand the effectiveness of {\it SafeStreets}, finding some information useful to improve their services. \\ \\
+	From the description above about the purpose of {\it SafeStreets}, we can summarise those goals
 		
-		\begin{itemize} %GOALS
-
-   			 \item {\bf [G1]} 			
-			 \item {\bf [G2]} 
-   			 \item {\bf [G3]}    			  
-   			 \item {\bf [G4]} 
+		\begin{itemize}
+   			 \item {\bf [G1]} Allowing {\it Users} to report to the system when a traffic violation occur.		
+			 \item {\bf [G2]} Allowing {\it Users} to enter data/information about the violation.
+   			 \item {\bf [G3]} Providing both {\it Users} and {\it Municipality} with statistics built from notifications’ data.    			  
    			 \\
 			 \\
-With regards to {\it {\it Advanced Function 1}}, we may identify one goal: 
-   			 \item {\bf [G6]}\\
+With regards to {\it {\it Advanced Function 1}}, we identify: 
+   			 \item {\bf [G4]} Identifying potentially unsafe areas and making suggestions to address those issues.
+   			 \\
 			 \\
- With regards to {\it Adanced Function 2}, we extract the following goals:
-			  \item {\bf [G7]} 			
+ With regards to {\it Advanced Function 2}, we identify:
+			  \item {\bf [G5]} Allowing {\it Municipality} to generate tickets based on the users’ notifications. 
+			  \item {\bf [G6]} Providing statistics built on data from issued tickets to the {\it Municipality}.		
 			  \end{itemize}
 			
 	\subsection{Scope}
-	dsdsdds
-	\\		
+	In this section we will distinguish between the {\it Machine}, that's the {\bf S2B} and the {\it World}, that's the portion of the real world affected by the {\it Machine}. This separation, according to the {\it World and Machine} paradigm by Jackson and Zave, leads to a classification of the phenomena in three different types, depending on where they occur. 		
 		\subsubsection{World Phenomena}
-		
-We identify the following world phenomena:
+		World phenomena are events that take place in the real world and do not have a direct impact on the sytem. 
 		\begin{itemize}
-			\item		
+			\item A generic traffic violation occurs on the streets under the {\it Municipality's} jurisdiction. 
+			\item An accident occurs on the streets under the {\it Municipality's} jurisdiction.
+			\item A {\it User} notices the violation and takes action.
+			\item A ticket is generated by the {\it Municipality}.
+			\item Data from all the tickets generated by the {\it Municipality} are stored by the {\it System}.
+			\item An intervention is made by the {\it Municipality} to address possible issues on the streets under its jurisdiction.
 		\end{itemize}
 
 		\subsubsection{Shared Phenomena}
-		
+		Shared phenomena are world phenomena that are shared with the Machine. These are further divided in two categories.\\ \\
+		{\bf Controlled by the world and observed by the machine}
+		\begin{itemize}
+			\item A {\it User} sends a violation notification to the system, including type of violation, position, date, time and picture.
+			\item {\it Municipality} transmits data about the accidents occurring on the streets to the {\it System}.
+			\item {\it Municipality} evaluates a violation notification coming from the {\it System}. 
+			\item {\it Municipality} elaborates a suggestion for an intervention coming from the {\it System}. 
+			\item {\it Municipality} transfers data about tickets generated to the {\it System}.
+		\end{itemize} 
+		{\bf Controlled by the machine and observed by the world}
+		\begin{itemize}
+			\item The {\it System} notifies the {\it User} that the plate recognition tool was not successful, in order for the user to take a better picture.
+			\item The {\it System} transmits a violation notification to the {\it Municipality}.
+			\item The {\it System} provides suggestions on possible interventions to address issues to the {\it Municipality}.
+			\item The {\it System} shows statistics mined from violation notifications data to {\it Users} and/or the {\it Municipality}.
+		\end{itemize}	
 		\subsubsection{Machine Phenomena}
+		Machine phenomena are events that entirely take place inside the System and cannot be observed in the real world.
+		\begin{itemize}
+			\item The plate recognition algorithm is ran on the picture of the violation.
+			\item The complete set of data are stored and can be retrieved by the {\it System's} DBMS.
+		\end{itemize}
+
 
 
 	\subsection{Definitions, Acronyms, Abbreviations}
@@ -73,13 +102,13 @@ We identify the following world phenomena:
 			
 			\begin{itemize}
 				\item {\bf Municipality:} 
-				\item {\bf Violation:} the action of violating traffic 					laws
-				\item {\bf Ticket:} administrative sanction established 					by law for a violation
-				\item {\bf Plate recognition Algorithm:} algorithm that 					automatic recognize veicles' plate by the images sent 						from users to report a violation or an accident 
-				\item {\bf Notification Data:} infromation that is 						povided by the user when he reports a violation. This 						includes picture, license plate, date, time, position.
-				\item {\bf Ticket Data:} infromation that is povided by 					the municipality when it adds a new ticket in the 							system. This includes violation type, license plate, 						date, time, position.
-				\item {\bf Accident Data:} infromation that usually is 					povided by the municipality when it reports an accident. 				This can includes accident type,picture, multiple 							license plate, date, time, position.
-				\item {\bf Intervention:} action taken by the 								municipality to prevent further issues in the city 						traffic.
+				\item {\bf Violation:} the action of violating traffic laws
+				\item {\bf Ticket:} administrative sanction established 	by law for a violation
+				\item {\bf Plate recognition Algorithm:} algorithm that 	automatic recognise vehicle's' plate by the images sent from users to report a violation or an accident 
+				\item {\bf Notification Data:} information that is provided by the user when he reports a violation. This includes picture, license plate, date, time, position.
+				\item {\bf Ticket Data:} information that is provided by the municipality when it adds a new ticket in the system. This includes violation type, license plate, date, time, position.
+				\item {\bf Accident Data:} information that usually is 	provided by the municipality when it reports an accident. This can includes accident type, picture, multiple license plate, date, time, position.
+				\item {\bf Intervention:} action taken by the municipality to prevent further issues in the city traffic.
 				\item {\bf Notification:} message sent by the user to 						advise the system about a violation.
 			\end{itemize}
 		
@@ -87,10 +116,10 @@ We identify the following world phenomena:
 		
 			\begin{itemize}
 				\item {\bf GPS:} Global Positioning System
-				\item {\bf API:} Aplication Programming Interface
+				\item {\bf API:} Application Programming Interface
 				\item {\bf ID:} Identifier
 				\item {\bf RASD:} Requirements Analysis and 								Specification Document
-				\item {\bf DBMS:} Batabase Management System
+				\item {\bf DBMS:} Data Bases Management System
 				\item {\bf GDPR:} General Data Protection Regulation
 			\end{itemize}
 
@@ -99,13 +128,13 @@ We identify the following world phenomena:
 		\subsubsection{Abbreviations}
 		
 			\begin{itemize}
-				\item {\bf Gn:} n-th goal
-				\item {\bf Rn:} n-th functional requirement
-				\item {\bf Dn:} n-th domain assumption
-				\item {\bf AF1:} advanced function one
-				\item {\bf AF2:} advanced function two
-				\item {\bf SP1:} shared phenomena controlled by the 						World and observed by the Machine
-				\item {\bf SP2:} shared phenomena controlled by the 						Machine and observed by the World
+				\item {\bf [Gn]:} n-th goal
+				\item {\bf [Rn]:} n-th functional requirement
+				\item {\bf [Dn]:} n-th domain assumption
+				\item {\bf AF1:} Advanced Function One
+				\item {\bf AF2:} Advanced Function Two
+				\item {\bf SP1:} Shared Phenomena controlled by the 	World and observed by the Machine
+				\item {\bf SP2:} Shared Phenomena controlled by the 	Machine and observed by the World
 				\item {\bf WP:} World Phenomena
 				\item {\bf MP:} Machine Phenomena
 			\end{itemize}
@@ -128,16 +157,17 @@ We identify the following world phenomena:
 	\subsection{Reference Documents}
 		
 		\begin{itemize}
-   	
-			 \item Project Assignment
-			\end{itemize}
+			 \item Mandatory Project Assignment
+			 \item Alloy Official Documentation: http://alloy.lcs.mit.edu/alloy/documentation.html
+			 \item ISEE
+		\end{itemize}
 
 	\subsection{Document Structure}
-			The rest of the document is organized as follows:
+			The rest of the document is organised as follows:
 				\begin{itemize}
-					\item {\bf Overall Description} (Section 2) 					
-					\item {\bf Specific Requirements} (Section 3) 
-					\item {\bf Formal Analysis} (Section 4)				
+					\item {\bf Overall Description} (Section 2): it will be given a general description of the application, with an analysis of the domain focusing on descriptions about the phenomena according to the {\it World and the Machine} paradigm, and the User Characteristic. It will be provided class diagram and state charts in UML Language and also domain assumptions, dependencies and constraints.
+					\item {\bf Specific Requirements} (Section 3): in this section all the Functional Requirements of the application are explained in details and related to use case scenarios and sequence diagrams clarifying process and interactions between the actors and the {\it System}. Also, there are descriptions of all the non-functional requirements and external interfaces.
+					\item {\bf Formal Analysis} (Section 4): description and creation of simulation using a formal model, the Alloy specification language in order to address the critical aspects of the {\it SafeStreets System}.				
 					\end{itemize}
 
 \pagebreak	
