@@ -224,6 +224,32 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 		
 
 	\subsection{Product functions}
+	\begin{itemize}
+	\item {\bf User functions:} \\
+	
+	
+		{\bf Report a traffic violation} \\
+		The User noticing a violation on the streets is able to, once accessed the System, fill in the information to report a violation: he takes a picture of the vehicle, with the plate decently readable, and select the type of violation from the list provided. The date, time and position are automatically taken by the system when the image is shot (the picture of the violation can only be taken using the application, not retrieved and uploaded from the photo archive) and integrated to the information given by the User. All the data is eventually sent to the System’s DBMS and the plate recognition algorithm is ran to complete the data with the plate number. If the tool fails, the User is instantly notified and asked to take a better picture.\\
+	
+		{\bf Access statistics from notifications’ data}\\
+		The User, once logged in, is able to enter the section of the application where statistics from the notifications received are available: number of violations per period (week, month, year), violations average per day of the week, the previous two per type of violation and a map showing where the violations were reported. Of course no plate number and no information about who reported the violations is shown to the User.\\
+	
+	\item {\bf Municipality functions:} \\
+	
+		{\bf Access statistics from notifications’ data}\\
+		The Municipality is able to enter the section of the system interface where statistics from the notifications received from its jurisdiction are available: number of violations per period (week, month, year), violations average per day of the week, the previous two per type of violation and a map showing where the violations were reported. The municipality can view the plate number of the offender of any violation notification but has no information on the User that reported it. \\
+		
+		{\bf Obtain suggestions about unsafe areas}\\
+		The system provides to the Municipality possible solutions to issues individuated through statistics, which are being mined from data on accidents and violations. This is something really valuable for the Municipality because most of the time it doesn’t have the tools itself to individuate connections and cause-effect relationship in the series of events (ex. a lot of accidents happening at a corner where a lot of second row parking violations are notified).\\
+		
+		{\bf Generate tickets}\\
+		The Municipality receives every notification of violations occurring under its jurisdiction and evaluates every one of them to determine whether a violation actually occurred, if the type of violation reported is correct and if there are the conditions to issue a ticket, in which case the ticket generated is no different from any ticket coming from a physically-verified violation. By exploiting the System’s information the municipality is able to issue a much larger number of tickets in its jurisdiction and to gain effectiveness in enforcing the rules. Every information about generated tickets is then shared with the System.\\
+		
+		{\bf Access statistics from issued tickets}\\
+		The Municipality is able to enter the section of the system interface where statistics from the tickets generated are available: number of tickets per period (week, month, year), tickets average per day of the week, the previous two per type of violation sanctioned, a map showing where the violations were reported.\\
+		
+		
+	\end{itemize}
 		
 	\subsection{User characteristics}
 	{\it SafeStreets} has two kinds of users. There are  {\bf simple }{\it Users} of the application and {\it Authorities} (for details about the semantics about the term User refers to the section 1.3.1 of this document). The first type is usually a citizen or a tourist of the city where the {\it SafeStreets'} service is activated. The {\it User} needs to notify authorities of a violation,  and in order to do this, he/she has to install the application on his/her smartphone. The second type of user are {\it Authorities}, they are representative of the {\it Municipality}. They can access the application from their smartphone or any device supplied by the {\it Municipality}. Also their access to the service is provided by the {\it Municipality} too because they have a different level of visibility in respect to the simple {\it Users}. They need to access statistics provided by the service or have to generate tickets. {\bf (? da rivedere se vogliamo tenere questa frase, in base a come decidiamo di gestire la generazione del ticket)}. \\
