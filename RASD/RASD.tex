@@ -74,7 +74,7 @@ With regards to {\it {\it Advanced Function 1}}, we identify:
 		Shared phenomena are world phenomena that are shared with the Machine. These are further divided in two categories.\\ \\
 		{\bf Controlled by the world and observed by the machine}
 		\begin{itemize}
-			\item A {\it guest} signs up on the system giving all the personal data needed and/or signs in with his credentials.
+			\item A {\it Guest} signs up on the system giving all the personal data needed and/or signs in with his credentials.
 			\item A {\it User} sends a violation notification to the system, including type of violation, position, date, time and picture.
 			\item {\it Municipality} transmits data about the accidents occurring on the streets to the {\it System}.
 			\item {\it Municipality} evaluates a violation notification coming from the {\it System}. 
@@ -102,6 +102,9 @@ With regards to {\it {\it Advanced Function 1}}, we identify:
 		\subsubsection{Definitions}
 			
 			\begin{itemize}
+				\item {\bf Guest:}
+				\item {\bf Authorities:}
+				\item {\bf User:}
 				\item {\bf Municipality:} Entity composed of both men and the information system that has authority on the streets, where it has the responsibility to enforce the rules and to guarantee safety. 
 				\item {\bf Violation:} the action of violating traffic laws.
 				\item {\bf Ticket:} administrative sanction established 	by law for a violation.
@@ -184,10 +187,12 @@ With regards to {\it {\it Advanced Function 1}}, we identify:
 	\subsection{Product functions}
 		
 	\subsection{User characteristics}
+	{\it SafeStreets} has two kinds of users. There are simple {\it Users} of the application and {\it Authorities}. The first type is usually a citizen or a tourist of the city where the {\it SafeStreets'} service is activated. The {\it User} needs to notify authorities of a violation,  and in order to do this, he/she has to install the application on his/her smartphone. The second type of user are {\it Authorities}, they are representative of the {\it Municipality} that needs to access statistics provided by the service or need to generate tickets {\bf (? da rivedere se vogliamo tenere questa frase, in base a come decidiamo di gestire la generazione del ticket)}
 	
 	\subsection{Assumptions, dependencies and constraints}
 		\subsubsection{Constraints}
 		\begin{itemize}
+		\item {\it Users} are located on the streets under the {\it Municipality} jurisdiction when they notify the violation.
 		\item {\it Users} must have a smartphone application to access the {\it System}.
 		\item The {\it System} must respect the GDPR regulation.
 		\item The {\it System} must ask the permission to process personal data about {\it Users}.
@@ -203,8 +208,10 @@ With regards to {\it {\it Advanced Function 1}}, we identify:
 		
 		\subsubsection{Domain Assumptions}
 		\begin{itemize}
-		 \item {\bf [D1]} {\it Users} are located on the streets under the {\it Municipality} jurisdiction when they notify the violation.
-		 \item 		
+		 \item {\bf [D1]} 
+		 \item {\bf [D2]}
+		 \item {\bf [D3]}
+		 \item {\bf [D4]}		
 		 \end{itemize}
 		
 \pagebreak	
