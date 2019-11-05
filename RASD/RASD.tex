@@ -3,6 +3,7 @@
 
 \usepackage {graphicx}
 \usepackage{longtable}
+\usepackage{float}
 \graphicspath {{./Images/}}
 			
 
@@ -301,18 +302,38 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 	\subsection{External Interface Requirements}	
 	\subsubsection{User Interfaces} 
 	\begin{itemize} 
-		\item {\bf Logo}
-		\item {\bf Login/Sign-up}
-		\item {\bf Account Creation}
+		\item {\bf Logo} \\
+		The logo of {\it SafeStreets}, that's also the logo icon for the smartphone application, captures the value of the service provided by the application. The logo is a safe home for a car, like the idea behind the development of the application: make streets safe thanks to the notification of car violation by citizens and city's tourists.
+			\begin{figure}[H]
+				\centering
+				\includegraphics[height=3.5cm]{safestreets_logo.png}
+				\caption{{\it SafeStreets} Logo}
+			\end{figure}
+		\item {\bf Login/Sign-up} \\
+		A {\it Guest} downloads the applications and opens it for the first time. He/she will see an interface that asks to choose between log-in and sign-up. If the {\it Guest} has not an account will click register to create an account in order to obtain access to all  the functionalities, while a {\it User} of the application will click login button after he/she has filled the form with his/her credentials (username and password).
+			\begin{figure}[H]
+				\center
+				\includegraphics[height=5.2cm]{Images/Interfaces/login.png}
+				\caption{Login interface}
+			\end{figure}
+		\item {\bf Account Creation} \\
+		A {\it Guest} downloads the applications and opens it. The {\it Guest} has not an account yet, so clicks the register button. Then the {\it System} shows a form to fill with username, e-mail, password and fiscal code needed to identify the {\it User} as a unique.
+			\begin{figure}[H]
+				\center
+				\includegraphics[height=5.2cm]{Images/Interfaces/signup.png}
+				\caption{Create account interface}
+			\end{figure} 
 		\item {\bf User Interface User}
 			\begin{itemize}
 			\item {\bf Report}
+			\item {\bf Safe Map}
 			\item {\bf Statistics}
 			\item {\bf User Settings}
 			\end{itemize}
 		\item {\bf User Interface Authority}
 			\begin{itemize}
 			\item {\bf Ticket}
+			\item {\bf Authority Map}
 			\item {\bf Interventions}
 			\item {\bf Statistics}
 			\item {\bf Authority Settings}
@@ -341,109 +362,232 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 	\subsubsection{Use Cases}
 	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\begin{longtable}{| p{3 cm} | p{8.5 cm} |} 
+	\begin{longtable}{| p{3 cm} | p{10.5 cm} |} 
 			\hline
 			{\bf ID} & UC1 \\
 			\hline
-			{\bf Description} & \\
+			{\bf Description} & A {\it Guest} creates a {\it User} account for the application.
+			\\
 			\hline
-			{\bf Actors} & \\
+			{\bf Actors} & {\it Guest}\\
 			\hline
-			{\bf Preconditions} & 	\\
+			{\bf Preconditions} & 	
+			\begin{itemize}
+					\item The {\it Guest} downloaded the application on the smartphone.
+					\item The {\it Guest} opens the app and does not have an account yet.
+				\end{itemize}	
+			\\
 			\hline
-			{\bf Flow of events} &	\\
+			{\bf Flow of events} &	
+			\begin{enumerate}
+				\item The {\it Guest} opens the application.
+				\item The {\it System} shows the interface to login or register.
+				\item The {\it Guest} clicks the Register button.
+				\item The {\it System} shows a form to fill with the user personal information: username, e-mail, password, fiscal code that will be used for future logins.
+				\item The {\it Guest} fills the form with all the information.
+				\item The {\it System} checks if all the informations are correct.
+				\item The {\it System} sends an e-mail to the {\it Guest} to confirm the account.
+				\item The {\it Guest} receives the e-mail and confirms the account.
+			\end{enumerate}
+			\\
 			\hline
-			{\bf Postconditions} & \\
+			{\bf Postconditions} & 
+			\begin{itemize}
+				\item The {\it Guest} is now able to sign-in as a {\it User}.
+				\item The {\it System} has stored the information of a new {\it User}.
+			\end{itemize}
+			\\
 			\hline
-			{\bf Exceptions} & 	\\
+			{\bf Exceptions} & 	
+			\begin{itemize}
+				\item The {\it Guest} enters an e-mail that's associated with an existing account.
+				\item The {\it Guest} enters a Fiscal Code that's associated with an existing account. 
+			\end{itemize}
+			The {\it System} shows an error message and the the flow restarts from point 4.
+			\\ \\
 			\hline
-			\caption{Caption for UC1}
+			\caption{Create a {\it User} account Use Case}
+			\end{longtable}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+	\begin{longtable}{| p{3 cm} | p{10.5 cm} |} 
+			\hline
+			{\bf ID} & UC2 \\
+			\hline
+			{\bf Description} & A {\it User} logs-in to the application.\\
+			\hline
+			{\bf Actors} & {\it User}\\
+			\hline
+			{\bf Preconditions} & 	
+			\begin{itemize}
+				\item The {\it User} downloaded the application on the smartphone.
+				\item The {\it User} has already created an account.
+			\end{itemize}
+			\\
+			\hline
+			{\bf Flow of events} &	
+			\begin{enumerate}
+				\item The {\it User} opens the application.
+				\item The {\it System} shows the interface to login or register.
+				\item The {\it User} clicks the Login button.
+				\item The {\it System} asks to decide between {\it User} and {\it Authority}.
+				\item The {\it User} clicks the {\it User} button. 
+				\item The {\it System} shows a form to fill with the credentials.
+				\item The {\it User} fills the form with e-mail and password. 
+				\item The {\it System} checks if the credentials are correct. 
+			\end{enumerate}
+			\\
+			\hline
+			{\bf Postconditions} & 
+			\begin{itemize}
+				\item The {\it User} is logged-in.
+				\item The {\it System} shows the {\it User} interface.
+			\end{itemize}
+			\\
+			\hline
+			{\bf Exceptions} & 	
+			\begin{itemize}
+				\item The {\it User} selects the {\it Authority} button entering the wrong credentials. 
+				\item The {\it User} enters the wrong credentials.
+			\end{itemize}
+			The {\it System} shows an error message and the flow restarts from point 4.
+			\\ \\
+			\hline
+			\caption{{\it User} logs-in Use Case}
 			\end{longtable}
 			
-		\begin{longtable}{| p{3 cm} | p{8.5 cm} |} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+	\begin{longtable}{| p{3 cm} | p{10.5 cm} |} 
+			\hline
+			{\bf ID} & UC3 \\
+			\hline
+			{\bf Description} & {\it Authority} logs-in to the application. \\
+			\hline
+			{\bf Actors} & {\it Authority} \\
+			\hline
+			{\bf Preconditions} & 	
+			\begin{itemize}
+				\item The {\it Authority} downloaded the application on the smartphone.
+				\item The {\it Authority} has already been provided of an account by the {\it Municipality}.
+			\end{itemize}
+			\\
+			\hline
+			{\bf Flow of events} &	
+			\begin{enumerate}
+				\item The {\it Authority} opens the application.
+				\item The {\it System} show the interface to login or register.
+				\item The {\it Authority} clicks the Login button.
+				\item The {\it System} asks to decide between {\it User} and {\it Authority}.
+				\item The {\it Authority} clicks the {\it Authority} button.
+				\item The {\it System} shows a form to fill with the credentials.
+				\item The {\it Authority} fills the form with matricola code and password.
+				\item The {\it System} checks if the credentials are correct.
+			\end{enumerate}
+			\\
+			\hline
+			{\bf Postconditions} & 
+			\begin{itemize}
+				\item The {\it Authority} is logged-in.
+				\item The {\it System} shows the {\it Authority} interface.
+			\end{itemize}
+			\\
+			\hline
+			{\bf Exceptions} & 	
+			\begin{itemize}
+				\item The {\it Authority} selects the {\it User} button entering the wrong credentials.
+				\item The {\it Authority} enters the wrong credentials.
+			\end{itemize}
+			The {\it System} shows an error message and the flow restarts from point 4.
+			\\ \\
+			\hline
+			\caption{{\it Authority} logs-in Use Case}
+			\end{longtable}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%			
+	\begin{longtable}{| p{3 cm} | p{10.5 cm} |} 
 			\hline
 			{\bf ID} & UC4 \\
 			\hline
-			{\bf Description} & User reports a violation \\
+			{\bf Description} & {\it User} reports a violation \\
 			\hline
-			{\bf Actors} & User\\
+			{\bf Actors} & {\it User}\\
 			\hline
 			{\bf Preconditions} & \begin{itemize}
-								  \item The User has logged in with his credentials
-								  \item The location of the violation (therefore the User’s) is within the Municipality’s jurisdiction
+								  \item The {\it User} has logged in with his credentials.
+								  \item The location of the violation (therefore the {\it User's}) is within the {\it Municipality's} jurisdiction
 								  \end{itemize}	\\
 			\hline
-			{\bf Flow of events} &	\begin{itemize}
-								  \item A User notices a traffic laws violation 
-								  \item The User decides to do something about it and accesses the System
-								  \item The User, in the “Report a violation” tab, takes a picture of the violation
-								  \item The User select the type of violation from the drop down menu
-								  \item The User submits the notification to the System
-								  \item The System runs the plate recognition algorithm on the picture to integrate the data with the plate number
-								  \end{itemize}	\\
+			{\bf Flow of events} &	\begin{enumerate}
+								  \item The {\it User} notices a traffic laws violation 
+								  \item The {\it User} decides to do something about it and accesses the {\it System}.
+								  \item The {\it User}, in the “Report a violation” tab, takes a picture of the violation
+								  \item The {\it User} selects the type of violation from the drop down menu.
+								  \item The {\it User} submits the notification to the {\it System}.
+								  \item The {\it System} runs the plate recognition algorithm on the picture to integrate the data with the plate number.
+								  \end{enumerate}	\\
 			\hline
 			{\bf Postconditions} & \begin{itemize}
-								  \item The system forwards the notification to the Municipality
+								  \item The {\it System} forwards the notification to the {\it Municipality}
 								  \end{itemize}	 \\
 			\hline
 			{\bf Exceptions} & 	\begin{itemize}
-								  \item The plate of the of the vehicle involved in the violation is not recognized by the System specific tool (The User is then notified and asked to take a more readable picture).
+								  \item The plate of the of the vehicle involved in the violation is not recognised by the {\it System} specific tool (The {\it User} is then notified and asked to take a more readable picture).
 								  \end{itemize}	\\
 			\hline
-			\caption{Caption for UC4}
+			\caption{{\it User} report violation Use Case}
 			\end{longtable}
 			
-			
-					\begin{longtable}{| p{3 cm} | p{8.5 cm} |} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%				
+	\begin{longtable}{| p{3 cm} | p{10.5 cm} |} 
 			\hline
 			{\bf ID} & UC7 \\
 			\hline
-			{\bf Description} & The Authority converts the violation notification into a ticket \\
+			{\bf Description} & The {\it Authority} converts the violation notification into a ticket \\
 			\hline
-			{\bf Actors} & User\\
+			{\bf Actors} & {\it Authority}\\
 			\hline
 			{\bf Preconditions} & \begin{itemize}
-								  \item The Authority has logged in with his credentials
+								  \item The {\it Authority} has logged in with his credentials
 								  \item
 								  \end{itemize}	\\
 			\hline
-			{\bf Flow of events} &	\begin{itemize}
-								  \item The Authority takes under examination a notification sent by the System
-								  \item The Authority recognizes the violation in the picture
-								  \item The Authority confirms the information given by the User
-								  \item The Authority establishes the case matches the criteria needed to generate a ticket
-								  \item The Authority generates a real ticket to the vehicle reported in the violation notification
-								  \end{itemize}	\\
+			{\bf Flow of events} &	\begin{enumerate}
+								  \item The {\it Authority} takes under examination a notification sent by the {\it System}.
+								  \item The {\it Authority} recognises the violation in the picture.
+								  \item The {\it Authority} confirms the information given by the {\it User}.
+								  \item The {\it Authority} establishes the case matches the criteria needed to generate a ticket.
+								  \item The {\it Authority} generates a real ticket to the vehicle reported in the violation notification.
+								  \end{enumerate}	\\
 			\hline
 			{\bf Postconditions} & \begin{itemize}
-								  \item The Municipality transmits data about the ticket to the System
+								  \item The {\it Municipality} transmits data about the ticket to the {\it System}.
 								  \end{itemize}	 \\
 			\hline
 			{\bf Exceptions} & 	\begin{itemize}
-								  \item The picture does not show the type of violation selected by the User, but another kind (the evaluation of the violation to generate a ticket still takes place)
+								  \item The picture does not show the type of violation selected by the {\it User}, but another kind (the evaluation of the violation to generate a ticket still takes place)
 								  \item The picture does not actually show a violation, or the violation is not clear enough in the picture to issue a ticket (in this case no ticket is generated)
 								  \end{itemize}	\\
 			\hline
-			\caption{Caption for UC7}
+			\caption{{\it Authority} ticket generation Use Case}
 			\end{longtable}
 			
-			
-					\begin{longtable}{| p{3 cm} | p{8.5 cm} |} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%							
+	\begin{longtable}{| p{3 cm} | p{10.5cm} |} 
 			\hline
 			{\bf ID} & UC9 \\
 			\hline
-			{\bf Description} & The Authority views the suggestions on possible interventions on the viability given by the System \\
+			{\bf Description} & The {\it Authority} views the suggestions on possible interventions on the viability given by the {\it System}. \\
 			\hline
-			{\bf Actors} & Authority\\
+			{\bf Actors} & {\it Authority}\\
 			\hline
 			{\bf Preconditions} & \begin{itemize}
-								  \item The User has logged in with his credentials
-								  \item The Municipality has been sending data on accidents to the System
+								  \item The {\it User} has logged in with his credentials.
+								  \item The {\it Municipality} has been sending data on accidents to the {\it System}.
 								  \end{itemize}	\\
 			\hline
-			{\bf Flow of events} &	\begin{itemize}
+			{\bf Flow of events} &	\begin{enumerate}
 								  \item
-								  \end{itemize}	\\
+								  \end{enumerate}	\\
 			\hline
 			{\bf Postconditions} & \begin{itemize}
 								  \item
@@ -453,7 +597,7 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 								  \item
 								  \end{itemize}	\\
 			\hline
-			\caption{Caption for UC9}
+			\caption{{\it Authority} accesses to Interventions Use Case}
 			\end{longtable}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%			
 
