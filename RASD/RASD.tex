@@ -3,6 +3,8 @@
 
 \usepackage {graphicx}
 \usepackage{longtable}
+\usepackage{subcaption}
+\usepackage{caption}
 \usepackage{float}
 \graphicspath {{./Images/}}
 			
@@ -254,7 +256,7 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 	\end{itemize}
 		
 	\subsection{User characteristics}
-	{\it SafeStreets} has two kinds of users. There are  {\bf simple }{\it Users} of the application and {\it Authorities} (for details about the semantics about the term User refers to the section 1.3.1 of this document). The first type is usually a citizen or a tourist of the city where the {\it SafeStreets'} service is activated. The {\it User} needs to notify authorities of a violation,  and in order to do this, he/she has to install the application on his/her smartphone. The second type of user are {\it Authorities}, they are representative of the {\it Municipality}. They can access the application from their smartphone or any device supplied by the {\it Municipality}. Also their access to the service is provided by the {\it Municipality} too because they have a different level of visibility in respect to the simple {\it Users}. They need to access statistics provided by the service or have to generate tickets. {\bf (? da rivedere se vogliamo tenere questa frase, in base a come decidiamo di gestire la generazione del ticket)}. \\
+	{\it SafeStreets} has two kinds of users. There are  {\bf simple }{\it Users} of the application and {\it Authorities} (for details about the semantics about the term User refers to the section 1.3.1 of this document). The first type is usually a citizen or a tourist of the city where the {\it SafeStreets'} service is activated. The {\it User} needs to notify authorities of a violation,  and in order to do this, he/she has to install the application on his/her smartphone. The second type of user are {\it Authorities}, they are representative of the {\it Municipality}. They can access the application from their smartphone or any device supplied by the {\it Municipality}. Also their access to the service is provided by the {\it Municipality} too because they have a different level of visibility in respect to the simple {\it Users}. They need to access statistics provided by the service or have to generate tickets. \\
 	The characters involved are:
 	\begin{itemize}
 		\item {\it Guest:} a user who has downloaded the application on his/her smartphone, but has to create an account. No functionalities can be accessed without registering to the service
@@ -306,23 +308,46 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 		The logo of {\it SafeStreets}, that's also the logo icon for the smartphone application, captures the value of the service provided by the application. The logo is a safe home for a car, like the idea behind the development of the application: make streets safe thanks to the notification of car violation by citizens and city's tourists.
 			\begin{figure}[H]
 				\centering
-				\includegraphics[height=3.5cm]{safestreets_logo.png}
+				\includegraphics[height=2.2cm]{safestreets_logo.png}
 				\caption{{\it SafeStreets} Logo}
 			\end{figure}
 		\item {\bf Login/Sign-up} \\
 		A {\it Guest} downloads the applications and opens it for the first time. He/she will see an interface that asks to choose between log-in and sign-up. If the {\it Guest} has not an account will click register to create an account in order to obtain access to all  the functionalities, while a {\it User} of the application will click login button after he/she has filled the form with his/her credentials (username and password).
+			\begin{figure} [H]
+			\centering
+			\begin{subfigure}{.4\textwidth}
+				\centering
+				\includegraphics[height=6cm]{Images/Interfaces/login_user.png}
+				\caption{User login}
+			\end{subfigure}
+			\begin{subfigure}{.4\textwidth}
+				\centering
+				\includegraphics[height=6cm]{Images/Interfaces/login_auth.png}
+				\caption{Authority login}
+			\end{subfigure}
+			\caption{Login interfaces}
+			\end{figure}
 			\begin{figure}[H]
-				\center
-				\includegraphics[height=5.2cm]{Images/Interfaces/login.png}
-				\caption{Login interface}
 			\end{figure}
 		\item {\bf Account Creation} \\
-		A {\it Guest} downloads the applications and opens it. The {\it Guest} has not an account yet, so clicks the register button. Then the {\it System} shows a form to fill with username, e-mail, password and fiscal code needed to identify the {\it User} as a unique.
+		A {\it Guest} downloads the applications and opens it. The {\it Guest} has not an account yet, so clicks the register button. Then the {\it System} shows a form to fill with username, e-mail, password and fiscal code needed to identify the {\it User} as unique.
+			\begin{figure} [H]
+			\centering
+			\begin{subfigure}{.4\textwidth}
+				\centering
+				\includegraphics[height=6cm]{Images/Interfaces/signup.png}
+				\caption{Registration form}
+			\end{subfigure}
+			\begin{subfigure}{.4\textwidth}
+				\centering
+				\includegraphics[height=6cm]{Images/Interfaces/signup_2.png}
+				\caption{Registration confirmation}
+			\end{subfigure}
+			\caption{Account creation interfaces}
+			\end{figure}
 			\begin{figure}[H]
-				\center
-				\includegraphics[height=5.2cm]{Images/Interfaces/signup.png}
-				\caption{Create account interface}
-			\end{figure} 
+			\end{figure}
+
 		\item {\bf User Interface User}
 			\begin{itemize}
 			\item {\bf Report}
