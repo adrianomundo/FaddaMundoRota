@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.10.30)  5 NOV 2019 12:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.10.30)  5 NOV 2019 18:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -64,9 +64,36 @@ Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)+ FMi change
 \c@LT@chunks=\count92
 \LT@p@ftn=\toks15
 )
+(/usr/local/texlive/2019/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2018/05/01 v1.1-162 Sub-captions (AR)
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2018/10/06 v3.3-154 Customizing captions (AR)
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2018/09/12 v1.8c caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 64.
+\captionmargin=\dimen106
+\captionmargin@=\dimen107
+\captionwidth=\dimen108
+\caption@tempdima=\dimen109
+\caption@indent=\dimen110
+\caption@parindent=\dimen111
+\caption@hangindent=\dimen112
+)
+\c@caption@flags=\count93
+\c@ContinuedFloat=\count94
+Package caption Info: longtable package is loaded.
+
+(/usr/local/texlive/2019/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2018/08/26 v1.4-95 longtable captions (AR)
+))
+\c@subfigure=\count95
+\c@subtable=\count96
+)
 (/usr/local/texlive/2019/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count93
+\c@float@type=\count97
 \float@exts=\toks16
 \float@box=\box31
 \@float@everytoks=\toks17
@@ -74,31 +101,31 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 ) (./RASD.aux)
 \openout1 = `RASD.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
 
 (/usr/local/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count94
-\scratchdimen=\dimen106
+\scratchcounter=\count98
+\scratchdimen=\dimen113
 \scratchbox=\box33
-\nofMPsegments=\count95
-\nofMParguments=\count96
+\nofMPsegments=\count99
+\nofMParguments=\count100
 \everyMPshowfont=\toks18
-\MPscratchCnt=\count97
-\MPscratchDim=\dimen107
-\MPnumerator=\count98
-\makeMPintoPDFobject=\count99
+\MPscratchCnt=\count101
+\MPscratchDim=\dimen114
+\MPnumerator=\count102
+\makeMPintoPDFobject=\count103
 \everyMPtoPDFconversion=\toks19
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -151,17 +178,20 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: End \AtBeginDocument code.
 <./Images/polimi_logo.png, id=1, 666.49pt x 489.83pt>
 File: ./Images/polimi_logo.png Graphic file (type png)
 <use ./Images/polimi_logo.png>
-Package pdftex.def Info: ./Images/polimi_logo.png  used on input line 14.
+Package pdftex.def Info: ./Images/polimi_logo.png  used on input line 16.
 (pdftex.def)             Requested size: 309.71124pt x 227.62204pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 25.
+(Font)              <12> on input line 27.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 25.
+(Font)              <8> on input line 27.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 25.
+(Font)              <6> on input line 27.
 
 [1
 
@@ -176,186 +206,186 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \openout3 = `RASD.toc'.
 
  [3]
-Underfull \hbox (badness 10000) in paragraph at lines 41--47
+Underfull \hbox (badness 10000) in paragraph at lines 43--49
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 41--47
+Underfull \hbox (badness 10000) in paragraph at lines 43--49
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 41--47
+Underfull \hbox (badness 10000) in paragraph at lines 43--49
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 41--47
+Underfull \hbox (badness 10000) in paragraph at lines 43--49
 
  []
 
 [4]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 49.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 51.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 49.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 51.
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--55
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 55--59
+Underfull \hbox (badness 10000) in paragraph at lines 53--57
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 77--79
+Underfull \hbox (badness 10000) in paragraph at lines 57--61
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 79--81
 
  []
 
 [5] [6] [7]
-Overfull \hbox (32.13979pt too wide) in paragraph at lines 168--169
+Overfull \hbox (32.13979pt too wide) in paragraph at lines 170--171
 []\OT1/cmr/m/n/10 Alloy Of-fi-cial Doc-u-men-ta-tion: http://alloy.lcs.mit.edu/
 alloy/documentation.html 
  []
 
 [8] [9]
-Underfull \hbox (badness 10000) in paragraph at lines 185--223
+Underfull \hbox (badness 10000) in paragraph at lines 187--225
 
  []
 
 
-Overfull \hbox (11.03017pt too wide) in paragraph at lines 185--223
+Overfull \hbox (11.03017pt too wide) in paragraph at lines 187--225
 \OT1/cmr/bx/n/10 A generic traf-fic Vi-o-la-tion oc-curs on the streets un-der 
 the []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 185--223
+Underfull \hbox (badness 10000) in paragraph at lines 187--225
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 185--223
+Underfull \hbox (badness 10000) in paragraph at lines 187--225
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 185--223
+Underfull \hbox (badness 10000) in paragraph at lines 187--225
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 185--223
+Underfull \hbox (badness 10000) in paragraph at lines 187--225
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 185--223
+Underfull \hbox (badness 10000) in paragraph at lines 187--225
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 185--223
+Underfull \hbox (badness 10000) in paragraph at lines 187--225
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 185--223
+Underfull \hbox (badness 10000) in paragraph at lines 187--225
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 185--223
+Underfull \hbox (badness 10000) in paragraph at lines 187--225
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 185--223
+Underfull \hbox (badness 10000) in paragraph at lines 187--225
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 185--223
+Underfull \hbox (badness 10000) in paragraph at lines 187--225
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 185--223
+Underfull \hbox (badness 10000) in paragraph at lines 187--225
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 185--223
+Underfull \hbox (badness 10000) in paragraph at lines 187--225
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 185--223
+Underfull \hbox (badness 10000) in paragraph at lines 187--225
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 185--223
+Underfull \hbox (badness 10000) in paragraph at lines 187--225
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 185--223
+Underfull \hbox (badness 10000) in paragraph at lines 187--225
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 185--223
+Underfull \hbox (badness 10000) in paragraph at lines 187--225
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 185--223
+Underfull \hbox (badness 10000) in paragraph at lines 187--225
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 185--223
+Underfull \hbox (badness 10000) in paragraph at lines 187--225
 
  []
 
 [10] [11]
-Underfull \hbox (badness 10000) in paragraph at lines 233--235
+Underfull \hbox (badness 10000) in paragraph at lines 235--237
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 236--238
+Underfull \hbox (badness 10000) in paragraph at lines 238--240
 
  []
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 239--240
+Underfull \hbox (badness 10000) in paragraph at lines 241--242
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 241--243
+Underfull \hbox (badness 10000) in paragraph at lines 243--245
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 244--246
+Underfull \hbox (badness 10000) in paragraph at lines 246--248
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 247--249
+Underfull \hbox (badness 10000) in paragraph at lines 249--251
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 250--252
+Underfull \hbox (badness 10000) in paragraph at lines 252--254
 
  []
 
@@ -363,105 +393,120 @@ Underfull \hbox (badness 10000) in paragraph at lines 250--252
 <./Images/safestreets_logo.png, id=60, 150.5625pt x 150.5625pt>
 File: ./Images/safestreets_logo.png Graphic file (type png)
 <use ./Images/safestreets_logo.png>
-Package pdftex.def Info: ./Images/safestreets_logo.png  used on input line 309.
+Package pdftex.def Info: ./Images/safestreets_logo.png  used on input line 311.
 
-(pdftex.def)             Requested size: 99.5875pt x 99.58464pt.
-<Images/Interfaces/login.png, id=61, 443.6575pt x 849.1725pt>
-File: Images/Interfaces/login.png Graphic file (type png)
-<use Images/Interfaces/login.png>
-Package pdftex.def Info: Images/Interfaces/login.png  used on input line 316.
-(pdftex.def)             Requested size: 77.29596pt x 147.95424pt.
-<Images/Interfaces/signup.png, id=62, 443.6575pt x 849.1725pt>
+(pdftex.def)             Requested size: 62.59714pt x 62.59596pt.
+<Images/Interfaces/login_user.png, id=61, 443.6575pt x 878.28125pt>
+File: Images/Interfaces/login_user.png Graphic file (type png)
+<use Images/Interfaces/login_user.png>
+Package pdftex.def Info: Images/Interfaces/login_user.png  used on input line 3
+20.
+(pdftex.def)             Requested size: 86.23192pt x 170.71652pt.
+<Images/Interfaces/login_auth.png, id=62, 443.6575pt x 878.28125pt>
+File: Images/Interfaces/login_auth.png Graphic file (type png)
+<use Images/Interfaces/login_auth.png>
+Package pdftex.def Info: Images/Interfaces/login_auth.png  used on input line 3
+25.
+(pdftex.def)             Requested size: 86.23192pt x 170.71652pt.
+ [16 <./Images/safestreets_logo.png> <./Images/Interfaces/login_user.png> <./Im
+ages/Interfaces/login_auth.png>]
+<Images/Interfaces/signup.png, id=70, 443.6575pt x 849.1725pt>
 File: Images/Interfaces/signup.png Graphic file (type png)
 <use Images/Interfaces/signup.png>
-Package pdftex.def Info: Images/Interfaces/signup.png  used on input line 323.
-(pdftex.def)             Requested size: 77.29596pt x 147.95424pt.
- [16 <./Images/safestreets_logo.png> <./Images/Interfaces/login.png>] [17 <./Im
-ages/Interfaces/signup.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 363--365
+Package pdftex.def Info: Images/Interfaces/signup.png  used on input line 338.
+(pdftex.def)             Requested size: 89.19026pt x 170.71652pt.
+<Images/Interfaces/signup_2.png, id=71, 443.6575pt x 878.28125pt>
+File: Images/Interfaces/signup_2.png Graphic file (type png)
+<use Images/Interfaces/signup_2.png>
+Package pdftex.def Info: Images/Interfaces/signup_2.png  used on input line 343
+.
+(pdftex.def)             Requested size: 86.23192pt x 170.71652pt.
+ [17 <./Images/Interfaces/signup.png> <./Images/Interfaces/signup_2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 388--390
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 366--368
+Underfull \hbox (badness 10000) in paragraph at lines 391--393
 
  []
 
 [18]
-Overfull \hbox (63.1122pt too wide) in alignment at lines 372--417
+Overfull \hbox (63.1122pt too wide) in alignment at lines 397--442
  [] [] 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 417
+Underfull \vbox (badness 10000) detected at line 442
  []
 
 [19]
-Overfull \hbox (63.1122pt too wide) in alignment at lines 420--464
+Overfull \hbox (63.1122pt too wide) in alignment at lines 445--489
  [] [] 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 464
+Underfull \vbox (badness 10000) detected at line 489
  []
 
 [20]
-Overfull \hbox (63.1122pt too wide) in alignment at lines 467--511
+Overfull \hbox (63.1122pt too wide) in alignment at lines 492--536
  [] [] 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 511
+Underfull \vbox (badness 10000) detected at line 536
  []
 
 [21]
-Overfull \hbox (63.1122pt too wide) in alignment at lines 514--545
+Overfull \hbox (63.1122pt too wide) in alignment at lines 539--570
  [] [] 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 545
+Underfull \vbox (badness 10000) detected at line 570
  []
 
 [22]
-Overfull \hbox (63.1122pt too wide) in alignment at lines 548--579
+Overfull \hbox (63.1122pt too wide) in alignment at lines 573--604
  [] [] 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 579
+Underfull \vbox (badness 10000) detected at line 604
  []
 
 [23]
-Overfull \hbox (63.1122pt too wide) in alignment at lines 582--608
+Overfull \hbox (63.1122pt too wide) in alignment at lines 607--633
  [] [] 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 608
+Underfull \vbox (badness 10000) detected at line 633
  []
 
 [24] [25] [26] [27] [28] (./RASD.aux) ) 
 Here is how much of TeX's memory you used:
- 1638 strings out of 492616
- 23610 string characters out of 6129480
- 100528 words of memory out of 5000000
- 5545 multiletter control sequences out of 15000+600000
- 8887 words of font info for 31 fonts, out of 8000000 for 9000
+ 2845 strings out of 492616
+ 45494 string characters out of 6129480
+ 122823 words of memory out of 5000000
+ 6737 multiletter control sequences out of 15000+600000
+ 9186 words of font info for 32 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,7n,25p,1654b,307s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,9n,46p,1654b,516s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2019/texmf-dist/font
 s/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2019/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2019/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2019/texmf-dist/fonts/ty
 pe1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmti12.pfb>
-Output written on RASD.pdf (28 pages, 532715 bytes).
+1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmti10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmti12.pfb>
+Output written on RASD.pdf (28 pages, 854676 bytes).
 PDF statistics:
- 131 PDF objects out of 1000 (max. 8388607)
- 85 compressed objects within 1 object stream
+ 139 PDF objects out of 1000 (max. 8388607)
+ 88 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
