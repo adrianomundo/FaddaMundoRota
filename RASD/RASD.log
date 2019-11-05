@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.10.30)  5 NOV 2019 18:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.10.30)  5 NOV 2019 23:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -477,12 +477,12 @@ Underfull \vbox (badness 10000) detected at line 604
  []
 
 [23]
-Overfull \hbox (63.1122pt too wide) in alignment at lines 607--633
+Overfull \hbox (63.1122pt too wide) in alignment at lines 607--635
  [] [] 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 633
+Underfull \vbox (badness 10000) detected at line 635
  []
 
 [24] [25] [26] [27] [28] (./RASD.aux) ) 
@@ -503,7 +503,7 @@ pe1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type
 ublic/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmti10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmti12.pfb>
-Output written on RASD.pdf (28 pages, 854676 bytes).
+Output written on RASD.pdf (28 pages, 855095 bytes).
 PDF statistics:
  139 PDF objects out of 1000 (max. 8388607)
  88 compressed objects within 1 object stream
