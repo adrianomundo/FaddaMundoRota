@@ -119,6 +119,10 @@ With regards to {\it {\it Advanced Function 1}}, we identify:
 				\item {\bf Accident Data:} information that usually is 	provided by the municipality when it reports an accident. This can includes accident type, picture, multiple license plate, date, time, position.
 				\item {\bf Intervention:} action taken by the municipality to prevent further issues in the city traffic.
 				\item {\bf Notification:} message sent by the user to 						advise the system about a violation.
+				\item {\bf SafeMap:}
+				\item {\bf AuthorityMap:}
+				\item {\bf Statistics:} also called stats, 
+				\item {\bf Ticket statistics:} also called ticket stats,
 			\end{itemize}
 		
 		\subsubsection{Acronyms}
@@ -224,7 +228,25 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 		The system’s DBMS assures integrity and durability of every piece of data managed by the system: every notification, information on issued tickets and statistics about the previous are available to be retrieved with a proper query.\\
 		
 		
-	\subsubsection{Class Diagrams}
+	\subsubsection{Class Diagrams}	
+	\begin{figure}[H]
+				\centering
+				\includegraphics[scale=0.5]{Images/Diagrams/Class_Diagram.png}
+				\caption{{\it SafeStreets} Class Diagram}
+	\end{figure}
+	
+	\subsubsection{State Charts}	
+	\begin{figure}[H]
+				\centering
+				\includegraphics[scale=0.6]{Images/Diagrams/ViolationStateChart.png}
+				\caption{Violation Report State Chart}
+	\end{figure}
+
+	\begin{figure}[H]
+				\centering
+				\includegraphics[scale=0.6]{Images/Diagrams/TicketStateChart.png}
+				\caption{Ticket Analysis State Chart}
+	\end{figure}
 		
 
 	\subsection{Product functions} 
