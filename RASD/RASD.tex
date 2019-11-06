@@ -674,14 +674,16 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 			{\bf Actors} & {\it Authority}\\
 			\hline
 			{\bf Preconditions} & \begin{itemize}
-								  \item The {\it Authority} has logged in with his credentials
-								  \item
+								  \item The {\it Authority} has logged in with his credentials.
+								  
 								  \end{itemize}	\\
 			\hline
 			{\bf Flow of events} &	\begin{enumerate}
-								  \item The {\it Authority} takes under examination a notification sent by the {\it System}.
-								  \item The {\it Authority} recognises the violation in the picture.
-								  \item The {\it Authority} confirms the information given by the {\it User}.
+								  \item The {\it Authority} accesses the Tickets tab on the System.
+								  \item The {\it System} shows to the {\it Authority} a list of notifications reported by {\it Users}.
+								  \item The {\it Authority} takes under examination a notification.
+								  \item The {\it Authority} recognizes the violation in the picture.
+								  \item The {\it Authority} confirms the information provided by the {\it User}.
 								  \item The {\it Authority} establishes the case matches the criteria needed to generate a ticket.
 								  \item The {\it Authority} generates a real ticket to the vehicle reported in the violation notification.
 								  \end{enumerate}	\\
