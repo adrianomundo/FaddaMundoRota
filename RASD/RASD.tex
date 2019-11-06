@@ -229,28 +229,20 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 
 	\subsection{Product functions} 
 	\begin{itemize}
-	\item {\bf User functions:} 
-	
-	
+	\item {\bf User Functions:} \\ \\
 		{\bf Report a traffic violation} \\
-		The User noticing a violation on the streets is able to, once accessed the System, fill in the information to report a violation: he takes a picture of the vehicle, with the plate decently readable, and select the type of violation from the list provided. The date, time and position are automatically taken by the system when the image is shot (the picture of the violation can only be taken using the application, not retrieved and uploaded from the photo archive) and integrated to the information given by the User. All the data is eventually sent to the System’s DBMS and the plate recognition algorithm is ran to complete the data with the plate number. If the tool fails, the User is instantly notified and asked to take a better picture.\\
-	
+		The User noticing a violation on the streets is able to, once accessed the System, fill in the information to report a violation: he takes a picture of the vehicle, with the plate decently readable, and select the type of violation from the list provided. The date, time and position are automatically taken by the system when the image is shot (the picture of the violation can only be taken using the application, not retrieved and uploaded from the photo archive) and integrated to the information given by the User. All the data is eventually sent to the System’s DBMS and the plate recognition algorithm is ran to complete the data with the plate number. If the tool fails, the User is instantly notified and asked to take a better picture. \\ \\ 
 		{\bf Access statistics from notifications’ data}\\
-		The User, once logged in, is able to enter the section of the application where statistics from the notifications received are available: number of violations per period (week, month, year), violations average per day of the week, the previous two per type of violation and a map showing where the violations were reported. Of course no plate number and no information about who reported the violations is shown to the User.\\
-	
-	\item {\bf Municipality functions:} \\
-	
+		The User, once logged in, is able to enter the section of the application where statistics from the notifications received are available: number of violations per period (week, month, year), violations average per day of the week, the previous two per type of violation and a map showing where the violations were reported. Of course no plate number and no information about who reported the violations is shown to the User.\\ 
+	\item {\bf Authority Functions:} \\ \\
 		{\bf Access statistics from notifications’ data}\\
-		The Municipality is able to enter the section of the system interface where statistics from the notifications received from its jurisdiction are available: number of violations per period (week, month, year), violations average per day of the week, the previous two per type of violation and a map showing where the violations were reported. The municipality can view the plate number of the offender of any violation notification but has no information on the User that reported it. \\
-		
+		The Municipality is able to enter the section of the system interface where statistics from the notifications received from its jurisdiction are available: number of violations per period (week, month, year), violations average per day of the week, the previous two per type of violation and a map showing where the violations were reported. The municipality can view the plate number of the offender of any violation notification but has no information on the User that reported it. \\ \\
 		{\bf Obtain suggestions about unsafe areas}\\
-		The system provides to the Municipality possible solutions to issues individuated through statistics, which are being mined from data on accidents and violations. This is something really valuable for the Municipality because most of the time it doesn’t have the tools itself to individuate connections and cause-effect relationship in the series of events (ex. a lot of accidents happening at a corner where a lot of second row parking violations are notified).\\
-		
+		The system provides to the Municipality possible solutions to issues individuated through statistics, which are being mined from data on accidents and violations. This is something really valuable for the Municipality because most of the time it doesn’t have the tools itself to individuate connections and cause-effect relationship in the series of events (ex. a lot of accidents happening at a corner where a lot of second row parking violations are notified).\\ \\
 		{\bf Generate tickets}\\
-		The Municipality receives every notification of violations occurring under its jurisdiction and evaluates every one of them to determine whether a violation actually occurred, if the type of violation reported is correct and if there are the conditions to issue a ticket, in which case the ticket generated is no different from any ticket coming from a physically-verified violation. By exploiting the System’s information the municipality is able to issue a much larger number of tickets in its jurisdiction and to gain effectiveness in enforcing the rules. Every information about generated tickets is then shared with the System.\\
-		
+		The Municipality receives every notification of violations occurring under its jurisdiction and evaluates every one of them to determine whether a violation actually occurred, if the type of violation reported is correct and if there are the conditions to issue a ticket, in which case the ticket generated is no different from any ticket coming from a physically-verified violation. By exploiting the System’s information the municipality is able to issue a much larger number of tickets in its jurisdiction and to gain effectiveness in enforcing the rules. Every information about generated tickets is then shared with the System.\\ \\
 		{\bf Access statistics from issued tickets}\\
-		The Municipality is able to enter the section of the system interface where statistics from the tickets generated are available: number of tickets per period (week, month, year), tickets average per day of the week, the previous two per type of violation sanctioned, a map showing where the violations were reported.\\
+		The Municipality is able to enter the section of the system interface where statistics from the tickets generated are available: number of tickets per period (week, month, year), tickets average per day of the week, the previous two per type of violation sanctioned, a map showing where the violations were reported.\\ \\
 		
 		
 	\end{itemize}
@@ -308,60 +300,131 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 		The logo of {\it SafeStreets}, that's also the logo icon for the smartphone application, captures the value of the service provided by the application. The logo is a safe home for a car, like the idea behind the development of the application: make streets safe thanks to the notification of car violation by citizens and city's tourists.
 			\begin{figure}[H]
 				\centering
-				\includegraphics[height=2.2cm]{safestreets_logo.png}
+				\includegraphics[height=2cm]{safestreets_logo.png}
 				\caption{{\it SafeStreets} Logo}
 			\end{figure}
 		\item {\bf Login/Sign-up} \\
-		A {\it Guest} downloads the applications and opens it for the first time. He/she will see an interface that asks to choose between log-in and sign-up. If the {\it Guest} has not an account will click register to create an account in order to obtain access to all  the functionalities, while a {\it User} of the application will click login button after he/she has filled the form with his/her credentials (username and password).
+		A {\it Guest} downloads the applications and opens it for the first time. The {\it System} shows an interface that asks to choose between log-in and sign-up. If the {\it Guest} has not an account will click register to create an account in order to obtain access to all  the functionalities, while a {\it User} of the application will click login button after that he/she filled the form with his/her credentials. 
 			\begin{figure} [H]
 			\centering
 			\begin{subfigure}{.4\textwidth}
 				\centering
-				\includegraphics[height=6cm]{Images/Interfaces/login_user.png}
-				\caption{User login}
+				\includegraphics[height=6.2cm]{Images/Interfaces/login_user.png}
+				\caption{{\it User} login}
 			\end{subfigure}
 			\begin{subfigure}{.4\textwidth}
 				\centering
-				\includegraphics[height=6cm]{Images/Interfaces/login_auth.png}
-				\caption{Authority login}
+				\includegraphics[height=6.2cm]{Images/Interfaces/login_auth.png}
+				\caption{{\it Authority} login}
 			\end{subfigure}
 			\caption{Login interfaces}
 			\end{figure}
 			\begin{figure}[H]
 			\end{figure}
-		\item {\bf Account Creation} \\
-		A {\it Guest} downloads the applications and opens it. The {\it Guest} has not an account yet, so clicks the register button. Then the {\it System} shows a form to fill with username, e-mail, password and fiscal code needed to identify the {\it User} as unique.
+		\item {\bf Account Creation} \\ 
+		A {\it Guest} downloads the applications and opens it. The {\it Guest} has not an account yet, so clicks the register button. Then the {\it System} shows a form to fill with username, e-mail, password and fiscal code needed to identify the {\it User} as unique. \\
 			\begin{figure} [H]
 			\centering
 			\begin{subfigure}{.4\textwidth}
 				\centering
-				\includegraphics[height=6cm]{Images/Interfaces/signup.png}
+				\includegraphics[height=6.2cm]{Images/Interfaces/signup.png}
 				\caption{Registration form}
 			\end{subfigure}
 			\begin{subfigure}{.4\textwidth}
 				\centering
-				\includegraphics[height=6cm]{Images/Interfaces/signup_2.png}
+				\includegraphics[height=6.2cm]{Images/Interfaces/signup_2.png}
 				\caption{Registration confirmation}
 			\end{subfigure}
-			\caption{Account creation interfaces}
+			\caption{Account creation interfaces} 
 			\end{figure}
+		\item {\bf User Interface User} \\
+		After the Log-in, the {\it User} enters in the application, where the {\it System} shows an interface with four tabs, each one representing a function of the application: report a violation, see the safety map, see statistics about violation and user setting. Below we will describe each section in details. 
+			\begin{itemize}
+			\item {\bf Report} \\
+			The Report tab is the primary tab for the {\it User}. Here the {\it User} can report a violation that noticed on the streets under the {\it Municipality's} jurisdiction. He can load a picture of the violation, that will be processed by the plate recognition algorithm to be sure that the vehicle is identified and associated to the offender. From the drop down menu the {\it User} can enter the type of the violation and the date. The GPS switch should be allowed to retrieve the metadata and the position. The second interface is an alert that advise the {\it User} the report is successfully completed. 
 			\begin{figure}[H]
+				\centering
+			\begin{subfigure}{.4\textwidth}
+				\centering
+				\includegraphics[height=6.2cm]{Images/Interfaces/user_report.png}
+				\caption{Report violation}
+			\end{subfigure}
+			\begin{subfigure}{.4\textwidth}
+				\centering
+				\includegraphics[height=6.2cm]{Images/Interfaces/user_report_done.png}
+				\caption{Reported completed}
+			\end{subfigure}
+			\caption{Report Violation {\it User} Interface}
 			\end{figure}
 
-		\item {\bf User Interface User}
-			\begin{itemize}
-			\item {\bf Report}
-			\item {\bf Safe Map}
-			\item {\bf Statistics}
-			\item {\bf User Settings}
+			\item {\bf Safe Map} \\
+			The Safe Map tab is the second tab of the application. The {\it User} can see the map of the city where is located. The streets are highlighted with different colours (red, yellow, green). Each one indicates the violation level of the highlighted street, as stated by the legend. So, the tab give the {\it User} the possibility to access information about streets' safety. Clicking the blue points distributed on the map, the {\it User} can see the reported violation with its data.
+			\begin{figure}[H]
+				\centering
+				\includegraphics[height=6.2cm]{Images/Interfaces/user_map.png}
+				\caption{Safe Map {\it User} interface}
+			\end{figure}
+			\item {\bf Statistics} \\
+			The Statistics tab is the third tab of the application. The {\it User} can see the statistics obtained by the notifications' data. The interface shows some examples, such as a violation risk index of the city, the most frequent violations, the average per week day and so on and so forth. These are some of the statistics that can be generated. Others can be created and added to the same interface. 
+			\begin{figure}[H]
+				\centering
+				\includegraphics[height=6.5cm]{Images/Interfaces/user_stats.png}
+				\caption{Statistics about violation {\it User} interface}
+			\end{figure}
+			\item {\bf User Settings} \\
+			The User settings tab is the fourth tab of the application. It allows the {\it User} to manage personal data associated with the account. He may modify the password, name and birthdate but e-mail and fiscal code can't be changed because they are the identifiers for the {\it User}. The interface shows all the information in a list view that can be changed anytime by the {\it User}. If there's a change the {\it System} notifies the {\it User} to check the change.
+			\begin{figure}[H]
+				\centering
+				\includegraphics[height=6.2cm]{Images/Interfaces/user_settings.png}
+				\caption{Settings {\it User} interface}
+			\end{figure}
 			\end{itemize}
 		\item {\bf User Interface Authority}
 			\begin{itemize}
-			\item {\bf Ticket}
-			\item {\bf Authority Map}
-			\item {\bf Interventions}
-			\item {\bf Statistics}
-			\item {\bf Authority Settings}
+			\item {\bf Ticket} \\
+			The Ticket tab is the first tab for the {\it Authority}. The {\it Authority} can see a violation that was notified by a {\it User} on the streets. {\it Authority} can verify the picture of the violation and see all the data regarding the violation type, vehicle and owner data with a map highlighting the street where the violation happened. The {\it Authority} can decide to validate the ticket or to refuse it if it's not a traffic law violation. The second interface shows that the ticket verification has been sent. 			
+			\begin{figure}[H]
+				\centering
+			\begin{subfigure}{.4\textwidth}
+				\centering
+				\includegraphics[height=6.2cm]{Images/Interfaces/auth_ticket.png}
+				\caption{Ticket verification}
+			\end{subfigure}
+			\begin{subfigure}{.4\textwidth}
+				\centering
+				\includegraphics[height=6.2cm]{Images/Interfaces/auth_ticket_done.png}
+				\caption{Ticket verification completed}
+			\end{subfigure}
+			\caption{Ticket Verification {\it Authority} Interface}
+			\end{figure}
+			\item {\bf Interventions} \\
+			The Interventions is the second tab of the application. The {\it Authority} can access all the interventions suggested by {\it SafeStreets} to improve the streets' security. The {\it Authority} can select the city, see the interventions as a list with the street and a brief motivation of the suggestion. The switch button let the {\it Authority}  advise the {\it Municipality} if the {\it System} suggestion is feasible or not.
+			\begin{figure}[H]
+				\centering
+				\includegraphics[height=6.2cm]{Images/Interfaces/auth_interv.png}
+				\caption{Interventions {\it Authority} interface}
+			\end{figure}
+			\item {\bf Authority Map} \\
+			The {\it Authority} Map tab is the third tab of the application. The {\it Authority} can see the map of the city where is located. The streets are highlighted with different colours (red, yellow, green). Each one indicates the violation level of the highlighted street, as stated by the legend. So, the tab give the {\it Authority} the possibility to access information about streets' safety. Clicking the blue points distributed on the map, the {\it Authority} can see the reported violation with its data and the plate number.
+			\begin{figure}[H]
+				\centering
+				\includegraphics[height=6.2cm]{Images/Interfaces/auth_map.png}
+				\caption{Map {\it Authority} interface}
+			\end{figure}
+			\item {\bf Statistics} \\
+			The Statistics tab is the fourth tab of the application. The {\it Authority} can see the statistics obtained by the notifications' data. The interface shows some examples, such as a violation risk index of the city, the most frequent violations, the average per week day and so on and so forth. The {\it Authority} can see also the statistics derived from the tickets' data. These are just example of possible insights from data. Others can be generated and inserted in this tab. \\
+				\begin{figure}[H]
+				\centering
+				\includegraphics[height=6.5cm]{Images/Interfaces/auth_stats.png}
+				\caption{Statistics {\it Authority} interface}
+			\end{figure}
+			\item {\bf Authority Settings} \\
+			The {\it Authority} settings tab is the fifth tab of the application. It allows the {\it Authority} to manage personal data associated with the account. He may modify the password but e-mail and matricola code can't be changed because they are the identifiers given by the {\it Municipality}. The interface shows all the information in a list view.
+				\begin{figure}[H]
+				\centering
+				\includegraphics[height=6.5cm]{Images/Interfaces/auth_settings.png}
+				\caption{Settings {\it Authority} interface}
+			\end{figure}
 			\end{itemize}
 	\end{itemize}
 	\subsubsection{Hardware Interfaces}
@@ -386,10 +449,10 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 	\subsubsection{Scenarios}
 	
 		{\bf Scenario 1}\\
-		Marco lives next to San Siro stadium in Milan; he has been living here for 10 years now and he is used to the fact that if he needs the car in proximity and during the one or two matches that every week for most of the year are played at San Siro, he has to move it out the garage few hours in advance, park it somewhere else and most of the time even pay for the parking spot. That’s because when Inter or Milan play a game at the stadium people don’t mind using the passage at the exit of Marco’s building garages (same with every other building in the area) as it was a regular parking spot. It’s become an usual behavior because during the matches every resource of the municipality is busy providing security and traffic control right outside the stadium and along the streets that leads outside the area. It’s then very good news for Marco the announcement made by the Municipality of Milan regarding the new partnership with SafeStreets: by reporting the parking violations to the system he can make sure the offenders get sanctioned even if the authorities are busy in the exact moment of the violation, so that people will understand, ticket after ticket, to leave the car somewhere else or to go to the matches using public transportation.\\
-		
+		Marco lives next to San Siro stadium in Milan; he has been living here for 10 years now and he is used to the fact that if he needs the car in proximity and during the one or two matches that every week for most of the year are played at San Siro, he has to move it out the garage few hours in advance, park it somewhere else and most of the time even pay for the parking spot. That’s because when Inter or Milan play a game at the stadium people don’t mind using the passage at the exit of Marco’s building garages (same with every other building in the area) as it was a regular parking spot. It’s become an usual behavior because during the matches every resource of the municipality is busy providing security and traffic control right outside the stadium and along the streets that leads outside the area. It’s then very good news for Marco the announcement made by the Municipality of Milan regarding the new partnership with SafeStreets: by reporting the parking violations to the system he can make sure the offenders get sanctioned even if the authorities are busy in the exact moment of the violation, so that people will understand, ticket after ticket, to leave the car somewhere else or to go to the matches using public transportation.\\ \\
 		{\bf Scenario 2}\\
-		The Municipality of Pavia has to deal with an annually increasing number of car accidents causing injuries in the city center. The city council has tried to limit the traffic by setting up a limited traffic area in which most of the vehicles cannot enter in certain time slots, and that is pretty effective in reducing congestion and improving safety. However the accidents problem is just slightly affected by the measure, especially when traffic limitations are not in force. The municipality then partners with SafeStreets and start receiving violation notification from the System, which collects them from the citizens (Users). Furthermore the Municipality makes data of all past accidents available to the System and shares details of new accidents as well. In a very few months SafeStreets is able to identify a pattern, which is that half of all accidents occurring are located in just two spots, both of them intersections, not controlled by traffic lights, between two narrow streets; these are also locations of a lot of wild parking notifications, especially sidewalks parking and pedestrian crossing parking. Moreover, most of this accidents are collision between two cars and between one car and a bike in the middle of the intersections. SafeStreets informs the Municipality of the observation and suggest a low-effort and cheap solution: placing, in proximity of the intersections, dividing posts on the edge of the sidewalk, one every one or two meters, to make it impossible to leave the car without blocking the narrow street viability. That will certainly make it a lot easier to see vehicles coming from the other way.\\
+		The Municipality of Pavia has to deal with an annually increasing number of car accidents causing injuries in the city center. The city council has tried to limit the traffic by setting up a limited traffic area in which most of the vehicles cannot enter in certain time slots, and that is pretty effective in reducing congestion and improving safety. However the accidents problem is just slightly affected by the measure, especially when traffic limitations are not in force. The municipality then partners with SafeStreets and start receiving violation notification from the System, which collects them from the citizens (Users). Furthermore the Municipality makes data of all past accidents available to the System and shares details of new accidents as well. In a very few months SafeStreets is able to identify a pattern, which is that half of all accidents occurring are located in just two spots, both of them intersections, not controlled by traffic lights, between two narrow streets; these are also locations of a lot of wild parking notifications, especially sidewalks parking and pedestrian crossing parking. Moreover, most of this accidents are collision between two cars and between one car and a bike in the middle of the intersections. SafeStreets informs the Municipality of the observation and suggest a low-effort and cheap solution: placing, in proximity of the intersections, dividing posts on the edge of the sidewalk, one every one or two meters, to make it impossible to leave the car without blocking the narrow street viability. That will certainly make it a lot easier to see vehicles coming from the other way.\\ \\
+		{\bf Scenario 3}
 		
 	\subsubsection{Use Cases}
 	
@@ -552,11 +615,10 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 			{\bf Flow of events} &	\begin{enumerate}
 								  \item The {\it User} notices a traffic laws violation 
 								  \item The {\it User} decides to do something about it and accesses the {\it System}.
-								  \item The {\it User}, in the “Report a violation” tab, takes a picture of the violation and submits it to the System
+								  \item The {\it User}, in the “Report a violation” tab, takes a picture of the violation and submits it to the {\it System}.
 								  \item The {\it System} runs the plate recognition algorithm on the picture to integrate the data with the plate number.
 								  \item The {\it User} selects the type of violation from the drop down menu.
 								  \item The {\it User} submits the notification to the {\it System}.
-					
 								  \end{enumerate}	\\
 			\hline
 			{\bf Postconditions} & \begin{itemize}
