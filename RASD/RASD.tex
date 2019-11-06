@@ -18,7 +18,7 @@
 
 
 \title {{\Huge \it SafeStreets} \\ \Large Software Engineering 2 Project - Prof. Matteo Rossi}
-\author{Salvatore Fadda - \\Adriano Mundo - 944684 \\ Francesco Rota -
+\author{Salvatore Fadda - 944786\\Adriano Mundo - 944684 \\ Francesco Rota -
 		\\ \\ A.Y. 2019/2020 \\ Version 1.0}
 \date{November 10, 2019}
 
@@ -663,11 +663,195 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 			\hline
 			\caption{{\it User} report violation Use Case}
 			\end{longtable}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+	\begin{longtable}{| p{3 cm} | p{10.5 cm} |} 
+			\hline
+			{\bf ID} & UC5 \\
+			\hline
+			{\bf Description} & A {\it User} access to the {\it SafeMap}.\\
+			\hline
+			{\bf Actors} & {\it Logged-in User}\\
+			\hline
+			{\bf Preconditions} & 	
+			\begin{itemize}
+				\item The {\it User} downloaded the application on the smartphone.
+				\item The {\it User} has logged into his account in {\it SafeStreet}.
+			\end{itemize}
+			\\
+			\hline
+			{\bf Flow of events} &	
+			\begin{enumerate}
+				\item The {\it User} opens the application.
+				\item The {\it System} shows the interface to login or register.
+				\item The {\it User} clicks the user tab.
+				\item The {\it System} shows a form to fill with the credentials.
+				\item The {\it User} fills the form with e-mail and password. 
+				\item The {\it User} clicks the login button.
+				\item The {\it System} checks if the credentials are correct. 
+			\end{enumerate}
+			\\
+			\hline
+			{\bf Postconditions} & 
+			\begin{itemize}
+				\item The {\it User} is logged-in.
+				\item The {\it System} shows the {\it User} interface.
+			\end{itemize}
+			\\
+			\hline
+			{\bf Exceptions} & 	
+			\begin{itemize}
+				\item The {\it User} selects the {\it Authority} tab entering the wrong credentials. 
+				\item The {\it User} enters the wrong credentials.
+			\end{itemize}
+			The {\it System} shows an error message and the flow restarts from point 2.
+			\\ \\
+			\hline
+			\caption{{\it User} logs-in Use Case}
+			\end{longtable}
+			
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+	\begin{longtable}{| p{3 cm} | p{10.5 cm} |} 
+			\hline
+			{\bf ID} & UC6 \\
+			\hline
+			{\bf Description} & A {\it User} access to the {\it statistics}.\\
+			\hline
+			{\bf Actors} & {\it Logged-in User}\\
+			\hline
+			{\bf Preconditions} & 	
+			\begin{itemize}
+				\item The {\it User} downloaded the application on the smartphone.
+				\item The {\it User} has logged into his account in {\it SafeStreet}.
+			\end{itemize}
+			\\
+			\hline
+			{\bf Flow of events} &	
+			\begin{enumerate}
+				\item The {\it User} opens the application.
+				\item The {\it System} shows the interface to login or register.
+				\item The {\it User} clicks the user tab.
+				\item The {\it System} shows a form to fill with the credentials.
+				\item The {\it User} fills the form with e-mail and password. 
+				\item The {\it User} clicks the login button.
+				\item The {\it System} checks if the credentials are correct. 
+			\end{enumerate}
+			\\
+			\hline
+			{\bf Postconditions} & 
+			\begin{itemize}
+				\item The {\it User} is logged-in.
+				\item The {\it System} shows the {\it User} interface.
+			\end{itemize}
+			\\
+			\hline
+			{\bf Exceptions} & 	
+			\begin{itemize}
+				\item The {\it User} selects the {\it Authority} tab entering the wrong credentials. 
+				\item The {\it User} enters the wrong credentials.
+			\end{itemize}
+			The {\it System} shows an error message and the flow restarts from point 2.
+			\\ \\
+			\hline
+			\caption{{\it User} logs-in Use Case}
+			\end{longtable}
+			
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+	\begin{longtable}{| p{3 cm} | p{10.5 cm} |} 
+			\hline
+			{\bf ID} & UC7 \\
+			\hline
+			{\bf Description} & An {\it Authority} access to the {\it AuthorityMap}.\\
+			\hline
+			{\bf Actors} & {\it Logged-in Authority}\\
+			\hline
+			{\bf Preconditions} & 	
+			\begin{itemize}
+				\item The {\it Authority} downloaded the application on the smartphone.
+				\item The {\it Authority} has logged into his account in {\it SafeStreet}.
+			\end{itemize}
+			\\
+			\hline
+			{\bf Flow of events} &	
+			\begin{enumerate}
+				\item The {\it User} opens the application.
+				\item The {\it System} shows the interface to login or register.
+				\item The {\it User} clicks the user tab.
+				\item The {\it System} shows a form to fill with the credentials.
+				\item The {\it User} fills the form with e-mail and password. 
+				\item The {\it User} clicks the login button.
+				\item The {\it System} checks if the credentials are correct. 
+			\end{enumerate}
+			\\
+			\hline
+			{\bf Postconditions} & 
+			\begin{itemize}
+				\item The {\it User} is logged-in.
+				\item The {\it System} shows the {\it User} interface.
+			\end{itemize}
+			\\
+			\hline
+			{\bf Exceptions} & 	
+			\begin{itemize}
+				\item The {\it User} selects the {\it Authority} tab entering the wrong credentials. 
+				\item The {\it User} enters the wrong credentials.
+			\end{itemize}
+			The {\it System} shows an error message and the flow restarts from point 2.
+			\\ \\
+			\hline
+			\caption{{\it User} logs-in Use Case}
+			\end{longtable}
+			
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+	\begin{longtable}{| p{3 cm} | p{10.5 cm} |} 
+			\hline
+			{\bf ID} & UC8 \\
+			\hline
+			{\bf Description} & A {\it User} access to {\it statistics} and {\it ticket statisticks}.\\
+			\hline
+			{\bf Actors} & {\it Logged-in Authority}\\
+			\hline
+			{\bf Preconditions} & 	
+			\begin{itemize}
+				\item The {\it Authority} downloaded the application on the smartphone.
+				\item The {\it Authority} has logged into his account in {\it SafeStreet}.
+			\end{itemize}
+			\\
+			\hline
+			{\bf Flow of events} &	
+			\begin{enumerate}
+				\item The {\it User} opens the application.
+				\item The {\it System} shows the interface to login or register.
+				\item The {\it User} clicks the user tab.
+				\item The {\it System} shows a form to fill with the credentials.
+				\item The {\it User} fills the form with e-mail and password. 
+				\item The {\it User} clicks the login button.
+				\item The {\it System} checks if the credentials are correct. 
+			\end{enumerate}
+			\\
+			\hline
+			{\bf Postconditions} & 
+			\begin{itemize}
+				\item The {\it User} is logged-in.
+				\item The {\it System} shows the {\it User} interface.
+			\end{itemize}
+			\\
+			\hline
+			{\bf Exceptions} & 	
+			\begin{itemize}
+				\item The {\it User} selects the {\it Authority} tab entering the wrong credentials. 
+				\item The {\it User} enters the wrong credentials.
+			\end{itemize}
+			The {\it System} shows an error message and the flow restarts from point 2.
+			\\ \\
+			\hline
+			\caption{{\it User} logs-in Use Case}
+			\end{longtable}
 			
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%				
 	\begin{longtable}{| p{3 cm} | p{10.5 cm} |} 
 			\hline
-			{\bf ID} & UC7 \\
+			{\bf ID} & UC9 \\
 			\hline
 			{\bf Description} & The {\it Authority} converts the violation notification into a ticket \\
 			\hline
@@ -701,7 +885,7 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%							
 	\begin{longtable}{| p{3 cm} | p{10.5cm} |} 
 			\hline
-			{\bf ID} & UC9 \\
+			{\bf ID} & UC10 \\
 			\hline
 			{\bf Description} & The {\it Authority} views the suggestions on possible interventions on the viability given by the {\it System}. \\
 			\hline

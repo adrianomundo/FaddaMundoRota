@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2019.11.6)  6 NOV 2019 19:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2019.11.6)  6 NOV 2019 20:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -619,29 +619,65 @@ Underfull \vbox (badness 10000) detected at line 665
  []
 
 [31]
-Overfull \hbox (63.1122pt too wide) in alignment at lines 668--699
+Overfull \hbox (63.1122pt too wide) in alignment at lines 668--711
  [] [] 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 699
+Underfull \vbox (badness 10000) detected at line 711
  []
 
 [32]
-Overfull \hbox (63.1122pt too wide) in alignment at lines 702--730
+Overfull \hbox (63.1122pt too wide) in alignment at lines 714--757
  [] [] 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 730
+Underfull \vbox (badness 10000) detected at line 757
  []
 
-[33] [34] [35] [36] [37] (./RASD.aux) ) 
+[33]
+Overfull \hbox (63.1122pt too wide) in alignment at lines 760--803
+ [] [] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 803
+ []
+
+[34]
+Overfull \hbox (63.1122pt too wide) in alignment at lines 806--849
+ [] [] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 849
+ []
+
+[35]
+Overfull \hbox (63.1122pt too wide) in alignment at lines 852--883
+ [] [] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 883
+ []
+
+[36]
+Overfull \hbox (63.1122pt too wide) in alignment at lines 886--914
+ [] [] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 914
+ []
+
+[37] [38] [39] [40] [41] (./RASD.aux) ) 
 Here is how much of TeX's memory you used:
- 2928 strings out of 494510
- 47957 string characters out of 6176236
- 120057 words of memory out of 5000000
- 6559 multiletter control sequences out of 15000+600000
+ 2932 strings out of 494510
+ 47979 string characters out of 6176236
+ 119057 words of memory out of 5000000
+ 6563 multiletter control sequences out of 15000+600000
  9531 words of font info for 33 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  42i,9n,46p,1657b,571s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -654,10 +690,10 @@ cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9
 /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/s
 hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
-Output written on RASD.pdf (37 pages, 3078224 bytes).
+Output written on RASD.pdf (41 pages, 3084053 bytes).
 PDF statistics:
- 207 PDF objects out of 1000 (max. 8388607)
- 113 compressed objects within 2 object streams
+ 219 PDF objects out of 1000 (max. 8388607)
+ 121 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  111 words of extra memory for PDF output out of 10000 (max. 10000000)
 
