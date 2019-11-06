@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.10.30)  6 NOV 2019 23:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.10.30)  6 NOV 2019 23:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -233,124 +233,124 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 51.
 
-Underfull \hbox (badness 10000) in paragraph at lines 53--57
+Underfull \hbox (badness 10000) in paragraph at lines 54--58
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 57--61
+Underfull \hbox (badness 10000) in paragraph at lines 58--62
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--81
+Underfull \hbox (badness 10000) in paragraph at lines 80--82
 
  []
 
 [5] [6] [7]
-Overfull \hbox (32.13979pt too wide) in paragraph at lines 174--175
+Overfull \hbox (32.13979pt too wide) in paragraph at lines 175--176
 []\OT1/cmr/m/n/10 Alloy Of-fi-cial Doc-u-men-ta-tion: http://alloy.lcs.mit.edu/
 alloy/documentation.html 
  []
 
 [8] [9]
-Underfull \hbox (badness 10000) in paragraph at lines 191--229
+Underfull \hbox (badness 10000) in paragraph at lines 192--230
 
  []
 
 
-Overfull \hbox (11.03017pt too wide) in paragraph at lines 191--229
+Overfull \hbox (11.03017pt too wide) in paragraph at lines 192--230
 \OT1/cmr/bx/n/10 A generic traf-fic Vi-o-la-tion oc-curs on the streets un-der 
 the []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 191--229
+Underfull \hbox (badness 10000) in paragraph at lines 192--230
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 191--229
+Underfull \hbox (badness 10000) in paragraph at lines 192--230
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 191--229
+Underfull \hbox (badness 10000) in paragraph at lines 192--230
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 191--229
+Underfull \hbox (badness 10000) in paragraph at lines 192--230
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 191--229
+Underfull \hbox (badness 10000) in paragraph at lines 192--230
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 191--229
+Underfull \hbox (badness 10000) in paragraph at lines 192--230
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 191--229
+Underfull \hbox (badness 10000) in paragraph at lines 192--230
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 191--229
+Underfull \hbox (badness 10000) in paragraph at lines 192--230
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 191--229
+Underfull \hbox (badness 10000) in paragraph at lines 192--230
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 191--229
+Underfull \hbox (badness 10000) in paragraph at lines 192--230
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 191--229
+Underfull \hbox (badness 10000) in paragraph at lines 192--230
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 191--229
+Underfull \hbox (badness 10000) in paragraph at lines 192--230
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 191--229
+Underfull \hbox (badness 10000) in paragraph at lines 192--230
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 191--229
+Underfull \hbox (badness 10000) in paragraph at lines 192--230
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 191--229
+Underfull \hbox (badness 10000) in paragraph at lines 192--230
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 191--229
+Underfull \hbox (badness 10000) in paragraph at lines 192--230
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 191--229
+Underfull \hbox (badness 10000) in paragraph at lines 192--230
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 191--229
+Underfull \hbox (badness 10000) in paragraph at lines 192--230
 
  []
 
@@ -359,10 +359,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 191--229
 File: Images/Diagrams/Class_Diagram.png Graphic file (type png)
 <use Images/Diagrams/Class_Diagram.png>
 Package pdftex.def Info: Images/Diagrams/Class_Diagram.png  used on input line 
-234.
+235.
 (pdftex.def)             Requested size: 405.514pt x 456.70514pt.
 
-Overfull \hbox (60.514pt too wide) in paragraph at lines 234--235
+Overfull \hbox (60.514pt too wide) in paragraph at lines 235--236
  [][] 
  []
 
@@ -371,7 +371,7 @@ Overfull \hbox (60.514pt too wide) in paragraph at lines 234--235
 File: Images/Diagrams/ViolationStateChart.png Graphic file (type png)
 <use Images/Diagrams/ViolationStateChart.png>
 Package pdftex.def Info: Images/Diagrams/ViolationStateChart.png  used on input
- line 241.
+ line 242.
 (pdftex.def)             Requested size: 317.58434pt x 250.13278pt.
  [13 <./Images/Diagrams/Class_Diagram.png>] [14 <./Images/Diagrams/ViolationSta
 teChart.png>]
@@ -379,55 +379,55 @@ teChart.png>]
 File: Images/Diagrams/TicketStateChart.png Graphic file (type png)
 <use Images/Diagrams/TicketStateChart.png>
 Package pdftex.def Info: Images/Diagrams/TicketStateChart.png  used on input li
-ne 247.
+ne 248.
 (pdftex.def)             Requested size: 367.97757pt x 215.0049pt.
 
-Overfull \hbox (22.97757pt too wide) in paragraph at lines 247--248
+Overfull \hbox (22.97757pt too wide) in paragraph at lines 248--249
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 254--259
+Underfull \hbox (badness 10000) in paragraph at lines 255--260
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 254--259
+Underfull \hbox (badness 10000) in paragraph at lines 255--260
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 254--259
+Underfull \hbox (badness 10000) in paragraph at lines 255--260
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 259--268
+Underfull \hbox (badness 10000) in paragraph at lines 260--269
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 259--268
+Underfull \hbox (badness 10000) in paragraph at lines 260--269
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 259--268
+Underfull \hbox (badness 10000) in paragraph at lines 260--269
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 259--268
+Underfull \hbox (badness 10000) in paragraph at lines 260--269
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 259--268
+Underfull \hbox (badness 10000) in paragraph at lines 260--269
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 259--268
+Underfull \hbox (badness 10000) in paragraph at lines 260--269
 
  []
 
@@ -435,36 +435,36 @@ Underfull \hbox (badness 10000) in paragraph at lines 259--268
 <./Images/safestreets_logo.png, id=75, 150.5625pt x 150.5625pt>
 File: ./Images/safestreets_logo.png Graphic file (type png)
 <use ./Images/safestreets_logo.png>
-Package pdftex.def Info: ./Images/safestreets_logo.png  used on input line 325.
+Package pdftex.def Info: ./Images/safestreets_logo.png  used on input line 326.
 
 (pdftex.def)             Requested size: 56.90648pt x 56.9055pt.
 <Images/Interfaces/login_user.png, id=76, 443.6575pt x 878.28125pt>
 File: Images/Interfaces/login_user.png Graphic file (type png)
 <use Images/Interfaces/login_user.png>
 Package pdftex.def Info: Images/Interfaces/login_user.png  used on input line 3
-34.
+35.
 (pdftex.def)             Requested size: 89.10902pt x 176.407pt.
 <Images/Interfaces/login_auth.png, id=77, 443.6575pt x 878.28125pt>
 File: Images/Interfaces/login_auth.png Graphic file (type png)
 <use Images/Interfaces/login_auth.png>
 Package pdftex.def Info: Images/Interfaces/login_auth.png  used on input line 3
-39.
+40.
 (pdftex.def)             Requested size: 89.10902pt x 176.407pt.
  [19 <./Images/safestreets_logo.png> <./Images/Interfaces/login_user.png> <./Im
 ages/Interfaces/login_auth.png>]
 <Images/Interfaces/signup.png, id=87, 443.6575pt x 849.1725pt>
 File: Images/Interfaces/signup.png Graphic file (type png)
 <use Images/Interfaces/signup.png>
-Package pdftex.def Info: Images/Interfaces/signup.png  used on input line 352.
+Package pdftex.def Info: Images/Interfaces/signup.png  used on input line 353.
 (pdftex.def)             Requested size: 92.16214pt x 176.407pt.
 <Images/Interfaces/signup_2.png, id=88, 443.6575pt x 878.28125pt>
 File: Images/Interfaces/signup_2.png Graphic file (type png)
 <use Images/Interfaces/signup_2.png>
-Package pdftex.def Info: Images/Interfaces/signup_2.png  used on input line 357
+Package pdftex.def Info: Images/Interfaces/signup_2.png  used on input line 358
 .
 (pdftex.def)             Requested size: 89.10902pt x 176.407pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 346--361
+Underfull \hbox (badness 10000) in paragraph at lines 347--362
 
  []
 
@@ -472,26 +472,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 346--361
 File: Images/Interfaces/user_report.png Graphic file (type png)
 <use Images/Interfaces/user_report.png>
 Package pdftex.def Info: Images/Interfaces/user_report.png  used on input line 
-371.
+372.
 (pdftex.def)             Requested size: 89.10902pt x 176.407pt.
 <Images/Interfaces/user_report_done.png, id=90, 462.72874pt x 879.285pt>
 File: Images/Interfaces/user_report_done.png Graphic file (type png)
 <use Images/Interfaces/user_report_done.png>
 Package pdftex.def Info: Images/Interfaces/user_report_done.png  used on input 
-line 376.
+line 377.
 (pdftex.def)             Requested size: 92.83359pt x 176.407pt.
 [20 <./Images/Interfaces/signup.png> <./Images/Interfaces/signup_2.png>]
 <Images/Interfaces/user_map.png, id=96, 443.6575pt x 878.28125pt>
 File: Images/Interfaces/user_map.png Graphic file (type png)
 <use Images/Interfaces/user_map.png>
-Package pdftex.def Info: Images/Interfaces/user_map.png  used on input line 386
+Package pdftex.def Info: Images/Interfaces/user_map.png  used on input line 387
 .
 (pdftex.def)             Requested size: 89.10902pt x 176.407pt.
 <Images/Interfaces/user_stats.png, id=97, 443.6575pt x 878.28125pt>
 File: Images/Interfaces/user_stats.png Graphic file (type png)
 <use Images/Interfaces/user_stats.png>
 Package pdftex.def Info: Images/Interfaces/user_stats.png  used on input line 3
-93.
+94.
 (pdftex.def)             Requested size: 93.4213pt x 184.9429pt.
 
 [21 <./Images/Interfaces/user_report.png> <./Images/Interfaces/user_report_done
@@ -500,33 +500,33 @@ Package pdftex.def Info: Images/Interfaces/user_stats.png  used on input line 3
 File: Images/Interfaces/user_settings.png Graphic file (type png)
 <use Images/Interfaces/user_settings.png>
 Package pdftex.def Info: Images/Interfaces/user_settings.png  used on input lin
-e 400.
+e 401.
 (pdftex.def)             Requested size: 89.10902pt x 176.407pt.
  [22 <./Images/Interfaces/user_stats.png>]
 <Images/Interfaces/auth_ticket.png, id=109, 454.69875pt x 879.285pt>
 File: Images/Interfaces/auth_ticket.png Graphic file (type png)
 <use Images/Interfaces/auth_ticket.png>
 Package pdftex.def Info: Images/Interfaces/auth_ticket.png  used on input line 
-412.
+413.
 (pdftex.def)             Requested size: 91.2226pt x 176.407pt.
 <Images/Interfaces/auth_ticket_done.png, id=110, 454.69875pt x 879.285pt>
 File: Images/Interfaces/auth_ticket_done.png Graphic file (type png)
 <use Images/Interfaces/auth_ticket_done.png>
 Package pdftex.def Info: Images/Interfaces/auth_ticket_done.png  used on input 
-line 417.
+line 418.
 (pdftex.def)             Requested size: 91.2226pt x 176.407pt.
 <Images/Interfaces/auth_interv.png, id=111, 443.6575pt x 878.28125pt>
 File: Images/Interfaces/auth_interv.png Graphic file (type png)
 <use Images/Interfaces/auth_interv.png>
 Package pdftex.def Info: Images/Interfaces/auth_interv.png  used on input line 
-426.
+427.
 (pdftex.def)             Requested size: 89.10902pt x 176.407pt.
  [23 <./Images/Interfaces/user_settings.png> <./Images/Interfaces/auth_ticket.p
 ng> <./Images/Interfaces/auth_ticket_done.png>]
 <Images/Interfaces/auth_map.png, id=118, 443.6575pt x 878.28125pt>
 File: Images/Interfaces/auth_map.png Graphic file (type png)
 <use Images/Interfaces/auth_map.png>
-Package pdftex.def Info: Images/Interfaces/auth_map.png  used on input line 433
+Package pdftex.def Info: Images/Interfaces/auth_map.png  used on input line 434
 .
 (pdftex.def)             Requested size: 89.10902pt x 176.407pt.
  [24 <./Images/Interfaces/auth_interv.png>]
@@ -534,10 +534,10 @@ Package pdftex.def Info: Images/Interfaces/auth_map.png  used on input line 433
 File: Images/Interfaces/auth_stats.png Graphic file (type png)
 <use Images/Interfaces/auth_stats.png>
 Package pdftex.def Info: Images/Interfaces/auth_stats.png  used on input line 4
-40.
+41.
 (pdftex.def)             Requested size: 99.49979pt x 184.9429pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 436--442
+Underfull \hbox (badness 10000) in paragraph at lines 437--443
 
  []
 
@@ -545,7 +545,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 436--442
 File: Images/Interfaces/auth_settings.png Graphic file (type png)
 <use Images/Interfaces/auth_settings.png>
 Package pdftex.def Info: Images/Interfaces/auth_settings.png  used on input lin
-e 447.
+e 448.
 (pdftex.def)             Requested size: 93.4213pt x 184.9429pt.
 [25 <./Images/Interfaces/auth_map.png> <./Images/Interfaces/auth_stats.png>]
 [26 <./Images/Interfaces/auth_settings.png>]
@@ -553,10 +553,10 @@ e 447.
 File: Images/Diagrams/UseCaseUser.png Graphic file (type png)
 <use Images/Diagrams/UseCaseUser.png>
 Package pdftex.def Info: Images/Diagrams/UseCaseUser.png  used on input line 47
-3.
+4.
 (pdftex.def)             Requested size: 384.93718pt x 136.50966pt.
 
-Overfull \hbox (39.93718pt too wide) in paragraph at lines 473--474
+Overfull \hbox (39.93718pt too wide) in paragraph at lines 474--475
  [][] 
  []
 
@@ -564,119 +564,119 @@ Overfull \hbox (39.93718pt too wide) in paragraph at lines 473--474
 File: Images/Diagrams/UseCaseAuthority.png Graphic file (type png)
 <use Images/Diagrams/UseCaseAuthority.png>
 Package pdftex.def Info: Images/Diagrams/UseCaseAuthority.png  used on input li
-ne 478.
+ne 479.
 (pdftex.def)             Requested size: 395.97841pt x 211.79073pt.
 
-Overfull \hbox (50.97841pt too wide) in paragraph at lines 478--479
+Overfull \hbox (50.97841pt too wide) in paragraph at lines 479--480
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 484--489
+Underfull \hbox (badness 10000) in paragraph at lines 485--490
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 484--489
+Underfull \hbox (badness 10000) in paragraph at lines 485--490
 
  []
 
 [27 <./Images/Diagrams/UseCaseUser.png> <./Images/Diagrams/UseCaseAuthority.png
 >]
-Overfull \hbox (63.1122pt too wide) in alignment at lines 493--539
+Overfull \hbox (63.1122pt too wide) in alignment at lines 494--540
  [] [] 
  []
 
 [28]
-Underfull \vbox (badness 10000) detected at line 539
+Underfull \vbox (badness 10000) detected at line 540
  []
 
 [29]
-Overfull \hbox (63.1122pt too wide) in alignment at lines 542--585
+Overfull \hbox (63.1122pt too wide) in alignment at lines 543--586
  [] [] 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 585
+Underfull \vbox (badness 10000) detected at line 586
  []
 
 
-Overfull \hbox (63.1122pt too wide) in alignment at lines 588--631
+Overfull \hbox (63.1122pt too wide) in alignment at lines 589--632
  [] [] 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 631
+Underfull \vbox (badness 10000) detected at line 632
  []
 
 [30]
-Overfull \hbox (63.1122pt too wide) in alignment at lines 634--665
+Overfull \hbox (63.1122pt too wide) in alignment at lines 635--666
  [] [] 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 665
+Underfull \vbox (badness 10000) detected at line 666
  []
 
 [31]
-Overfull \hbox (63.1122pt too wide) in alignment at lines 668--711
+Overfull \hbox (63.1122pt too wide) in alignment at lines 669--712
  [] [] 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 711
+Underfull \vbox (badness 10000) detected at line 712
  []
 
 [32]
-Overfull \hbox (63.1122pt too wide) in alignment at lines 714--757
+Overfull \hbox (63.1122pt too wide) in alignment at lines 715--758
  [] [] 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 757
+Underfull \vbox (badness 10000) detected at line 758
  []
 
 [33]
-Overfull \hbox (63.1122pt too wide) in alignment at lines 760--803
+Overfull \hbox (63.1122pt too wide) in alignment at lines 761--804
  [] [] 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 803
+Underfull \vbox (badness 10000) detected at line 804
  []
 
 [34]
-Overfull \hbox (63.1122pt too wide) in alignment at lines 806--849
+Overfull \hbox (63.1122pt too wide) in alignment at lines 807--850
  [] [] 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 849
+Underfull \vbox (badness 10000) detected at line 850
  []
 
 [35]
-Overfull \hbox (63.1122pt too wide) in alignment at lines 852--885
+Overfull \hbox (63.1122pt too wide) in alignment at lines 853--886
  [] [] 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 885
+Underfull \vbox (badness 10000) detected at line 886
  []
 
 [36]
-Overfull \hbox (63.1122pt too wide) in alignment at lines 888--916
+Overfull \hbox (63.1122pt too wide) in alignment at lines 889--917
  [] [] 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 916
+Underfull \vbox (badness 10000) detected at line 917
  []
 
 [37] [38] [39] [40] [41] (./RASD.aux) ) 
 Here is how much of TeX's memory you used:
  2932 strings out of 492616
  48297 string characters out of 6129480
- 123963 words of memory out of 5000000
+ 124963 words of memory out of 5000000
  6806 multiletter control sequences out of 15000+600000
  9531 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -691,7 +691,7 @@ ublic/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmti10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmti12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmti9.pfb>
-Output written on RASD.pdf (41 pages, 3084151 bytes).
+Output written on RASD.pdf (41 pages, 3084207 bytes).
 PDF statistics:
  219 PDF objects out of 1000 (max. 8388607)
  121 compressed objects within 2 object streams
