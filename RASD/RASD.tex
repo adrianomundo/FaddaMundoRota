@@ -477,10 +477,11 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 			\begin{enumerate}
 				\item The {\it Guest} opens the application.
 				\item The {\it System} shows the interface to login or register.
-				\item The {\it Guest} clicks the Register button.
+				\item The {\it Guest} clicks the register button.
 				\item The {\it System} shows a form to fill with the user personal information: username, e-mail, password, fiscal code that will be used for future logins.
 				\item The {\it Guest} fills the form with all the information.
 				\item The {\it System} checks if all the informations are correct.
+				\item The {\it System} shows an interface to confirm the account is created. 
 				\item The {\it System} sends an e-mail to the {\it Guest} to confirm the account.
 				\item The {\it Guest} receives the e-mail and confirms the account.
 			\end{enumerate}
@@ -496,7 +497,7 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 			{\bf Exceptions} & 	
 			\begin{itemize}
 				\item The {\it Guest} enters an e-mail that's associated with an existing account.
-				\item The {\it Guest} enters a Fiscal Code that's associated with an existing account. 
+				\item The {\it Guest} enters a fiscal code that's associated with an existing account. 
 			\end{itemize}
 			The {\it System} shows an error message and the the flow restarts from point 4.
 			\\ \\
@@ -524,11 +525,10 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 			\begin{enumerate}
 				\item The {\it User} opens the application.
 				\item The {\it System} shows the interface to login or register.
-				\item The {\it User} clicks the Login button.
-				\item The {\it System} asks to decide between {\it User} and {\it Authority}.
-				\item The {\it User} clicks the {\it User} button. 
+				\item The {\it User} clicks the user tab.
 				\item The {\it System} shows a form to fill with the credentials.
 				\item The {\it User} fills the form with e-mail and password. 
+				\item The {\it User} clicks the login button.
 				\item The {\it System} checks if the credentials are correct. 
 			\end{enumerate}
 			\\
@@ -542,10 +542,10 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 			\hline
 			{\bf Exceptions} & 	
 			\begin{itemize}
-				\item The {\it User} selects the {\it Authority} button entering the wrong credentials. 
+				\item The {\it User} selects the {\it Authority} tab entering the wrong credentials. 
 				\item The {\it User} enters the wrong credentials.
 			\end{itemize}
-			The {\it System} shows an error message and the flow restarts from point 4.
+			The {\it System} shows an error message and the flow restarts from point 2.
 			\\ \\
 			\hline
 			\caption{{\it User} logs-in Use Case}
@@ -570,13 +570,12 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 			{\bf Flow of events} &	
 			\begin{enumerate}
 				\item The {\it Authority} opens the application.
-				\item The {\it System} show the interface to login or register.
-				\item The {\it Authority} clicks the Login button.
-				\item The {\it System} asks to decide between {\it User} and {\it Authority}.
-				\item The {\it Authority} clicks the {\it Authority} button.
+				\item The {\it System} shows the interface to login or register.
+				\item The {\it Authority} clicks the authority tab.
 				\item The {\it System} shows a form to fill with the credentials.
-				\item The {\it Authority} fills the form with matricola code and password.
-				\item The {\it System} checks if the credentials are correct.
+				\item The {\it Authority} fills the form with matricola and password. 
+				\item The {\it Authority} clicks the login button.
+				\item The {\it System} checks if the credentials are correct. 
 			\end{enumerate}
 			\\
 			\hline
@@ -589,10 +588,10 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 			\hline
 			{\bf Exceptions} & 	
 			\begin{itemize}
-				\item The {\it Authority} selects the {\it User} button entering the wrong credentials.
+				\item The {\it Authority} selects the {\it User} tab entering the wrong credentials.
 				\item The {\it Authority} enters the wrong credentials.
 			\end{itemize}
-			The {\it System} shows an error message and the flow restarts from point 4.
+			The {\it System} shows an error message and the flow restarts from point 2.
 			\\ \\
 			\hline
 			\caption{{\it Authority} logs-in Use Case}
