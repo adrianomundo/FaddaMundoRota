@@ -153,7 +153,6 @@ With regards to {\it {\it Advanced Function 1}}, we identify:
 				\item {\bf MP:} Machine Phenomena
 			\end{itemize}
 			
-
 	\subsection{Revision History}
 	
 	\begin{table}[ht]
@@ -683,24 +682,29 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 			\hline
 			{\bf Flow of events} &	
 			\begin{enumerate}
-				\item The {\it User} selects the {\it SafeMap} tab in the application.
-				\item The {\it System} shows the {\it SafeMap}.
-				\item The {\it User} clicks on a {\it SafeMap}'s point to see more details. 
-				\item The {\it System} shows the user violations of the selected zone. 
+				\item The {\it User} opens the application.
+				\item The {\it System} shows the interface to login or register.
+				\item The {\it User} clicks the user tab.
+				\item The {\it System} shows a form to fill with the credentials.
+				\item The {\it User} fills the form with e-mail and password. 
+				\item The {\it User} clicks the login button.
+				\item The {\it System} checks if the credentials are correct. 
 			\end{enumerate}
 			\\
 			\hline
 			{\bf Postconditions} & 
 			\begin{itemize}
-				\item The {\it User} can see all violations in the selected point of the {\it SafeMap}.
+				\item The {\it User} is logged-in.
+				\item The {\it System} shows the {\it User} interface.
 			\end{itemize}
 			\\
 			\hline
 			{\bf Exceptions} & 	
 			\begin{itemize}
-				\item The {\it User} selects a point of the map that doesn't contain violations.
-				\item The {\it System} shows a message to the user asking him that there aren't violations in the zone.
+				\item The {\it User} selects the {\it Authority} tab entering the wrong credentials. 
+				\item The {\it User} enters the wrong credentials.
 			\end{itemize}
+			The {\it System} shows an error message and the flow restarts from point 2.
 			\\ \\
 			\hline
 			\caption{{\it User} logs-in Use Case}
@@ -724,20 +728,29 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 			\hline
 			{\bf Flow of events} &	
 			\begin{enumerate}
-				\item The {\it User} selects the {\it statistics} tab in the application.
-				\item The {\it System} shows the {\it statistics}.
-				\item The {\it User} clicks on a specific {\it statistic} to see more details. 
-				\item The {\it System} shows the user all the possible details about the selected {\it statistic}. 
+				\item The {\it User} opens the application.
+				\item The {\it System} shows the interface to login or register.
+				\item The {\it User} clicks the user tab.
+				\item The {\it System} shows a form to fill with the credentials.
+				\item The {\it User} fills the form with e-mail and password. 
+				\item The {\it User} clicks the login button.
+				\item The {\it System} checks if the credentials are correct. 
 			\end{enumerate}
 			\\
 			\hline
 			{\bf Postconditions} & 
 			\begin{itemize}
-				\item The {\it User} can see all details about a certain {\it statistic}.
+				\item The {\it User} is logged-in.
+				\item The {\it System} shows the {\it User} interface.
 			\end{itemize}
 			\\
 			\hline
 			{\bf Exceptions} & 	
+			\begin{itemize}
+				\item The {\it User} selects the {\it Authority} tab entering the wrong credentials. 
+				\item The {\it User} enters the wrong credentials.
+			\end{itemize}
+			The {\it System} shows an error message and the flow restarts from point 2.
 			\\ \\
 			\hline
 			\caption{{\it User} logs-in Use Case}
@@ -761,24 +774,29 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 			\hline
 			{\bf Flow of events} &	
 			\begin{enumerate}
-				\item The {\it Authority} selects the {\it AuthorityMap} tab in the application.
-				\item The {\it System} shows the {\it AuthorityMap}.
-				\item The {\it Authority} clicks on a {\it AuthorityMap}'s point to see more details. 
-				\item The {\it System} shows the authority violations and accidents of the selected zone. 
+				\item The {\it User} opens the application.
+				\item The {\it System} shows the interface to login or register.
+				\item The {\it User} clicks the user tab.
+				\item The {\it System} shows a form to fill with the credentials.
+				\item The {\it User} fills the form with e-mail and password. 
+				\item The {\it User} clicks the login button.
+				\item The {\it System} checks if the credentials are correct. 
 			\end{enumerate}
 			\\
 			\hline
 			{\bf Postconditions} & 
 			\begin{itemize}
-				\item The {\it Authority} can see all violations and accidents in the selected point of the {\it AuthorityMap}.
+				\item The {\it User} is logged-in.
+				\item The {\it System} shows the {\it User} interface.
 			\end{itemize}
 			\\
 			\hline
 			{\bf Exceptions} & 	
 			\begin{itemize}
-				\item The {\it Authority} selects a point of the map that doesn't contain violations or accidents.
-				\item The {\it System} shows a message to the authority asking him that there aren't violations or accidetns in the zone.
+				\item The {\it User} selects the {\it Authority} tab entering the wrong credentials. 
+				\item The {\it User} enters the wrong credentials.
 			\end{itemize}
+			The {\it System} shows an error message and the flow restarts from point 2.
 			\\ \\
 			\hline
 			\caption{{\it User} logs-in Use Case}
@@ -802,20 +820,29 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 			\hline
 			{\bf Flow of events} &	
 			\begin{enumerate}
-				\item The {\it Authority} selects the {\it statistics} tab in the application.
-				\item The {\it System} shows the {\it statistics} and {\it ticket statistics}.
-				\item The {\it Authority} clicks on a specific {\it statistic} to see more details. 
-				\item The {\it System} shows all the possible details about the selected {\it statistic} or {\it ticket statisitc}. 
+				\item The {\it User} opens the application.
+				\item The {\it System} shows the interface to login or register.
+				\item The {\it User} clicks the user tab.
+				\item The {\it System} shows a form to fill with the credentials.
+				\item The {\it User} fills the form with e-mail and password. 
+				\item The {\it User} clicks the login button.
+				\item The {\it System} checks if the credentials are correct. 
 			\end{enumerate}
 			\\
 			\hline
 			{\bf Postconditions} & 
 			\begin{itemize}
-				\item The {\it Authority} can see all details about a certain {\it statistic} or {\it ticket statistic}
+				\item The {\it User} is logged-in.
+				\item The {\it System} shows the {\it User} interface.
 			\end{itemize}
 			\\
 			\hline
 			{\bf Exceptions} & 	
+			\begin{itemize}
+				\item The {\it User} selects the {\it Authority} tab entering the wrong credentials. 
+				\item The {\it User} enters the wrong credentials.
+			\end{itemize}
+			The {\it System} shows an error message and the flow restarts from point 2.
 			\\ \\
 			\hline
 			\caption{{\it User} logs-in Use Case}
