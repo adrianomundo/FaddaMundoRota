@@ -1,7 +1,7 @@
 
 \documentclass {article}
 
-\usepackage {graphicx}
+\usepackage{graphicx}
 \usepackage{longtable}
 \usepackage{subcaption}
 \usepackage{caption}
@@ -488,7 +488,6 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 		{\bf Scenario 3}
 		
 	\subsubsection{Use Cases}
-	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\begin{longtable}{| p{3 cm} | p{10.5 cm} |} 
 			\hline
@@ -533,7 +532,7 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 				\item The {\it Guest} enters a fiscal code that's associated with an existing account. 
 			\end{itemize}
 			The {\it System} shows an error message and the the flow restarts from point 4.
-			\\ \\
+			\\
 			\hline
 			\caption{Create a {\it User} account Use Case}
 			\end{longtable}
@@ -578,8 +577,7 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 				\item The {\it User} selects the {\it Authority} tab entering the wrong credentials. 
 				\item The {\it User} enters the wrong credentials.
 			\end{itemize}
-			The {\it System} shows an error message and the flow restarts from point 2.
-			\\ \\
+			The {\it System} shows an error message and the flow restarts from point 2. \\
 			\hline
 			\caption{{\it User} logs-in Use Case}
 			\end{longtable}
@@ -913,10 +911,24 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 								  \end{itemize}	\\
 			\hline
 			\caption{{\it Authority} accesses to Interventions Use Case}
-			\end{longtable}
+			\end{longtable} 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%			
 
+	\pagebreak
 	\subsubsection{Sequence Diagrams}
+	The first sequence diagram models the interaction for the creation of a new account. The actors are a {\it Guest} and the {\it System}.
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.55]{images/Diagrams/sd_signup}
+			\caption{Account creation sequence diagram}
+		\end{figure}
+	The second sequence diagram models the interaction for the log-in to the application. We created a single sequence diagram for both {\it User} and {\it Authority} because the procedure is almost the same.
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.55]{images/Diagrams/sd_login}
+			\caption{Application log-in sequence diagram}
+		\end{figure}
+	
 	\subsubsection{Mapping on Requirements}
 	\subsection{Performance Requirements}
 	In this section we will explore the requirements that the application should respect to work properly. The {\it System} is implemented as a mobile application, {\it SafeStreets}, with a two-tier architecture, and designed to be used by citizens (or tourists) and authority in a city where the {\it Municipality}, in collaboration with {\it SafeStreets}, activated the service. \\
@@ -964,6 +976,45 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 
 %Effort Spent - Section 5
 \section{Effort Spent}
+
+\begin{longtable}{| p{2 cm} | p{6 cm} | p{1 cm} |} 
+			\hline
+			{\bf Date} & {\bf Task} & {\bf Hours}\\
+			\hline
+			00/00/10 & Git & 1 \\
+						\hline
+			& & {\bf Total} \\
+			\hline
+			& & XX \\
+			\hline
+			\caption{Adriano Mundo's effort}
+\end{longtable}
+
+\begin{longtable}{| p{2 cm} | p{6 cm} | p{1 cm} |} 
+			\hline
+			{\bf Date} & {\bf Task} & {\bf Hours}\\
+			\hline
+			00/00/10 & Git & 1 \\
+						\hline
+			& & {\bf Total} \\
+			\hline
+			& & XX \\
+			\hline
+			\caption{Francesco Rota's effort}
+\end{longtable}
+
+\begin{longtable}{| p{2 cm} | p{6 cm} | p{1 cm} |} 
+			\hline
+			{\bf Date} & {\bf Task} & {\bf Hours}\\
+			\hline
+			00/00/10 & Git & 1 \\
+						\hline
+			& & {\bf Total} \\
+			\hline
+			& & XX \\
+			\hline
+			\caption{Salvatore Fadda's effort}
+\end{longtable}
 
 \pagebreak
 
