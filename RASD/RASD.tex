@@ -787,7 +787,7 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 			\hline
 			{\bf ID} & UC8 \\
 			\hline
-			{\bf Description} & A {\it User} access to {\it statistics} and {\it ticket statisticks}.\\
+			{\bf Description} & A {\it Authority} access to {\it statistics} and {\it ticket statisticks}.\\
 			\hline
 			{\bf Actors} & {\it Logged-in Authority}\\
 			\hline
@@ -900,6 +900,18 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 			\centering
 			\includegraphics[scale=0.55]{Images/Diagrams/sd_login.png}
 			\caption{Application log-in sequence diagram}
+		\end{figure}
+		The fifth sequence diagram models the access and interaction from the user to the application Map. We created a single sequence diagram for both {\it User} and {\it Authority} because the procedure is almost the same.
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.55]{Images/Diagrams/57SeqDiagram.png}
+			\caption{Map access sequence diagram}
+		\end{figure}
+		The sixth sequence diagram models the access and interaction from the user to the application statiscics. We created a single sequence diagram for both {\it User} and {\it Authority} because the procedure is almost the same.
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.55]{Images/Diagrams/68SeqDiagram.png}
+			\caption{Statistic access sequence diagram}
 		\end{figure}
 	
 	\subsubsection{Mapping on Requirements}

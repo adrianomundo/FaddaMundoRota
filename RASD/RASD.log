@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2019.11.6)  8 NOV 2019 09:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2019.11.6)  8 NOV 2019 09:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -694,40 +694,55 @@ Overfull \hbox (69.60022pt too wide) in paragraph at lines 901--902
  [][] 
  []
 
-[38 <./Images/Diagrams/sd_signup.png>] [39 <./Images/Diagrams/sd_login.png>]
-[40] [41] [42]
-Overfull \hbox (1.9582pt too wide) in paragraph at lines 985--986
+[38 <./Images/Diagrams/sd_signup.png>]
+<Images/Diagrams/57SeqDiagram.png, id=180, 573.14125pt x 586.19pt>
+File: Images/Diagrams/57SeqDiagram.png Graphic file (type png)
+<use Images/Diagrams/57SeqDiagram.png>
+Package pdftex.def Info: Images/Diagrams/57SeqDiagram.png  used on input line 9
+07.
+(pdftex.def)             Requested size: 315.22865pt x 322.40549pt.
+ [39 <./Images/Diagrams/sd_login.png>]
+<Images/Diagrams/68SeqDiagram.png, id=185, 563.10374pt x 586.19pt>
+File: Images/Diagrams/68SeqDiagram.png Graphic file (type png)
+<use Images/Diagrams/68SeqDiagram.png>
+Package pdftex.def Info: Images/Diagrams/68SeqDiagram.png  used on input line 9
+13.
+(pdftex.def)             Requested size: 309.70801pt x 322.40549pt.
+
+[40 <./Images/Diagrams/57SeqDiagram.png>] [41 <./Images/Diagrams/68SeqDiagram.p
+ng>] [42] [43] [44]
+Overfull \hbox (1.9582pt too wide) in paragraph at lines 997--998
 []|\OT1/cmr/bx/n/10 Hours| 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 994
+Underfull \vbox (badness 10000) detected at line 1006
  []
 
 
-Overfull \hbox (1.9582pt too wide) in paragraph at lines 998--999
+Overfull \hbox (1.9582pt too wide) in paragraph at lines 1010--1011
 []|\OT1/cmr/bx/n/10 Hours| 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1007
+Underfull \vbox (badness 10000) detected at line 1019
  []
 
 
-Overfull \hbox (1.9582pt too wide) in paragraph at lines 1011--1012
+Overfull \hbox (1.9582pt too wide) in paragraph at lines 1023--1024
 []|\OT1/cmr/bx/n/10 Hours| 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1020
+Underfull \vbox (badness 10000) detected at line 1032
  []
 
-[43] (./RASD.aux) ) 
+[45] (./RASD.aux) ) 
 Here is how much of TeX's memory you used:
- 2945 strings out of 494510
- 48288 string characters out of 6176236
+ 2955 strings out of 494510
+ 48614 string characters out of 6176236
  119347 words of memory out of 5000000
- 6574 multiletter control sequences out of 15000+600000
+ 6582 multiletter control sequences out of 15000+600000
  9531 words of font info for 33 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  42i,9n,46p,1657b,571s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -740,10 +755,10 @@ live/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmti9.pfb>
-Output written on RASD.pdf (43 pages, 3136617 bytes).
+Output written on RASD.pdf (45 pages, 3162184 bytes).
 PDF statistics:
- 230 PDF objects out of 1000 (max. 8388607)
- 126 compressed objects within 2 object streams
+ 240 PDF objects out of 1000 (max. 8388607)
+ 130 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 121 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 131 words of extra memory for PDF output out of 10000 (max. 10000000)
 
