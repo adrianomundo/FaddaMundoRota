@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.10.30)  8 NOV 2019 12:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.10.30)  8 NOV 2019 12:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -646,16 +646,16 @@ Underfull \vbox (badness 10000) detected at line 783
  []
 
 
-Overfull \hbox (63.1122pt too wide) in alignment at lines 786--820
+Overfull \hbox (63.1122pt too wide) in alignment at lines 786--819
  [] [] 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 820
+Underfull \vbox (badness 10000) detected at line 819
  []
 
 [34]
-Overfull \hbox (63.1122pt too wide) in alignment at lines 823--856
+Overfull \hbox (63.1122pt too wide) in alignment at lines 822--856
  [] [] 
  []
 
@@ -664,33 +664,33 @@ Underfull \vbox (badness 10000) detected at line 856
  []
 
 [35]
-Overfull \hbox (63.1122pt too wide) in alignment at lines 859--887
+Overfull \hbox (63.1122pt too wide) in alignment at lines 860--888
  [] [] 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 887
+Underfull \vbox (badness 10000) detected at line 888
  []
 
 [36] [37]
 <Images/Diagrams/sd_signup.png, id=174, 703.62875pt x 845.1575pt>
 File: Images/Diagrams/sd_signup.png Graphic file (type png)
 <use Images/Diagrams/sd_signup.png>
-Package pdftex.def Info: Images/Diagrams/sd_signup.png  used on input line 895.
+Package pdftex.def Info: Images/Diagrams/sd_signup.png  used on input line 896.
 
 (pdftex.def)             Requested size: 386.99701pt x 464.83806pt.
 
-Overfull \hbox (41.99701pt too wide) in paragraph at lines 895--896
+Overfull \hbox (41.99701pt too wide) in paragraph at lines 896--897
  [][] 
  []
 
 <Images/Diagrams/sd_login.png, id=175, 753.81625pt x 845.1575pt>
 File: Images/Diagrams/sd_login.png Graphic file (type png)
 <use Images/Diagrams/sd_login.png>
-Package pdftex.def Info: Images/Diagrams/sd_login.png  used on input line 901.
+Package pdftex.def Info: Images/Diagrams/sd_login.png  used on input line 902.
 (pdftex.def)             Requested size: 414.60022pt x 464.83806pt.
 
-Overfull \hbox (69.60022pt too wide) in paragraph at lines 901--902
+Overfull \hbox (69.60022pt too wide) in paragraph at lines 902--903
  [][] 
  []
 
@@ -698,10 +698,10 @@ Overfull \hbox (69.60022pt too wide) in paragraph at lines 901--902
 <Images/Diagrams/UC4-7.png, id=180, 723.70375pt x 624.3325pt>
 File: Images/Diagrams/UC4-7.png Graphic file (type png)
 <use Images/Diagrams/UC4-7.png>
-Package pdftex.def Info: Images/Diagrams/UC4-7.png  used on input line 907.
+Package pdftex.def Info: Images/Diagrams/UC4-7.png  used on input line 908.
 (pdftex.def)             Requested size: 398.03828pt x 343.38394pt.
 
-Overfull \hbox (53.03828pt too wide) in paragraph at lines 907--908
+Overfull \hbox (53.03828pt too wide) in paragraph at lines 908--909
  [][] 
  []
 
@@ -710,49 +710,49 @@ Overfull \hbox (53.03828pt too wide) in paragraph at lines 907--908
 File: Images/Diagrams/57SeqDiagram.png Graphic file (type png)
 <use Images/Diagrams/57SeqDiagram.png>
 Package pdftex.def Info: Images/Diagrams/57SeqDiagram.png  used on input line 9
-13.
+14.
 (pdftex.def)             Requested size: 315.22865pt x 322.40549pt.
  [40 <./Images/Diagrams/UC4-7.png>]
 <Images/Diagrams/68SeqDiagram.png, id=190, 563.10374pt x 586.19pt>
 File: Images/Diagrams/68SeqDiagram.png Graphic file (type png)
 <use Images/Diagrams/68SeqDiagram.png>
 Package pdftex.def Info: Images/Diagrams/68SeqDiagram.png  used on input line 9
-19.
+20.
 (pdftex.def)             Requested size: 309.70801pt x 322.40549pt.
 
 [41 <./Images/Diagrams/57SeqDiagram.png>] [42 <./Images/Diagrams/68SeqDiagram.p
 ng>] [43] [44] [45]
-Overfull \hbox (1.9582pt too wide) in paragraph at lines 1003--1004
+Overfull \hbox (1.9582pt too wide) in paragraph at lines 1004--1005
 []|\OT1/cmr/bx/n/10 Hours| 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1012
+Underfull \vbox (badness 10000) detected at line 1013
  []
 
 
-Overfull \hbox (1.9582pt too wide) in paragraph at lines 1016--1017
+Overfull \hbox (1.9582pt too wide) in paragraph at lines 1017--1018
 []|\OT1/cmr/bx/n/10 Hours| 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1025
+Underfull \vbox (badness 10000) detected at line 1026
  []
 
 
-Overfull \hbox (1.9582pt too wide) in paragraph at lines 1029--1030
+Overfull \hbox (1.9582pt too wide) in paragraph at lines 1030--1031
 []|\OT1/cmr/bx/n/10 Hours| 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1038
+Underfull \vbox (badness 10000) detected at line 1039
  []
 
 [46] (./RASD.aux) ) 
 Here is how much of TeX's memory you used:
  2960 strings out of 492616
  49060 string characters out of 6129480
- 124113 words of memory out of 5000000
+ 125113 words of memory out of 5000000
  6829 multiletter control sequences out of 15000+600000
  9531 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -767,7 +767,7 @@ sy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
 i10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti
 12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9
 .pfb>
-Output written on RASD.pdf (46 pages, 3184039 bytes).
+Output written on RASD.pdf (46 pages, 3184044 bytes).
 PDF statistics:
  245 PDF objects out of 1000 (max. 8388607)
  132 compressed objects within 2 object streams

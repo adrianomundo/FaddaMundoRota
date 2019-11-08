@@ -783,46 +783,9 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 			\end{longtable}
 			
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
-	\begin{longtable}{| p{3 cm} | p{10.5 cm} |} 
+		\begin{longtable}{| p{3 cm} | p{10.5 cm} |} 
 			\hline
 			{\bf ID} & UC8 \\
-			\hline
-			{\bf Description} & A {\it Authority} access to {\it statistics} and {\it ticket statisticks}.\\
-			\hline
-			{\bf Actors} & {\it Logged-in Authority}\\
-			\hline
-			{\bf Preconditions} & 	
-			\begin{itemize}
-				\item The {\it Authority} downloaded the application on the smartphone.
-				\item The {\it Authority} has logged into his account in {\it SafeStreet}.
-			\end{itemize}
-			\\
-			\hline
-			{\bf Flow of events} &	
-			\begin{enumerate}
-				\item The {\it Authority} selects the {\it statistics} tab in the application.
-				\item The {\it System} shows the {\it statistics} and {\it ticket statistics}.
-				\item The {\it Authority} clicks on a specific {\it statistic} to see more details. 
-				\item The {\it System} shows all the possible details about the selected {\it statistic} or {\it ticket statisitc}. 
-			\end{enumerate}
-			\\
-			\hline
-			{\bf Postconditions} & 
-			\begin{itemize}
-				\item The {\it Authority} can see all details about a certain {\it statistic} or {\it ticket statistic}
-			\end{itemize}
-			\\
-			\hline
-			{\bf Exceptions} & 	
-			\\ \\
-			\hline
-			\caption{{\it Authority} statistics access}
-			\end{longtable}
-			
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%				
-	\begin{longtable}{| p{3 cm} | p{10.5 cm} |} 
-			\hline
-			{\bf ID} & UC9 \\
 			\hline
 			{\bf Description} & The {\it Authority} converts the violation notification into a ticket \\
 			\hline
@@ -855,7 +818,45 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 			\caption{{\it Authority} ticket generation Use Case}
 			\end{longtable}
 			
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%							
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%				
+	\begin{longtable}{| p{3 cm} | p{10.5 cm} |} 
+			\hline
+			{\bf ID} & UC9 \\
+			\hline
+			{\bf Description} & A {\it Authority} access to {\it statistics} and {\it ticket statistics}.\\
+			\hline
+			{\bf Actors} & {\it Logged-in Authority}\\
+			\hline
+			{\bf Preconditions} & 	
+			\begin{itemize}
+				\item The {\it Authority} downloaded the application on the smartphone.
+				\item The {\it Authority} has logged into his account in {\it SafeStreet}.
+			\end{itemize}
+			\\
+			\hline
+			{\bf Flow of events} &	
+			\begin{enumerate}
+				\item The {\it Authority} selects the {\it statistics} tab in the application.
+				\item The {\it System} shows the {\it statistics} and {\it ticket statistics}.
+				\item The {\it Authority} clicks on a specific {\it statistic} to see more details. 
+				\item The {\it System} shows all the possible details about the selected {\it statistic} or {\it ticket statisitc}. 
+			\end{enumerate}
+			\\
+			\hline
+			{\bf Postconditions} & 
+			\begin{itemize}
+				\item The {\it Authority} can see all details about a certain {\it statistic} or {\it ticket statistic}
+			\end{itemize}
+			\\
+			\hline
+			{\bf Exceptions} & 	
+			\\ \\
+			\hline
+			\caption{{\it Authority} statistics access}
+			\end{longtable}
+			
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%				
+			
 	\begin{longtable}{| p{3 cm} | p{10.5cm} |} 
 			\hline
 			{\bf ID} & UC10 \\
