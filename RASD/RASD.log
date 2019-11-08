@@ -1,13 +1,13 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.10.30)  7 NOV 2019 19:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2019.11.6)  8 NOV 2019 09:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **RASD.tex
 (./RASD.tex
 LaTeX2e <2018-12-01>
-(/usr/local/texlive/2019/texmf-dist/tex/latex/base/article.cls
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
-(/usr/local/texlive/2019/texmf-dist/tex/latex/base/size10.clo
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
 )
 \c@part=\count80
@@ -22,31 +22,31 @@ File: size10.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/keyval.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/trig.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 99.
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/graphics-def/pdftex.def
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/tools/longtable.sty
+(/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)+ FMi change
 \LTleft=\skip43
 \LTright=\skip44
@@ -64,13 +64,13 @@ Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)+ FMi change
 \c@LT@chunks=\count92
 \LT@p@ftn=\toks15
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/caption/subcaption.sty
+(/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2018/05/01 v1.1-162 Sub-captions (AR)
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/caption/caption.sty
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2018/10/06 v3.3-154 Customizing captions (AR)
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/caption/caption3.sty
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2018/09/12 v1.8c caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 64.
 \captionmargin=\dimen106
@@ -85,13 +85,13 @@ Package caption3 Info: TeX engine: e-TeX on input line 64.
 \c@ContinuedFloat=\count94
 Package caption Info: longtable package is loaded.
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/caption/ltcaption.sty
+(/usr/share/texlive/texmf-dist/tex/latex/caption/ltcaption.sty
 Package: ltcaption 2018/08/26 v1.4-95 longtable captions (AR)
 ))
 \c@subfigure=\count95
 \c@subtable=\count96
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/float/float.sty
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count97
 \float@exts=\toks16
@@ -114,7 +114,7 @@ LaTeX Font Info:    ... okay on input line 12.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
 LaTeX Font Info:    ... okay on input line 12.
 
-(/usr/local/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count98
 \scratchdimen=\dimen113
@@ -127,39 +127,39 @@ LaTeX Font Info:    ... okay on input line 12.
 \MPnumerator=\count102
 \makeMPintoPDFobject=\count103
 \everyMPtoPDFconversion=\toks19
-) (/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
-(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 )
-(/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/grfext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 
-(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
 
-(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )))
-(/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 
-(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 
-(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
 Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
 
-(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 ))))
-(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-(/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
 )
 Package pdftexcmds Info: LuaTeX not detected.
@@ -174,7 +174,7 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
@@ -195,8 +195,8 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 [1
 
-{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./Image
-s/polimi_logo.png>] (./RASD.toc
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Images/polimi_logo.png>]
+ (./RASD.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 2.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -227,7 +227,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 43--49
 
 [4]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 51.
- (/usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
@@ -435,36 +435,36 @@ Underfull \hbox (badness 10000) in paragraph at lines 259--268
 <./Images/safestreets_logo.png, id=75, 150.5625pt x 150.5625pt>
 File: ./Images/safestreets_logo.png Graphic file (type png)
 <use ./Images/safestreets_logo.png>
-Package pdftex.def Info: ./Images/safestreets_logo.png  used on input line 325.
+Package pdftex.def Info: ./Images/safestreets_logo.png  used on input line 326.
 
 (pdftex.def)             Requested size: 56.90648pt x 56.9055pt.
 <Images/Interfaces/login_user.png, id=76, 443.6575pt x 878.28125pt>
 File: Images/Interfaces/login_user.png Graphic file (type png)
 <use Images/Interfaces/login_user.png>
 Package pdftex.def Info: Images/Interfaces/login_user.png  used on input line 3
-34.
+35.
 (pdftex.def)             Requested size: 89.10902pt x 176.407pt.
 <Images/Interfaces/login_auth.png, id=77, 443.6575pt x 878.28125pt>
 File: Images/Interfaces/login_auth.png Graphic file (type png)
 <use Images/Interfaces/login_auth.png>
 Package pdftex.def Info: Images/Interfaces/login_auth.png  used on input line 3
-39.
+40.
 (pdftex.def)             Requested size: 89.10902pt x 176.407pt.
  [19 <./Images/safestreets_logo.png> <./Images/Interfaces/login_user.png> <./Im
 ages/Interfaces/login_auth.png>]
 <Images/Interfaces/signup.png, id=87, 443.6575pt x 849.1725pt>
 File: Images/Interfaces/signup.png Graphic file (type png)
 <use Images/Interfaces/signup.png>
-Package pdftex.def Info: Images/Interfaces/signup.png  used on input line 352.
+Package pdftex.def Info: Images/Interfaces/signup.png  used on input line 353.
 (pdftex.def)             Requested size: 92.16214pt x 176.407pt.
 <Images/Interfaces/signup_2.png, id=88, 443.6575pt x 878.28125pt>
 File: Images/Interfaces/signup_2.png Graphic file (type png)
 <use Images/Interfaces/signup_2.png>
-Package pdftex.def Info: Images/Interfaces/signup_2.png  used on input line 357
+Package pdftex.def Info: Images/Interfaces/signup_2.png  used on input line 358
 .
 (pdftex.def)             Requested size: 89.10902pt x 176.407pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 346--361
+Underfull \hbox (badness 10000) in paragraph at lines 347--362
 
  []
 
@@ -472,26 +472,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 346--361
 File: Images/Interfaces/user_report.png Graphic file (type png)
 <use Images/Interfaces/user_report.png>
 Package pdftex.def Info: Images/Interfaces/user_report.png  used on input line 
-371.
+372.
 (pdftex.def)             Requested size: 89.10902pt x 176.407pt.
 <Images/Interfaces/user_report_done.png, id=90, 462.72874pt x 879.285pt>
 File: Images/Interfaces/user_report_done.png Graphic file (type png)
 <use Images/Interfaces/user_report_done.png>
 Package pdftex.def Info: Images/Interfaces/user_report_done.png  used on input 
-line 376.
+line 377.
 (pdftex.def)             Requested size: 92.83359pt x 176.407pt.
 [20 <./Images/Interfaces/signup.png> <./Images/Interfaces/signup_2.png>]
 <Images/Interfaces/user_map.png, id=96, 443.6575pt x 878.28125pt>
 File: Images/Interfaces/user_map.png Graphic file (type png)
 <use Images/Interfaces/user_map.png>
-Package pdftex.def Info: Images/Interfaces/user_map.png  used on input line 386
+Package pdftex.def Info: Images/Interfaces/user_map.png  used on input line 387
 .
 (pdftex.def)             Requested size: 89.10902pt x 176.407pt.
 <Images/Interfaces/user_stats.png, id=97, 443.6575pt x 878.28125pt>
 File: Images/Interfaces/user_stats.png Graphic file (type png)
 <use Images/Interfaces/user_stats.png>
 Package pdftex.def Info: Images/Interfaces/user_stats.png  used on input line 3
-93.
+94.
 (pdftex.def)             Requested size: 93.4213pt x 184.9429pt.
 
 [21 <./Images/Interfaces/user_report.png> <./Images/Interfaces/user_report_done
@@ -500,33 +500,33 @@ Package pdftex.def Info: Images/Interfaces/user_stats.png  used on input line 3
 File: Images/Interfaces/user_settings.png Graphic file (type png)
 <use Images/Interfaces/user_settings.png>
 Package pdftex.def Info: Images/Interfaces/user_settings.png  used on input lin
-e 400.
+e 401.
 (pdftex.def)             Requested size: 89.10902pt x 176.407pt.
  [22 <./Images/Interfaces/user_stats.png>]
 <Images/Interfaces/auth_ticket.png, id=109, 454.69875pt x 879.285pt>
 File: Images/Interfaces/auth_ticket.png Graphic file (type png)
 <use Images/Interfaces/auth_ticket.png>
 Package pdftex.def Info: Images/Interfaces/auth_ticket.png  used on input line 
-412.
+413.
 (pdftex.def)             Requested size: 91.2226pt x 176.407pt.
 <Images/Interfaces/auth_ticket_done.png, id=110, 454.69875pt x 879.285pt>
 File: Images/Interfaces/auth_ticket_done.png Graphic file (type png)
 <use Images/Interfaces/auth_ticket_done.png>
 Package pdftex.def Info: Images/Interfaces/auth_ticket_done.png  used on input 
-line 417.
+line 418.
 (pdftex.def)             Requested size: 91.2226pt x 176.407pt.
 <Images/Interfaces/auth_interv.png, id=111, 443.6575pt x 878.28125pt>
 File: Images/Interfaces/auth_interv.png Graphic file (type png)
 <use Images/Interfaces/auth_interv.png>
 Package pdftex.def Info: Images/Interfaces/auth_interv.png  used on input line 
-426.
+427.
 (pdftex.def)             Requested size: 89.10902pt x 176.407pt.
  [23 <./Images/Interfaces/user_settings.png> <./Images/Interfaces/auth_ticket.p
 ng> <./Images/Interfaces/auth_ticket_done.png>]
 <Images/Interfaces/auth_map.png, id=118, 443.6575pt x 878.28125pt>
 File: Images/Interfaces/auth_map.png Graphic file (type png)
 <use Images/Interfaces/auth_map.png>
-Package pdftex.def Info: Images/Interfaces/auth_map.png  used on input line 433
+Package pdftex.def Info: Images/Interfaces/auth_map.png  used on input line 434
 .
 (pdftex.def)             Requested size: 89.10902pt x 176.407pt.
  [24 <./Images/Interfaces/auth_interv.png>]
@@ -534,10 +534,10 @@ Package pdftex.def Info: Images/Interfaces/auth_map.png  used on input line 433
 File: Images/Interfaces/auth_stats.png Graphic file (type png)
 <use Images/Interfaces/auth_stats.png>
 Package pdftex.def Info: Images/Interfaces/auth_stats.png  used on input line 4
-40.
+41.
 (pdftex.def)             Requested size: 99.49979pt x 184.9429pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 436--442
+Underfull \hbox (badness 10000) in paragraph at lines 437--443
 
  []
 
@@ -545,7 +545,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 436--442
 File: Images/Interfaces/auth_settings.png Graphic file (type png)
 <use Images/Interfaces/auth_settings.png>
 Package pdftex.def Info: Images/Interfaces/auth_settings.png  used on input lin
-e 447.
+e 448.
 (pdftex.def)             Requested size: 93.4213pt x 184.9429pt.
 [25 <./Images/Interfaces/auth_map.png> <./Images/Interfaces/auth_stats.png>]
 [26 <./Images/Interfaces/auth_settings.png>]
@@ -553,10 +553,10 @@ e 447.
 File: Images/Diagrams/UseCaseUser.png Graphic file (type png)
 <use Images/Diagrams/UseCaseUser.png>
 Package pdftex.def Info: Images/Diagrams/UseCaseUser.png  used on input line 47
-3.
+4.
 (pdftex.def)             Requested size: 384.93718pt x 136.50966pt.
 
-Overfull \hbox (39.93718pt too wide) in paragraph at lines 473--474
+Overfull \hbox (39.93718pt too wide) in paragraph at lines 474--475
  [][] 
  []
 
@@ -564,20 +564,20 @@ Overfull \hbox (39.93718pt too wide) in paragraph at lines 473--474
 File: Images/Diagrams/UseCaseAuthority.png Graphic file (type png)
 <use Images/Diagrams/UseCaseAuthority.png>
 Package pdftex.def Info: Images/Diagrams/UseCaseAuthority.png  used on input li
-ne 478.
+ne 479.
 (pdftex.def)             Requested size: 395.97841pt x 211.79073pt.
 
-Overfull \hbox (50.97841pt too wide) in paragraph at lines 478--479
+Overfull \hbox (50.97841pt too wide) in paragraph at lines 479--480
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 484--489
+Underfull \hbox (badness 10000) in paragraph at lines 485--490
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 484--489
+Underfull \hbox (badness 10000) in paragraph at lines 485--490
 
  []
 
@@ -591,110 +591,159 @@ Overfull \hbox (63.1122pt too wide) in alignment at lines 493--539
 Underfull \vbox (badness 10000) detected at line 539
  []
 
+
+Overfull \hbox (63.1122pt too wide) in alignment at lines 542--584
+ [] [] 
+ []
+
 [29]
-Overfull \hbox (63.1122pt too wide) in alignment at lines 542--585
+Underfull \vbox (badness 10000) detected at line 584
+ []
+
+
+Overfull \hbox (63.1122pt too wide) in alignment at lines 587--630
  [] [] 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 585
- []
-
-
-Overfull \hbox (63.1122pt too wide) in alignment at lines 588--631
- [] [] 
- []
-
-
-Underfull \vbox (badness 10000) detected at line 631
+Underfull \vbox (badness 10000) detected at line 630
  []
 
 [30]
-Overfull \hbox (63.1122pt too wide) in alignment at lines 634--665
+Overfull \hbox (63.1122pt too wide) in alignment at lines 633--664
  [] [] 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 665
+Underfull \vbox (badness 10000) detected at line 664
  []
 
 [31]
-Overfull \hbox (63.1122pt too wide) in alignment at lines 668--711
+Overfull \hbox (63.1122pt too wide) in alignment at lines 667--705
  [] [] 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 711
+Underfull \vbox (badness 10000) detected at line 705
  []
 
 [32]
-Overfull \hbox (63.1122pt too wide) in alignment at lines 714--757
+Overfull \hbox (63.1122pt too wide) in alignment at lines 708--742
  [] [] 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 757
+Underfull \vbox (badness 10000) detected at line 742
  []
 
 [33]
-Overfull \hbox (63.1122pt too wide) in alignment at lines 760--803
+Overfull \hbox (63.1122pt too wide) in alignment at lines 745--783
  [] [] 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 803
+Underfull \vbox (badness 10000) detected at line 783
+ []
+
+
+Overfull \hbox (63.1122pt too wide) in alignment at lines 786--820
+ [] [] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 820
  []
 
 [34]
-Overfull \hbox (63.1122pt too wide) in alignment at lines 806--849
+Overfull \hbox (63.1122pt too wide) in alignment at lines 823--856
  [] [] 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 849
+Underfull \vbox (badness 10000) detected at line 856
  []
 
 [35]
-Overfull \hbox (63.1122pt too wide) in alignment at lines 852--885
+Overfull \hbox (63.1122pt too wide) in alignment at lines 859--887
  [] [] 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 885
+Underfull \vbox (badness 10000) detected at line 887
  []
 
-[36]
-Overfull \hbox (63.1122pt too wide) in alignment at lines 888--916
- [] [] 
+[36] [37]
+<Images/Diagrams/sd_signup.png, id=174, 703.62875pt x 845.1575pt>
+File: Images/Diagrams/sd_signup.png Graphic file (type png)
+<use Images/Diagrams/sd_signup.png>
+Package pdftex.def Info: Images/Diagrams/sd_signup.png  used on input line 895.
+
+(pdftex.def)             Requested size: 386.99701pt x 464.83806pt.
+
+Overfull \hbox (41.99701pt too wide) in paragraph at lines 895--896
+ [][] 
+ []
+
+<Images/Diagrams/sd_login.png, id=175, 753.81625pt x 845.1575pt>
+File: Images/Diagrams/sd_login.png Graphic file (type png)
+<use Images/Diagrams/sd_login.png>
+Package pdftex.def Info: Images/Diagrams/sd_login.png  used on input line 901.
+(pdftex.def)             Requested size: 414.60022pt x 464.83806pt.
+
+Overfull \hbox (69.60022pt too wide) in paragraph at lines 901--902
+ [][] 
+ []
+
+[38 <./Images/Diagrams/sd_signup.png>] [39 <./Images/Diagrams/sd_login.png>]
+[40] [41] [42]
+Overfull \hbox (1.9582pt too wide) in paragraph at lines 985--986
+[]|\OT1/cmr/bx/n/10 Hours| 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 916
+Underfull \vbox (badness 10000) detected at line 994
  []
 
-[37] [38] [39] [40] [41] [42] (./RASD.aux) ) 
+
+Overfull \hbox (1.9582pt too wide) in paragraph at lines 998--999
+[]|\OT1/cmr/bx/n/10 Hours| 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 1007
+ []
+
+
+Overfull \hbox (1.9582pt too wide) in paragraph at lines 1011--1012
+[]|\OT1/cmr/bx/n/10 Hours| 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 1020
+ []
+
+[43] (./RASD.aux) ) 
 Here is how much of TeX's memory you used:
- 2932 strings out of 492616
- 48297 string characters out of 6129480
- 123963 words of memory out of 5000000
- 6806 multiletter control sequences out of 15000+600000
+ 2945 strings out of 494510
+ 48288 string characters out of 6176236
+ 119347 words of memory out of 5000000
+ 6574 multiletter control sequences out of 15000+600000
  9531 words of font info for 33 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
+ 36 hyphenation exceptions out of 8191
  42i,9n,46p,1657b,571s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2019/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2019/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2019/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2019/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2019/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmti9.pfb>
-Output written on RASD.pdf (42 pages, 3085296 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx
+12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmti9.pfb>
+Output written on RASD.pdf (43 pages, 3136617 bytes).
 PDF statistics:
- 222 PDF objects out of 1000 (max. 8388607)
- 123 compressed objects within 2 object streams
+ 230 PDF objects out of 1000 (max. 8388607)
+ 126 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 111 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 121 words of extra memory for PDF output out of 10000 (max. 10000000)
 

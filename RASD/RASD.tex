@@ -681,32 +681,27 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 			\hline
 			{\bf Flow of events} &	
 			\begin{enumerate}
-				\item The {\it User} opens the application.
-				\item The {\it System} shows the interface to login or register.
-				\item The {\it User} clicks the user tab.
-				\item The {\it System} shows a form to fill with the credentials.
-				\item The {\it User} fills the form with e-mail and password. 
-				\item The {\it User} clicks the login button.
-				\item The {\it System} checks if the credentials are correct. 
+				\item The {\it User} selects the {\it SafeMap} tab in the application.
+				\item The {\it System} shows the {\it SafeMap}.
+				\item The {\it User} clicks on a {\it SafeMap}'s point to see more details. 
+				\item The {\it System} shows the user violations of the selected zone. 
 			\end{enumerate}
 			\\
 			\hline
 			{\bf Postconditions} & 
 			\begin{itemize}
-				\item The {\it User} is logged-in.
-				\item The {\it System} shows the {\it User} interface.
+				\item The {\it User} can see all violations in the selected point of the {\it SafeMap}.
 			\end{itemize}
 			\\
 			\hline
 			{\bf Exceptions} & 	
 			\begin{itemize}
-				\item The {\it User} selects the {\it Authority} tab entering the wrong credentials. 
-				\item The {\it User} enters the wrong credentials.
+				\item The {\it User} selects a point of the map that doesn't contain violations.
+				\item The {\it System} shows a message to the user asking him that there aren't violations in the zone.
 			\end{itemize}
-			The {\it System} shows an error message and the flow restarts from point 2.
 			\\ \\
 			\hline
-			\caption{{\it User} logs-in Use Case}
+			\caption{{\it User SafeMap} access}
 			\end{longtable}
 			
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
@@ -727,32 +722,23 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 			\hline
 			{\bf Flow of events} &	
 			\begin{enumerate}
-				\item The {\it User} opens the application.
-				\item The {\it System} shows the interface to login or register.
-				\item The {\it User} clicks the user tab.
-				\item The {\it System} shows a form to fill with the credentials.
-				\item The {\it User} fills the form with e-mail and password. 
-				\item The {\it User} clicks the login button.
-				\item The {\it System} checks if the credentials are correct. 
+				\item The {\it User} selects the {\it statistics} tab in the application.
+				\item The {\it System} shows the {\it statistics}.
+				\item The {\it User} clicks on a specific {\it statistic} to see more details. 
+				\item The {\it System} shows the user all the possible details about the selected {\it statistic}. 
 			\end{enumerate}
 			\\
 			\hline
 			{\bf Postconditions} & 
 			\begin{itemize}
-				\item The {\it User} is logged-in.
-				\item The {\it System} shows the {\it User} interface.
+				\item The {\it User} can see all details about a certain {\it statistic}.
 			\end{itemize}
 			\\
 			\hline
 			{\bf Exceptions} & 	
-			\begin{itemize}
-				\item The {\it User} selects the {\it Authority} tab entering the wrong credentials. 
-				\item The {\it User} enters the wrong credentials.
-			\end{itemize}
-			The {\it System} shows an error message and the flow restarts from point 2.
 			\\ \\
 			\hline
-			\caption{{\it User} logs-in Use Case}
+			\caption{{\it User} statistics access}
 			\end{longtable}
 			
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
@@ -773,32 +759,27 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 			\hline
 			{\bf Flow of events} &	
 			\begin{enumerate}
-				\item The {\it User} opens the application.
-				\item The {\it System} shows the interface to login or register.
-				\item The {\it User} clicks the user tab.
-				\item The {\it System} shows a form to fill with the credentials.
-				\item The {\it User} fills the form with e-mail and password. 
-				\item The {\it User} clicks the login button.
-				\item The {\it System} checks if the credentials are correct. 
+				\item The {\it Authority} selects the {\it AuthorityMap} tab in the application.
+				\item The {\it System} shows the {\it AuthorityMap}.
+				\item The {\it Authority} clicks on a {\it AuthorityMap}'s point to see more details. 
+				\item The {\it System} shows the authority violations and accidents of the selected zone. 
 			\end{enumerate}
 			\\
 			\hline
 			{\bf Postconditions} & 
 			\begin{itemize}
-				\item The {\it User} is logged-in.
-				\item The {\it System} shows the {\it User} interface.
+				\item The {\it Authority} can see all violations and accidents in the selected point of the {\it AuthorityMap}.
 			\end{itemize}
 			\\
 			\hline
 			{\bf Exceptions} & 	
 			\begin{itemize}
-				\item The {\it User} selects the {\it Authority} tab entering the wrong credentials. 
-				\item The {\it User} enters the wrong credentials.
+				\item The {\it Authority} selects a point of the map that doesn't contain violations or accidents.
+				\item The {\it System} shows a message to the authority asking him that there aren't violations or accidetns in the zone.
 			\end{itemize}
-			The {\it System} shows an error message and the flow restarts from point 2.
 			\\ \\
 			\hline
-			\caption{{\it User} logs-in Use Case}
+			\caption{{\it Authority AuthorityMap} access}
 			\end{longtable}
 			
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
@@ -819,32 +800,23 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 			\hline
 			{\bf Flow of events} &	
 			\begin{enumerate}
-				\item The {\it User} opens the application.
-				\item The {\it System} shows the interface to login or register.
-				\item The {\it User} clicks the user tab.
-				\item The {\it System} shows a form to fill with the credentials.
-				\item The {\it User} fills the form with e-mail and password. 
-				\item The {\it User} clicks the login button.
-				\item The {\it System} checks if the credentials are correct. 
+				\item The {\it Authority} selects the {\it statistics} tab in the application.
+				\item The {\it System} shows the {\it statistics} and {\it ticket statistics}.
+				\item The {\it Authority} clicks on a specific {\it statistic} to see more details. 
+				\item The {\it System} shows all the possible details about the selected {\it statistic} or {\it ticket statisitc}. 
 			\end{enumerate}
 			\\
 			\hline
 			{\bf Postconditions} & 
 			\begin{itemize}
-				\item The {\it User} is logged-in.
-				\item The {\it System} shows the {\it User} interface.
+				\item The {\it Authority} can see all details about a certain {\it statistic} or {\it ticket statistic}
 			\end{itemize}
 			\\
 			\hline
 			{\bf Exceptions} & 	
-			\begin{itemize}
-				\item The {\it User} selects the {\it Authority} tab entering the wrong credentials. 
-				\item The {\it User} enters the wrong credentials.
-			\end{itemize}
-			The {\it System} shows an error message and the flow restarts from point 2.
 			\\ \\
 			\hline
-			\caption{{\it User} logs-in Use Case}
+			\caption{{\it Authority} statistics access}
 			\end{longtable}
 			
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%				
@@ -920,13 +892,13 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 	The first sequence diagram models the interaction for the creation of a new account. The actors are a {\it Guest} and the {\it System}.
 		\begin{figure}[H]
 			\centering
-			\includegraphics[scale=0.55]{images/Diagrams/sd_signup}
+			\includegraphics[scale=0.55]{Images/Diagrams/sd_signup.png}
 			\caption{Account creation sequence diagram}
 		\end{figure}
 	The second sequence diagram models the interaction for the log-in to the application. We created a single sequence diagram for both {\it User} and {\it Authority} because the procedure is almost the same.
 		\begin{figure}[H]
 			\centering
-			\includegraphics[scale=0.55]{images/Diagrams/sd_login}
+			\includegraphics[scale=0.55]{Images/Diagrams/sd_login.png}
 			\caption{Application log-in sequence diagram}
 		\end{figure}
 	
