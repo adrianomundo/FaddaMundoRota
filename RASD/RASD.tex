@@ -300,7 +300,7 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 		\subsubsection{Domain Assumptions}
 		\begin{itemize}
 		 \item {\bf [D1]} Each user, simple one or authority, has only one account.
-		 \item {\bf [D2]} Data provided during the registration are correct and belong to the person who created the account
+		 \item {\bf [D2]} Data provided during the registration are correct and belong to the person who created the account.
 		 \item {\bf [D3]} A violation should be clearly visible and identifiable from the picture.
 		 \item {\bf [D4]} A violation is processed if everything is correct, otherwise the Municipality fixes the errors.
 		 \item {\bf [D5]} Data from Municipality about incidents or issued tickets are correct.
@@ -308,8 +308,9 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 		 \item {\bf [D7]} Permission to access GPS and device data is granted to the System.
 		 \item {\bf [D8]} Each car has a license plate.
 		 \item {\bf [D9]} Municipality is entitled to issue tickets even if the violation is not physically acknowledged.
-		 \item {\bf [D10]} Suggestions from the System are not discarded from the Municipality, but they are evaluated as a feasible solution.
+		 \item {\bf [D10]} Suggestions from the System are not ignored from the Municipality, but they are evaluated by the Authority.
 		 \item {\bf [D11]} User takes responsibility for the reports of violation he/she submits. 
+		 \item {\bf [D12]} Violation data are collected in order to be analysed.  
 		 \end{itemize}
 		
 \pagebreak
@@ -914,43 +915,84 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 			\includegraphics[scale=0.55]{Images/Diagrams/57SeqDiagram.png}
 			\caption{Map access sequence diagram}
 		\end{figure}
-		The sixth sequence diagram models the access and interaction from the user to the application statiscics. We created a single sequence diagram for both {\it User} and {\it Authority} because the procedure is almost the same.
+		The sixth sequence diagram models the access and interaction from the user to the application statistics. We created a single sequence diagram for both {\it User} and {\it Authority} because the procedure is almost the same.
 		\begin{figure}[H]
 			\centering
 			\includegraphics[scale=0.55]{Images/Diagrams/68SeqDiagram.png}
 			\caption{Statistic access sequence diagram}
 		\end{figure}
+		
+	\pagebreak
 	
 	\subsubsection{Mapping on Requirements}
 	\begin{itemize}
-			 \item {\bf [G1]} The System has to be used both by {\it Users} and {\it Authorities}.
+			 \item {\bf [G1]} The {\it System} has to be used both by {\it Users} and {\it Authorities}.
 			 \begin{itemize}
 			 \item {\bf [R1]} The {\it System} allows account to be created as a simple {\it User} or {\it Authority}.
+			 \item {\bf [R2]} A {\it User} account can be created if the {\it User} provides the correct data: unique email and fiscal code. 
+			 \item {\bf [R3]} An {\it Authority} account can be created if Municipality granted {\it Authority} with credentials. 
+			 \item {\bf [R4]} {\it Users} and {\it Authority} can access the service if they log-in with their credentials.
+			 \item {\bf [R5]} The {\it System} must be able to check if the credentials are valid.
+			 \item {\bf [R6]} The {\it System} must store all {\it User} credentials. 
+			 \item {\bf [D1]} Each user, simple one or authority, has only one account.
+			 \item {\bf [D2]} Data provided during the registration are correct and belong to the person who created the account.
 			 \end{itemize}
-   			 \item {\bf [G2]} Allowing {\it Users} to report to the system when a traffic violation occur.		
+   			 \item {\bf [G2]} Allowing {\it Users} to report to the {\it System} when a traffic violation occur.		
    			 \begin{itemize}
-   			 \item 
+   			 \item {\bf [R7]} The {\it System} must be able to analyse the picture and recognise the plate number. 
+   			 \item {\bf [R8]} The {\it System} gives a feedback to the {\it User} if the report process is done correctly.
+   			 \item {\bf [R9]} Only {\it User} with an account can create and send a report.
+   			 \item {\bf [D3]} A violation should be clearly visible and identifiable from the picture.
+   			 \item {\bf [D8]} Each car has a license plate.
+   			 \item {\bf [D11]} A {\it User} takes responsibility for the reports of violation he/she submits.
 			 \end{itemize}
 			 \item {\bf [G3]} Allowing {\it Users} to enter data/information about the violation.
 			 \begin{itemize}
-			 \item 
+			 \item {\bf [R10]} The {\it System} must allow the {\it User} to take a picture of the violation.
+			 \item {\bf [R11]} The {\it System} can accept or refuse the image loaded from the {\it User}.
+			 \item {\bf [R12]} The {\it System} must allow the {\it User} to select the violation type.
+			 \item {\bf [R13]} Metadata, such as date and time, must be automatically retrieved from the device. 
+			 \item {\bf [R14]} The {\it System} must allow the {\it User} to edit information before sending the report.
+			 \item {\bf [R15]} The {\it System} must be able to store all the notification data.
+			 \item {\bf [D3]} A violation should be clearly visible and identifiable from the picture.
+			 \item {\bf [D6]} GPS system of the device has an accuracy of 50 meters.
+			 \item {\bf [D7]} Permission to access GPS and device data is granted to the System.
+   			 \item {\bf [D8]} Each car has a license plate.
+   			 \item {\bf [D11]} A {\it User} takes responsibility for the reports of violation he/she submits.
 			 \end{itemize}
    			 \item {\bf [G4]} Providing both {\it Users} and {\it Authorities} with statistics built from notifications’ data.    	
    			 \begin{itemize}
-   			 \item 
+   			 \item {\bf [R15]} The {\it System} must be able to store all the notifications' data.
+   			 \item {\bf [R16]} All violation data used for statistics are validated by the {\it Municipality}.
+   			 \item {\bf [R17]} The {\it System} imports new data and update map and statistics every 12h.
+   			 \item {\bf [R18]} The {\it System} must allow the {\it User} to visualise statistics derived from the data.
+   			 \item {\bf [R19]} The {\it System} must allow {\it Authority} to see sensible information that {\it User} can't access. 
+   			 \item {\bf [D12]} Violation data are collected in order to be analysed. 
 			 \end{itemize}		  
    			 \item {\bf [G5]} Identifying potentially unsafe areas and making suggestions to address those issues.
    		    	\begin{itemize}
-   		    	\item 
+   		    	\item {\bf [R20]} The {\it System} must be able to identify viability issues based on data.
+   		    	\item {\bf [R21]} The {\it System} must suggest solution to address viability issue.
+   		    	\item {\bf [R22]} The {\it System} must allow the {\it Authority} to access the list of possible interventions. 
+   		    	\item {\bf [R23]} The {\it System} must allow the {\it Authority} to establish if the intervention is feasible solutions or not.
+   		    	\item {\bf [D5]} Data from Municipality about incidents or issued tickets are correct.
+   		    	\item {\bf [D10]} Suggestions from the System are not ignored from the Municipality, but they are evaluated by the Authority.
 			 \end{itemize}
-			  \item {\bf [G6]} Allowing {\it Municipality} to generate tickets based on the users’ notifications. 
+			  \item {\bf [G6]} Allowing {\it Municipality} to generate tickets based on the {\it Users'} notifications. 
 			  \begin{itemize}
-			  \item 
-			 \end{itemize}
+			  \item {\bf [R23]} The {\it System} must allow the {\it Authority} to access information about the violation notification.
+			  \item {\bf [R24]} The {\it System} must allow the {\it Authority} to validate a ticket.
+			  \item {\bf [R25]} The {\it System} must allow the {\it Authority} to access sensible data about the violation.
+			  \item {\bf [R26]} The {\it System} must advise the {\it Authority} that the violation details process is done correctly. 
+			  \item {\bf [D5]} Data from Municipality about incidents or issued tickets are correct.
+			  \item {\bf [D9]} Municipality is entitled to issue tickets even if the violation is not physically acknowledged.
+			  \end{itemize}
 			  \item {\bf [G7]} Providing statistics built on data from issued tickets to the {\it Municipality}.		
 			  \begin{itemize}
-			  \item 
-			 \end{itemize}
+			  \item {\bf [R27]} The {\it System} must be able to store all the tickets' data.
+			  \item {\bf [R28]} All tickets data used for statistics are validated by the {\it Municipality}
+			  \item {\bf [R29]} The {\it System} must allow the {\it Authority} to visualise statistics derived from tickets' data.
+			  \item {\bf [D5]} Data from Municipality about incidents or issued tickets are correct.
 			  \end{itemize}
 	\subsection{Performance Requirements}
 	In this section we will explore the requirements that the application should respect to work properly. The {\it System} is implemented as a mobile application, {\it SafeStreets}, with a two-tier architecture, and designed to be used by citizens (or tourists) and authority in a city where the {\it Municipality}, in collaboration with {\it SafeStreets}, activated the service. \\
