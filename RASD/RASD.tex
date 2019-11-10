@@ -9,6 +9,16 @@
 \usepackage{comment}
 \graphicspath {{./Images/}}
 			
+\begin{comment}
+\usepackage{hyperref}
+\hypersetup{
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}	
+\end{comment}
+
 
 \begin{document}
 
@@ -19,7 +29,7 @@
 
 
 \title {{\Huge \it SafeStreets} \\ \Large Software Engineering 2 Project - Prof. Matteo Rossi}
-\author{Salvatore Fadda - 944786\\Adriano Mundo - 944684 \\ Francesco Rota -
+\author{Salvatore Fadda - 944786\\Adriano Mundo - 944684 \\ Francesco Rota - 948714
 		\\ \\ A.Y. 2019/2020 \\ Version 1.0}
 \date{November 10, 2019}
 
@@ -42,9 +52,9 @@ This document represents the {\it Requirements Analysis and Specification Docume
 	\subsection{Purpose}
 	
 	{\it SafeStreets} is a crowd-sourced application that aims at keeping safe the city's streets. The application goal is to allow {\it Users} to notify the {\it Municipality} when a violation occur on the streets under its jurisdiction. The {\it User} can notice and notify the violation by sending a photo of the violation including date, time and position. These violations are for the majority parking violation, such as double parking or vehicle parked in the middle of bike lanes. \\ \\
-	{\it SafesStreets}, once the {\it User} has notified the violation, stores all the data, completing them with all the necessary metadata. In order to be sure that the violation is correctly elaborated, the application uses a plate recognition algorithm. The {\it User} is notified if something goes wrong during the whole process, so an alternative solution can be found. All the data stored by {\it SafeStreets} are provided by the {\it Users} or they can be retrieved directly from the device, like the position from the GPS system.\\
-	All the data collected by {\it SafeStreets} can be mined by {\it Users} and the {\it Authorities}, so they can be provided with statistics built from this data. The application can show different statistics based on different level of visibility, so the {\it Authorities} can access to some information that the {\it Users} can not access, and viceversa. This is the purpose of the {\it Basic Service}. \\ \\
-	The application has also two specific {\it Advanced Functions}. In the {\bf AF1}, the application {\it SafeStreets} can cross the information about the road accident, thanks to a service offered by the {\it Municipality}, with the data stored and retrieved from the {\it User}. So {\it SafeStreets } elaborates them in order to identify potentially unsafe areas and suggest possibile interventions to solve founded issues. The suggestions can be various and depend on each case. \\ \\
+	{\it SafesStreets}, once the {\it User} has notified the violation, stores all the data, completing them with all the necessary metadata. In order to be sure that the violation is correctly elaborated, the application uses a plate recognition algorithm. The {\it User} is notified if something goes wrong during the whole process, so an alternative solution can be found. All the data stored by {\it SafeStreets} are provided by the {\it Users} or they can be retrieved directly from the device, like the position from the GPS.\\
+	All the data collected by {\it SafeStreets} can be mined by {\it Users} and the {\it Authorities}, so they can be provided with statistics built from this data. The application can show different statistics based on different level of visibility, so the {\it Authorities} can access some information that the {\it Users} can not access. This is the purpose of the {\bf Basic Service}. \\ \\
+	The application has also two specific Advanced Functions. In the {\bf AF1}, the application {\it SafeStreets} can cross the information about the road accident, thanks to a service offered by the {\it Municipality}, with the data stored and retrieved from the {\it User}. So {\it SafeStreets} elaborates them in order to identify potentially unsafe areas and suggest possibile interventions to solve the issues founded. The suggestions can be various and depend on each case. \\ \\
 	In the   {\bf AF2}, {\it SafeStreets} allows the {\it Municipality} to generate traffic tickets directly from the application data, derived from the {\it User} notifications'. Additionally, starting from the application data about issued tickets, {\it SafeStreets} can build, looking for trends in the data, statistics and provide insights to the {\it Municipality}. This can help {\it Municipality} to improve the process of issued tickets and understand the effectiveness of {\it SafeStreets}, finding some information useful to improve their services. \\ \\
 	From the description above about the purpose of {\it SafeStreets}, we can summarise those goals
 		
@@ -65,7 +75,7 @@ With regards to {\it {\it Advanced Function 1}}, we identify:
 			  \end{itemize}
 			
 	\subsection{Scope}
-	In this section we will distinguish between the {\it Machine}, that's the {\bf S2B} and the {\it World}, that's the portion of the real world affected by the {\it Machine}. This separation, according to the {\it World and Machine} paradigm by Jackson and Zave, leads to a classification of the phenomena in three different types, depending on where they occur. 		
+	In this section we will distinguish between the {\it Machine}, that's the System to be and the {\it World}, that's the portion of the real world affected by the {\it Machine}. This separation, according to the {\it World and Machine} paradigm by Jackson and Zave, leads to a classification of the phenomena in three different types, depending on where they occur. 		
 		\subsubsection{World Phenomena}
 		World phenomena are events that take place in the real world and do not have a direct impact on the {\it System}. 
 		\begin{itemize}
@@ -73,7 +83,6 @@ With regards to {\it {\it Advanced Function 1}}, we identify:
 			\item An accident occurs on the streets under the {\it Municipality's} jurisdiction.
 			\item A {\it User} notices the violation and takes action.
 			\item A ticket is generated by the {\it Municipality}.
-			\item Data from all the tickets generated by the {\it Municipality} are stored by the {\it System}.
 			\item An intervention is made by the {\it Municipality} to address possible issues on the streets under its jurisdiction.
 		\end{itemize}
 
@@ -84,16 +93,18 @@ With regards to {\it {\it Advanced Function 1}}, we identify:
 			\item A {\it Guest} signs up on the system giving all the personal data needed and/or signs in with his credentials.
 			\item A {\it User} sends a violation notification to the system, including type of violation, position, date, time and picture.
 			\item {\it Municipality} transmits data about the accidents occurring on the streets to the {\it System}.
-			\item {\it Municipality} evaluates a violation notification coming from the {\it System}. 
-			\item {\it Municipality} elaborates a suggestion for an intervention coming from the {\it System}. 
+			\item {\it Authority}, as a representative of the {\it Municipality} evaluates a violation notification coming from the {\it System}. 
+			\item {\it Authority}, as a representative of the {\it Municipality}, evaluates a suggestion for an intervention coming from the {\it System}. 
 			\item {\it Municipality} transfers data about tickets generated to the {\it System}.
 		\end{itemize} 
 		{\bf Controlled by the machine and observed by the world}
 		\begin{itemize}
 			\item The {\it System} notifies the {\it User} that the plate recognition tool was not successful, in order for the user to take a better picture.
 			\item The {\it System} transmits a violation notification to the {\it Municipality}.
-			\item The {\it System} provides suggestions on possible interventions to address issues to the {\it Municipality}.
-			\item The {\it System} shows statistics mined from violation notifications data to {\it Users} and/or the {\it Municipality}.
+			\item The {\it System} provides suggestions on possible interventions to address issues to the {\it Municipality} through {\it Authorities}.
+			\item The {\it System} shows statistics mined from violation notifications data to {\it Users} and/or the {\it Authorities}.
+			\item The {\it System} shows statistics obtained from tickets data to the {\it Authorities}.
+			\item Data from all the tickets generated by the {\it Municipality} are stored by the {\it System}.
 		\end{itemize}	
 		\subsubsection{Machine Phenomena}
 		Machine phenomena are events that entirely take place inside the System and cannot be observed in the real world.
@@ -109,22 +120,22 @@ With regards to {\it {\it Advanced Function 1}}, we identify:
 		\subsubsection{Definitions}
 			
 			\begin{itemize}
-				\item {\bf Guest:} a user who needs to sign up to the application in order to access its functionalities, otherwise they can't access to the service.
+				\item {\bf Guest:} someone who needs to sign up to the application in order to access its functionalities, otherwise they can't access to the service.
 				\item {\bf Authorities:} representatives of the Municipality considered as a kind of application user
 				\item {\bf User:} citizen or city's tourist that is registered to the application, so he/she can access the functionality offered by the application. Even if the term User can be considered as a generic term for every application user, in this document we'll consider user as explained above.
 				\item {\bf Municipality:} entity composed of both men and the information system that has authority on the streets, where it has the responsibility to enforce the rules and to guarantee safety. 
 				\item {\bf Violation:} the action of violating traffic laws.
-				\item {\bf Ticket:} administrative sanction established 	by law for a violation.
-				\item {\bf Plate recognition Algorithm:} algorithm that 	automatic recognise vehicle's' plate by the images sent from users to report a violation or an accident.
+				\item {\bf Ticket:} administrative sanction established 	by law for a traffic violation.
+				\item {\bf Plate Recognition Algorithm:} algorithm that 	automatic recognise vehicle's' plate by the images sent from users to report a violation or an accident.
 				\item {\bf Notification Data:} information that is provided by the user when he reports a violation. This includes picture, license plate, date, time, position.
 				\item {\bf Ticket Data:} information that is provided by the municipality when it adds a new ticket in the system. This includes violation type, license plate, date, time, position.
-				\item {\bf Accident Data:} information that usually is 	provided by the municipality when it reports an accident. This can includes accident type, picture, multiple license plate, date, time, position.
+				\item {\bf Accident Data:} information that usually is provided by the municipality when it stores data about an accident. This can includes accident type, picture, multiple license plate, date, time, position.
 				\item {\bf Intervention:} action taken by the municipality to prevent further issues in the city traffic.
 				\item {\bf Notification:} message sent by the user to 						advise the system about a violation.
-				\item {\bf SafeMap:}
-				\item {\bf AuthorityMap:}
-				\item {\bf Statistics:} also called stats, 
-				\item {\bf Ticket statistics:} also called ticket stats,
+				\item {\bf Safe Map:} map indicating the violation level of the city. The level is obtained from the users' data.
+				\item {\bf Authority Map:} map indicating the violation level of the city. The level is obtained from the users' data. Also contains sensible data for authorities. 
+				\item {\bf Statistics:} all the insights obtained from the analysis of the notifications' data, aggregated and showed to the user or to the authority, as user of the application.  
+				\item {\bf Ticket Statistics:} all the insights obtained from the analysis of the tickets' data, aggregated and showed to the authority, because they contains sensible information and are not useful to the user.
 			\end{itemize}
 		
 		\subsubsection{Acronyms}
@@ -132,7 +143,6 @@ With regards to {\it {\it Advanced Function 1}}, we identify:
 			\begin{itemize}
 				\item {\bf GPS:} Global Positioning System
 				\item {\bf API:} Application Programming Interface
-				\item {\bf ID:} Identifier
 				\item {\bf RASD:} Requirements Analysis and 								Specification Document
 				\item {\bf DBMS:} Data Bases Management System
 				\item {\bf GDPR:} General Data Protection Regulation
@@ -161,7 +171,7 @@ With regards to {\it {\it Advanced Function 1}}, we identify:
 		\begin{tabular}{ccc} 
 		Version & Date & Changes  \\ 
 		\hline
-		 \\1.0 & 27/10/2019 & First Delivery
+		 \\1.0 & 10/10/2019 & First Delivery
 		 \\
 		\end{tabular}
 		\caption{Revision History}
@@ -179,8 +189,8 @@ With regards to {\it {\it Advanced Function 1}}, we identify:
 	\subsection{Document Structure}
 			The rest of the document is organised as follows:
 				\begin{itemize}
-					\item {\bf Overall Description} (Section 2): it will be given a general description of the application, with an analysis of the domain focusing on descriptions about the phenomena according to the {\it World and the Machine} paradigm, and the User Characteristic. It will be provided class diagram and state charts in UML Language and also domain assumptions, dependencies and constraints.
-					\item {\bf Specific Requirements} (Section 3): in this section all the Functional Requirements of the application are explained in details and related to use case scenarios and sequence diagrams clarifying process and interactions between the actors and the {\it System}. Also, there are descriptions of all the non-functional requirements and external interfaces.
+					\item {\bf Overall Description} (Section 2): it will be given a general description of the application, with an in depth analysis of the phenomena according to the {\it World and the Machine} paradigm, and the User Characteristic. There will be provided class diagram and state charts in UML Language and also domain assumptions, dependencies and constraints.
+					\item {\bf Specific Requirements} (Section 3): in this section all the Functional Requirements of the application are explained in details and related to use case scenarios and sequence diagrams for clarifying processes and interactions between the actors and the {\it System}. Also, there are descriptions of all the non-functional requirements and external interfaces.
 					\item {\bf Formal Analysis} (Section 4): description and creation of simulation using a formal model, the Alloy specification language in order to address the critical aspects of the {\it SafeStreets System}.				
 					\end{itemize}
 
@@ -189,37 +199,39 @@ With regards to {\it {\it Advanced Function 1}}, we identify:
 %Overall Description - Section 2
 \section{Overall Description}
 	\subsection{Product perspective} 
-	In this section we will provide a detailed descriptions of World and Shared Phenomena. Also, there  a Class Diagram and State Charts to clarify the modeling of the application. \\ \\
-	{\bf A generic traffic Violation occurs on the streets under the \mbox{Municipality's} jurisdiction (WP)} \\
-		A violation of the traffic laws occurs on the streets on which the municipality has responsibilities.
+	In this section we will provide a detailed descriptions of World and Shared Phenomena. Also, there are a Class Diagram and State Charts to clarify the modelling of the application. \\ \\
+	{\bf A generic traffic violation occurs on the streets under the \mbox{Municipality's} jurisdiction (WP)} \\
+		A violation of traffic laws occurs on the streets on which the municipality has responsibilities.
 Violations includes (but are not limited to) parking where it is forbidden (outside parking lanes, on pedestrian crossings, on sidewalks, exc). \\ \\
-	{\bf An Accident occurs on the streets under the Municipality's jurisdiction (WP)} \\
+	{\bf An accident occurs on the streets under the Municipality's jurisdiction (WP)} \\
 		A car accident occurs on the streets on which the municipality has responsibilities. Because guaranteeing safety is one of those, the municipality aims the number of accidents to be the lowest possible. Car accidents do not only occur between two vehicles, but may also include pedestrians, bikes and urban infrastructure. \\ \\
 	{\bf A User notices the violation and takes action (WP)} \\
 		A user of the system acknowledges a traffic laws violation and contributes, through the system, to the street safety and rules enforcing effort by reporting the type of violation together with a picture of the vehicle involved. \\ \\
-	{\bf A Ticket is generated by the Municipality (WP)}\\
-		Representatives of the municipality issue a ticket to the owner of the vehicle involved in a traffic laws violations. \\ \\
-	{\bf Data from all the Tickets generated by the Municipality are stored by the System (WP)}\\
-		The municipality keeps detailed track in the database of its information system of every ticket issued, including date, time, position, type of violation and plate number.\\ \\
-	{\bf An Intervention is made by the Municipality to address possible issues on the streets under its jurisdiction (WP)} \\
-		In order to fulfil its responsibility of guaranteeing safety, the municipality makes a modification in the viability or the urban infrastructure layout on the streets under its jurisdiction to address a safety issue.\\ \\
+	{\bf A ticket is generated by the Municipality (WP)}\\
+		Authorities, as representatives of the municipality confirm a ticket and municipality issues a ticket to the owner of the vehicle involved in a traffic laws violations. \\ \\
+	{\bf An intervention is made by the Municipality to address possible issues on the streets under its jurisdiction (WP)} \\
+		In order to fulfil its responsibility of guaranteeing safety, the municipality makes a modification in the viability or to the urban infrastructure layout on the streets under its jurisdiction to address a safety issue.\\ \\
 	{\bf The System notifies the User that the plate recognition tool was not successful, in order for the user to take a better picture (SP2)}. \\
 		As soon as the system receives from a user a notification of a traffic laws violation, it instantly runs the plate recognition algorithm and in case that fails, the system notifies the user asking him to take a new picture in which the plate is more readable. \\ \\
 	{\bf The System transmits a violation notification to the Municipality (SP2)} \\
 		The system shares every notification that is reported by users with the municipality, which has the responsibility to take action if necessary.\\ \\
-	{\bf The System provides suggestions on possible interventions to address issues to the Municipality (SP2)} \\
+	{\bf The System provides suggestions on possible interventions to address issues to the Municipality through Authorities (SP2)} \\
 		After crossing the information about accidents, which has been transmitted from the municipality, with the data of the violations reported, the system is able to individuate areas and traffic dynamics that are particularly dangerous and to compute possible solutions that would improve safety. \\ \\
-	{\bf The System shows statistics mined from violation notifications data to users and/or the Municipality (SP2)} \\
-		The system allows both users and municipality to view statistics mined from the notification data. Of course users cannot visualize some of this statistics for privacy reasons (for example the plate of the most egregious violators). \\ \\
+	{\bf The System shows statistics mined from violation notifications data to Users and/or the Authorities (SP2)} \\
+		The system allows both users and authorities, as representatives of the municipality to view statistics mined from the notification data. Of course users cannot visualise some of this statistics for privacy reasons (for example the plate of the most egregious violators). \\ \\
+	{\bf The System shows statistics obtained from tickets data to the Authorities (SP2)}\\
+		The system allows authorities, as representatives of the municipality to view statistics obtained from tickets' data. Users cannot visualise this insights. \\ \\
+	{\bf Data from all the tickets generated by the Municipality are stored by the System (SP2)}\\
+		The municipality keeps detailed track in the database of its information system of every ticket issued, including date, time, position, type of violation and plate number.\\ \\
 	{\bf A Guest signs up on the system giving all the personal data needed and/or signs in with his credentials  (SP1)} \\
 		A guest registers on the system sharing his identity, date of birth and email address. He then gets valid credentials to login into the System and use the service. \\ \\
 	{\bf A User sends a violation notification to the System, including type of violation, position, date, time and picture (SP1)} \\
-		A User reports a violation through the System, taking a picture of the vehicle and selecting the type of violation. The System autonomously includes to that information the date, time and position of the User in the instant he takes the picture. \\ \\
+		A User reports a violation through the System, taking a picture of the vehicle and selecting the type of violation. The System autonomously includes to that information the date, time and position of the User in the instant he loads the picture. \\ \\
 	{\bf Municipality transmits data about the accidents occurring on the streets to the System (SP1)}\\
 		The municipality shares complete data about every accident occurring on the streets with the system.\\ \\
-	{\bf Municipality evaluates a violation notification coming from the System (SP1)}\\ 
+	{\bf Authority, as a representative of the Municipality evaluates a violation notification coming from the System (SP1)}\\ 
 		Representatives of the municipality evaluate a notification transmitted by the system to verify the actual violation of the traffic laws and to generate, if the conditions are right, a ticket. \\ \\
-	{\bf Municipality evaluates a suggestion for an intervention coming from the System (SP1)}\\ 
+	{\bf  Authority, as a representative of the Municipality evaluates a suggestion for an intervention coming from the System (SP1)}\\ 
 		Once received a suggestion for an intervention from the system, representatives of the municipality evaluate whether it is consistent and feasible and make a cost and benefits analysis.\\ \\
 	{\bf Municipality transfers data about tickets generated to the System (SP1)}\\
 		The municipality shares complete data about every ticket issued with the system.\\ \\
@@ -239,27 +251,27 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 	\subsubsection{State Charts}	
 	\begin{figure}[H]
 				\centering
-				\includegraphics[scale=0.7]{Images/Diagrams/ViolationStateChart.png}
+				\includegraphics[scale=0.6]{Images/Diagrams/ViolationStateChart.png}
 				\caption{{\it Violation Report} State Chart}
 	\end{figure}
-	\pagebreak
 	\begin{figure}[H]
 				\centering
 				\includegraphics[scale=0.6]{Images/Diagrams/TicketStateChart.png}
 				\caption{{\it Ticket Analysis} State Chart}
 	\end{figure}
+	\pagebreak
 		
 
 	\subsection{Product functions} 
 	\begin{itemize}
 	\item {\bf User Functions:} \\ \\
 		{\bf Report a traffic violation} \\
-		The User noticing a violation on the streets is able to, once accessed the System, fill in the information to report a violation: he takes a picture of the vehicle, with the plate decently readable, and select the type of violation from the list provided. The date, time and position are automatically taken by the system when the image is shot (the picture of the violation can only be taken using the application, not retrieved and uploaded from the photo archive) and integrated to the information given by the User. All the data is eventually sent to the System’s DBMS and the plate recognition algorithm is ran to complete the data with the plate number. If the tool fails, the User is instantly notified and asked to take a better picture. \\ \\ 
-		{\bf Access statistics from notifications’ data}\\
+		The User noticing a violation on the streets is able to, once accessed the System, fill in the information to report a violation: he takes a picture of the vehicle, with the plate decently readable, and select the type of violation from the list provided. The date, time and position are automatically taken by the system when the image is loaded (the picture of the violation can only be taken using the application, not retrieved and uploaded from the photo archive) and integrated to the information given by the User. All the data are eventually sent to the System’s DBMS and the plate recognition algorithm is ran to complete the data with the plate number. If the tool fails, the User is instantly notified and asked to take a better picture. \\ \\ 
+		{\bf Access statistics from notifications' data}\\
 		The User, once logged in, is able to enter the section of the application where statistics from the notifications received are available: number of violations per period (week, month, year), violations average per day of the week, the previous two per type of violation and a map showing where the violations were reported. Of course no plate number and no information about who reported the violations is shown to the User.\\ 
 	\item {\bf Authority Functions:} \\ \\
-		{\bf Access statistics from notifications’ data}\\
-		The Municipality is able to enter the section of the system interface where statistics from the notifications received from its jurisdiction are available: number of violations per period (week, month, year), violations average per day of the week, the previous two per type of violation and a map showing where the violations were reported. The municipality can view the plate number of the offender of any violation notification but has no information on the User that reported it. \\ \\
+		{\bf Access statistics from notifications' data}\\
+		The Municipality is able to enter the section of the system interface where statistics from the notifications received from its jurisdiction are available: number of violations per period (week, month, year), violations average per day of the week, the previous two per type of violation and a map showing where the violations were reported. As a representative of the municipality, Authority can view the plate number of the offender of any violation notification but has no information on the User that reported it. \\ \\
 		{\bf Obtain suggestions about unsafe areas}\\
 		The system provides to the Municipality possible solutions to issues individuated through statistics, which are being mined from data on accidents and violations. This is something really valuable for the Municipality because most of the time it doesn’t have the tools itself to individuate connections and cause-effect relationship in the series of events (ex. a lot of accidents happening at a corner where a lot of second row parking violations are notified).\\ \\
 		{\bf Generate tickets}\\
@@ -271,7 +283,7 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 	\end{itemize}
 		
 	\subsection{User characteristics}
-	{\it SafeStreets} has two kinds of users. There are  {\bf simple }{\it Users} of the application and {\it Authorities} (for details about the semantics about the term User refers to the section 1.3.1 of this document). The first type is usually a citizen or a tourist of the city where the {\it SafeStreets'} service is activated. The {\it User} needs to notify authorities of a violation,  and in order to do this, he/she has to install the application on his/her smartphone. The second type of user are {\it Authorities}, they are representative of the {\it Municipality}. They can access the application from their smartphone or any device supplied by the {\it Municipality}. Also their access to the service is provided by the {\it Municipality} too because they have a different level of visibility in respect to the simple {\it Users}. They need to access statistics provided by the service or have to generate tickets. \\
+	{\it SafeStreets} has two kinds of users. There are  {\bf simple }{\it Users} of the application and {\it Authorities} (for details about the semantics about the term User refers to the section 1.3.1 of this document). The first type is usually a citizen or a tourist of the city where the {\it SafeStreets'} service is activated. The {\it User} needs to notify authorities of a violation,  and in order to do this, he/she has to install the application on his/her smartphone. The second type of user are {\it Authorities}, they are representative of the {\it Municipality}. They can access the application from their smartphone or any device provided by the {\it Municipality}. Also their access to the service is provided by the {\it Municipality} too because they have a different level of visibility in respect to the simple {\it Users}. They need to access statistics provided by the service or they have to generate tickets. \\
 	The characters involved are:
 	\begin{itemize}
 		\item {\it Guest:} a user who has downloaded the application on his/her smartphone, but has to create an account. No functionalities can be accessed without registering to the service
@@ -366,7 +378,7 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 		After the Log-in, the {\it User} enters in the application, where the {\it System} shows an interface with four tabs, each one representing a function of the application: report a violation, see the safety map, see statistics about violation and user setting. Below we will describe each section in details. 
 			\begin{itemize}
 			\item {\bf Report} \\
-			The Report tab is the primary tab for the {\it User}. Here the {\it User} can report a violation that noticed on the streets under the {\it Municipality's} jurisdiction. He can load a picture of the violation, that will be processed by the plate recognition algorithm to be sure that the vehicle is identified and associated to the offender. From the drop down menu the {\it User} can enter the type of the violation and the date. The GPS switch should be allowed to retrieve the metadata and the position. The second interface is an alert that advise the {\it User} the report is successfully completed. 
+			The Report tab is the primary tab for the {\it User}. Here the {\it User} can report a violation that noticed on the streets under the {\it Municipality's} jurisdiction. He can load a picture of the violation, that will be processed by the plate recognition algorithm to be sure that the vehicle is identified and associated to the offender. From the drop down menu the {\it User} can enter the type of the violation. The GPS and Date switch should be allowed to retrieve the metadata and the position. The second interface is an alert that advise the {\it User} the report is successfully completed. 
 			\begin{figure}[H]
 				\centering
 			\begin{subfigure}{.4\textwidth}
