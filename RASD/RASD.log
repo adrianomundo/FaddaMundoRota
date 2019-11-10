@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.10.30)  10 NOV 2019 23:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.10.30)  10 NOV 2019 23:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -762,55 +762,131 @@ Overfull \hbox (53.03828pt too wide) in paragraph at lines 976--977
 
 [45 <./Images/Diagrams/UC7.png>] [46 <./Images/Diagrams/UC10.png>] [47]
 [48] [49] [50] [51]
-Overfull \hbox (1.9582pt too wide) in paragraph at lines 1115--1116
+<Images/Alloy/alloy_1.jpg, id=233, 471.26062pt x 456.95718pt>
+File: Images/Alloy/alloy_1.jpg Graphic file (type jpg)
+<use Images/Alloy/alloy_1.jpg>
+Package pdftex.def Info: Images/Alloy/alloy_1.jpg  used on input line 1111.
+(pdftex.def)             Requested size: 353.4446pt x 342.71704pt.
+
+Overfull \hbox (8.4446pt too wide) in paragraph at lines 1111--1112
+ [][] 
+ []
+
+<Images/Alloy/alloy_2.jpg, id=234, 462.22687pt x 440.39531pt>
+File: Images/Alloy/alloy_2.jpg Graphic file (type jpg)
+<use Images/Alloy/alloy_2.jpg>
+Package pdftex.def Info: Images/Alloy/alloy_2.jpg  used on input line 1115.
+(pdftex.def)             Requested size: 346.6693pt x 330.29567pt.
+
+Overfull \hbox (1.6693pt too wide) in paragraph at lines 1115--1116
+ [][] 
+ []
+
+<Images/Alloy/alloy_3.jpg, id=235, 462.22687pt x 378.66469pt>
+File: Images/Alloy/alloy_3.jpg Graphic file (type jpg)
+<use Images/Alloy/alloy_3.jpg>
+Package pdftex.def Info: Images/Alloy/alloy_3.jpg  used on input line 1119.
+(pdftex.def)             Requested size: 346.6693pt x 283.99782pt.
+
+Overfull \hbox (1.6693pt too wide) in paragraph at lines 1119--1120
+ [][] 
+ []
+
+[52 <./Images/Alloy/alloy_1.jpg>]
+<Images/Alloy/alloy_4.jpg, id=239, 459.96844pt x 452.4403pt>
+File: Images/Alloy/alloy_4.jpg Graphic file (type jpg)
+<use Images/Alloy/alloy_4.jpg>
+Package pdftex.def Info: Images/Alloy/alloy_4.jpg  used on input line 1123.
+(pdftex.def)             Requested size: 344.97548pt x 339.3294pt.
+ [53 <./Images/Alloy/alloy_2.jpg>]
+<Images/Alloy/alloy_5.jpg, id=243, 462.22687pt x 392.96812pt>
+File: Images/Alloy/alloy_5.jpg Graphic file (type jpg)
+<use Images/Alloy/alloy_5.jpg>
+Package pdftex.def Info: Images/Alloy/alloy_5.jpg  used on input line 1127.
+(pdftex.def)             Requested size: 346.6693pt x 294.72536pt.
+
+Overfull \hbox (1.6693pt too wide) in paragraph at lines 1127--1128
+ [][] 
+ []
+
+[54 <./Images/Alloy/alloy_3.jpg>]
+<Images/Alloy/alloy_6.jpg, id=247, 472.01344pt x 247.67531pt>
+File: Images/Alloy/alloy_6.jpg Graphic file (type jpg)
+<use Images/Alloy/alloy_6.jpg>
+Package pdftex.def Info: Images/Alloy/alloy_6.jpg  used on input line 1131.
+(pdftex.def)             Requested size: 354.0092pt x 185.75601pt.
+
+Overfull \hbox (9.0092pt too wide) in paragraph at lines 1131--1132
+ [][] 
+ []
+
+[55 <./Images/Alloy/alloy_4.jpg>]
+<Images/Alloy/executing_0.jpg, id=252, 349.305pt x 57.96657pt>
+File: Images/Alloy/executing_0.jpg Graphic file (type jpg)
+<use Images/Alloy/executing_0.jpg>
+Package pdftex.def Info: Images/Alloy/executing_0.jpg  used on input line 1135.
+
+(pdftex.def)             Requested size: 296.91064pt x 49.2718pt.
+<Images/Alloy/executing.jpg, id=253, 752.8125pt x 484.05844pt>
+File: Images/Alloy/executing.jpg Graphic file (type jpg)
+<use Images/Alloy/executing.jpg>
+Package pdftex.def Info: Images/Alloy/executing.jpg  used on input line 1139.
+(pdftex.def)             Requested size: 414.04816pt x 266.23296pt.
+
+Overfull \hbox (69.04816pt too wide) in paragraph at lines 1139--1140
+ [][] 
+ []
+
+[56 <./Images/Alloy/alloy_5.jpg> <./Images/Alloy/alloy_6.jpg>]
+Overfull \hbox (1.9582pt too wide) in paragraph at lines 1148--1149
 []|\OT1/cmr/bx/n/10 Hours| 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1150
+Underfull \vbox (badness 10000) detected at line 1183
  []
 
-
-Overfull \hbox (1.9582pt too wide) in paragraph at lines 1154--1155
+[57 <./Images/Alloy/executing_0.jpg> <./Images/Alloy/executing.jpg>]
+Overfull \hbox (1.9582pt too wide) in paragraph at lines 1187--1188
 []|\OT1/cmr/bx/n/10 Hours| 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1189
+Underfull \vbox (badness 10000) detected at line 1222
  []
 
 
-Overfull \hbox (1.9582pt too wide) in paragraph at lines 1193--1194
+Overfull \hbox (1.9582pt too wide) in paragraph at lines 1226--1227
 []|\OT1/cmr/bx/n/10 Hours| 
  []
 
-[52]
-Underfull \vbox (badness 10000) detected at line 1228
+
+Underfull \vbox (badness 10000) detected at line 1261
  []
 
-[53] (./RASD.aux) ) 
+[58] [59] (./RASD.aux) ) 
 Here is how much of TeX's memory you used:
- 3009 strings out of 492616
- 49956 string characters out of 6129480
- 138013 words of memory out of 5000000
- 6872 multiletter control sequences out of 15000+600000
+ 3051 strings out of 492616
+ 51011 string characters out of 6129480
+ 139013 words of memory out of 5000000
+ 6904 multiletter control sequences out of 15000+600000
  9531 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,9n,46p,1657b,571s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmbx10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmbx12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmr9.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-sy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
-i10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti
-12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9
-.pfb>
-Output written on RASD.pdf (53 pages, 3213086 bytes).
+</usr/local/texlive/2019/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmbx10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmbx12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr9.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmti10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmti12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmti9.pfb>
+Output written on RASD.pdf (59 pages, 3606382 bytes).
 PDF statistics:
- 271 PDF objects out of 1000 (max. 8388607)
- 147 compressed objects within 2 object streams
+ 298 PDF objects out of 1000 (max. 8388607)
+ 160 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 146 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 186 words of extra memory for PDF output out of 10000 (max. 10000000)
 
