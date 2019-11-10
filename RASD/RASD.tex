@@ -323,7 +323,7 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 		 \item {\bf [D9]} Municipality is entitled to issue tickets even if the violation is not physically acknowledged.
 		 \item {\bf [D10]} Suggestions from the System are not ignored from the Municipality, but they are evaluated by the Authority.
 		 \item {\bf [D11]} User takes responsibility for the reports of violation he/she submits. 
-		 \item {\bf [D12]} Violation data are collected in order to be analysed.  
+		 \item {\bf [D12]} Violation data have a relative error of 5\%.  
 		 \end{itemize}
 		
 \pagebreak
@@ -597,12 +597,14 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 			\caption{{\it User} logs-in Use Case}
 			\end{longtable}
 			
+			\pagebreak
+			
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
 	\begin{longtable}{| p{3 cm} | p{10.5 cm} |} 
 			\hline
 			{\bf ID} & UC3 \\
 			\hline
-			{\bf Description} & {\it Authority} logs-in to the application. \\
+			{\bf Description} & An {\it Authority} logs-in to the application. \\
 			\hline
 			{\bf Actors} & {\it Authority} \\
 			\hline
@@ -643,14 +645,15 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 			\caption{{\it Authority} logs-in Use Case}
 			\end{longtable}
 
+	\pagebreak
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%			
 	\begin{longtable}{| p{3 cm} | p{10.5 cm} |} 
 			\hline
 			{\bf ID} & UC4 \\
 			\hline
-			{\bf Description} & {\it User} reports a violation \\
+			{\bf Description} & A {\it Logged-in User} reports a violation \\
 			\hline
-			{\bf Actors} & {\it User}\\
+			{\bf Actors} & {\it Logged-in User}\\
 			\hline
 			{\bf Preconditions} & \begin{itemize}
 								  \item The {\it User} has logged in with his credentials.
@@ -671,150 +674,154 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 								  \end{itemize}	 \\
 			\hline
 			{\bf Exceptions} & 	\begin{itemize}
-								  \item The plate of the of the vehicle involved in the violation is not recognised by the {\it System} specific tool (The {\it User} is then notified and asked to take a more readable picture).
-								  \end{itemize}	\\
+								  \item The plate of the of the vehicle involved in the violation is not recognised by the {\it System} specific tool. 
+								  \end{itemize}
+								  The {\it System} sends an error message to the {\it User}, that need to retake the photo. The flow of the events restarts from point 3. \\
 			\hline
-			\caption{{\it User} report violation Use Case}
+			\caption{{\it Logged-in User} report violation Use Case}
 			\end{longtable}
-
+\pagebreak
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
 	\begin{longtable}{| p{3 cm} | p{10.5 cm} |} 
 			\hline
 			{\bf ID} & UC5 \\
 			\hline
-			{\bf Description} & A {\it User} access to the {\it SafeMap}.\\
+			{\bf Description} & A {\it Logged-in User} accesses to the Safe Map.\\
 			\hline
 			{\bf Actors} & {\it Logged-in User}\\
 			\hline
 			{\bf Preconditions} & 	
 			\begin{itemize}
 				\item The {\it User} downloaded the application on the smartphone.
-				\item The {\it User} has logged into his account in {\it SafeStreet}.
+				\item The {\it User} has logged in with his credentials.
 			\end{itemize}
 			\\
 			\hline
 			{\bf Flow of events} &	
 			\begin{enumerate}
-				\item The {\it User} selects the {\it SafeMap} tab in the application.
-				\item The {\it System} shows the {\it SafeMap}.
-				\item The {\it User} clicks on a {\it SafeMap}'s point to see more details. 
-				\item The {\it System} shows the user violations of the selected zone. 
+				\item The {\it User} selects the Safe Map tab in the application.
+				\item The {\it System} shows the Safe Map interface.
+				\item The {\it User} clicks on a SafeMap's point to see more details. 
+				\item The {\it System} shows the violations of the selected zone. 
 			\end{enumerate}
 			\\
 			\hline
 			{\bf Postconditions} & 
 			\begin{itemize}
-				\item The {\it User} can see all violations in the selected point of the {\it SafeMap}.
+				\item The {\it User} can see all violations in the selected point of the  SafeMap.
 			\end{itemize}
 			\\
 			\hline
 			{\bf Exceptions} & 	
 			\begin{itemize}
-				\item The {\it User} selects a point of the map that doesn't contain violations.
-				\item The {\it System} shows a message to the user asking him that there aren't violations in the zone.
+				\item The {\it User} selects a point that doesn't contain violations. 
 			\end{itemize}
-			\\ \\
+			The {\it System} show a message explaining that there are no violation in that point. The flow of events restarts from point 2. \\
 			\hline
-			\caption{{\it User SafeMap} access}
+			\caption{{\it Logged-in User} accesses Safe Map Use Case}
 			\end{longtable}
-			
+			\pagebreak
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
 	\begin{longtable}{| p{3 cm} | p{10.5 cm} |} 
 			\hline
 			{\bf ID} & UC6 \\
 			\hline
-			{\bf Description} & A {\it User} access to the {\it statistics}.\\
+			{\bf Description} & A {\it Logged-in User} accesses to the statistics.\\
 			\hline
 			{\bf Actors} & {\it Logged-in User}\\
 			\hline
 			{\bf Preconditions} & 	
 			\begin{itemize}
 				\item The {\it User} downloaded the application on the smartphone.
-				\item The {\it User} has logged into his account in {\it SafeStreet}.
+				\item The {\it User} has logged in with his credentials.
 			\end{itemize}
 			\\
 			\hline
 			{\bf Flow of events} &	
 			\begin{enumerate}
-				\item The {\it User} selects the {\it statistics} tab in the application.
-				\item The {\it System} shows the {\it statistics}.
-				\item The {\it User} clicks on a specific {\it statistic} to see more details. 
-				\item The {\it System} shows the user all the possible details about the selected {\it statistic}. 
+				\item The {\it User} selects the Statistics tab in the application.
+				\item The {\it System} shows the Statistics interface.
+				\item The {\it User} clicks on a specific Statistic to see more details. 
+				\item The {\it System} shows the user all the insights about the selected statistic. 
 			\end{enumerate}
 			\\
 			\hline
 			{\bf Postconditions} & 
 			\begin{itemize}
-				\item The {\it User} can see all details about a certain {\it statistic}.
+				\item The {\it User} can see all the details about a certain statistic.
 			\end{itemize}
 			\\
 			\hline
-			{\bf Exceptions} & 	
-			\\ \\
+			{\bf Exceptions} & 
+			\begin{itemize}
+				\item There's no data in the database that let to create Statistics.
+			\end{itemize}
+			The {\it System} shows a message explaining there are no sufficient data at the moment to provide Statistics.
+			\\ 
 			\hline
-			\caption{{\it User} statistics access}
+			\caption{{\it Logged-in User} accesses Statistics Use Case}
 			\end{longtable}
-			
+			\pagebreak
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
 	\begin{longtable}{| p{3 cm} | p{10.5 cm} |} 
 			\hline
 			{\bf ID} & UC7 \\
 			\hline
-			{\bf Description} & An {\it Authority} access to the {\it AuthorityMap}.\\
+			{\bf Description} & A {\it Logged-in Authority} accesses to the Authority Map.\\
 			\hline
 			{\bf Actors} & {\it Logged-in Authority}\\
 			\hline
 			{\bf Preconditions} & 	
 			\begin{itemize}
 				\item The {\it Authority} downloaded the application on the smartphone.
-				\item The {\it Authority} has logged into his account in {\it SafeStreet}.
+				\item The {\it Authority} has logged in with his credentials.
 			\end{itemize}
 			\\
 			\hline
 			{\bf Flow of events} &	
 			\begin{enumerate}
-				\item The {\it Authority} selects the {\it AuthorityMap} tab in the application.
-				\item The {\it System} shows the {\it AuthorityMap}.
-				\item The {\it Authority} clicks on a {\it AuthorityMap}'s point to see more details. 
-				\item The {\it System} shows the authority violations and accidents of the selected zone. 
+				\item The {\it Authority} selects the Authority Map tab in the application.
+				\item The {\it System} shows the Authority Map interface.
+				\item The {\it Authority} clicks on a AuthorityMap's point to see more details. 
+				\item The {\it System} shows the violations of the selected zone with detailed data about vehicles and offenders that are not visible to the {\it User}. 
 			\end{enumerate}
 			\\
 			\hline
 			{\bf Postconditions} & 
 			\begin{itemize}
-				\item The {\it Authority} can see all violations and accidents in the selected point of the {\it AuthorityMap}.
+				\item The {\it Authority} can see all violations in the selected point of the Authority Map.
 			\end{itemize}
 			\\
 			\hline
 			{\bf Exceptions} & 	
 			\begin{itemize}
-				\item The {\it Authority} selects a point of the map that doesn't contain violations or accidents.
-				\item The {\it System} shows a message to the authority asking him that there aren't violations or accidetns in the zone.
+				\item The {\it Authority} selects a point that doesn't contain violations.
 			\end{itemize}
-			\\ \\
+			The {\it System} show a message explaining that there are no violation in that point. The flow of events restarts from point 2. \\
 			\hline
-			\caption{{\it Authority AuthorityMap} access}
+			\caption{{\it Logged-in Authority} accesses Authority Map Use Case}
 			\end{longtable}
+			\pagebreak
 			
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
 		\begin{longtable}{| p{3 cm} | p{10.5 cm} |} 
 			\hline
 			{\bf ID} & UC8 \\
 			\hline
-			{\bf Description} & The {\it Authority} converts the violation notification into a ticket \\
+			{\bf Description} & A {\it Logged-in Authority} converts the violation notification into a ticket \\
 			\hline
-			{\bf Actors} & {\it Authority}\\
+			{\bf Actors} & {\it Logged-in Authority}\\
 			\hline
 			{\bf Preconditions} & \begin{itemize}
+								\item The {\it Authority} downloaded the application on the smartphone.
 								  \item The {\it Authority} has logged in with his credentials.
-								  
 								  \end{itemize}	\\
 			\hline
 			{\bf Flow of events} &	\begin{enumerate}
-								  \item The {\it Authority} accesses the Tickets tab on the System.
+								  \item The {\it Authority} accesses the tickets tab on the {\it System}.
 								  \item The {\it System} shows to the {\it Authority} a list of notifications reported by {\it Users}.
 								  \item The {\it Authority} takes under examination a notification.
-								  \item The {\it Authority} recognizes the violation in the picture.
+								  \item The {\it Authority} recognises the violation in the picture.
 								  \item The {\it Authority} confirms the information provided by the {\it User}.
 								  \item The {\it Authority} establishes the case matches the criteria needed to generate a ticket.
 								  \item The {\it Authority} generates a real ticket to the vehicle reported in the violation notification.
@@ -829,45 +836,50 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 								  \item The picture does not actually show a violation, or the violation is not clear enough in the picture to issue a ticket (in this case no ticket is generated)
 								  \end{itemize}	\\
 			\hline
-			\caption{{\it Authority} ticket generation Use Case}
+			\caption{{\it Logged-in Authority} ticket generation Use Case}
 			\end{longtable}
+			\pagebreak
 			
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%				
 	\begin{longtable}{| p{3 cm} | p{10.5 cm} |} 
 			\hline
 			{\bf ID} & UC9 \\
 			\hline
-			{\bf Description} & A {\it Authority} accesses to {\it statistics} and {\it ticket statistics}.\\
+			{\bf Description} & A {\it Logged-in Authority} accesses to Statistics, including Ticket Statistics.\\
 			\hline
 			{\bf Actors} & {\it Logged-in Authority}\\
 			\hline
 			{\bf Preconditions} & 	
 			\begin{itemize}
 				\item The {\it Authority} downloaded the application on the smartphone.
-				\item The {\it Authority} has logged into his account in {\it SafeStreet}.
+				\item The {\it Authority} has logged in with his credentials.
 			\end{itemize}
 			\\
 			\hline
 			{\bf Flow of events} &	
 			\begin{enumerate}
-				\item The {\it Authority} selects the {\it statistics} tab in the application.
-				\item The {\it System} shows the {\it statistics} and {\it ticket statistics}.
-				\item The {\it Authority} clicks on a specific {\it statistic} to see more details. 
-				\item The {\it System} shows all the possible details about the selected {\it statistic} or {\it ticket statistics}. 
+				\item The {\it Authority} selects the Statistics tab in the application.
+				\item The {\it System} shows the Statistics and Ticket Statistics interface.
+				\item The {\it Authority} clicks on a specific Statistic to see more details. 
+				\item The {\it System} shows all the insights about the selected Statistics.
 			\end{enumerate}
 			\\
 			\hline
 			{\bf Postconditions} & 
 			\begin{itemize}
-				\item The {\it Authority} can see all details about a certain {\it statistic} or {\it ticket statistic}
+				\item The {\it Authority} can see all details about a certain Statistic or ticket statistic.
 			\end{itemize}
 			\\
 			\hline
-			{\bf Exceptions} & 	
-			\\ \\
+			{\bf Exceptions} & 
+			\begin{itemize}
+				\item There's no data in the database that let to create Statistics.
+			\end{itemize}
+			The {\it System} shows a message explaining there are no sufficient data at the moment to provide Statistics. \\
 			\hline
-			\caption{{\it Authority} statistics access}
+			\caption{{\it Logged-in Authority} accesses Statistics Use Case}
 			\end{longtable}
+			\pagebreak
 			
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%				
 			
@@ -875,12 +887,13 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 			\hline
 			{\bf ID} & UC10 \\
 			\hline
-			{\bf Description} & The {\it Authority} accesses suggestions on possible interventions \\
+			{\bf Description} & A {\it Logged-in Authority} accesses suggestions on possible interventions \\
 			\hline
-			{\bf Actors} & {\it Authority}\\
+			{\bf Actors} & {\it Logged-in Authority}\\
 			\hline
 			{\bf Preconditions} & 
 					\begin{itemize}
+						\item The {\it Authority} downloaded the application on the smartphone.
 						\item The {\it Authority} has logged in with his credentials.
 						\item The {\it Municipality} sent data about accidents to the {\it System}.
 						\end{itemize}	\\
@@ -920,7 +933,7 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 
 	\pagebreak
 	\subsubsection{Sequence Diagrams}
-	The first sequence diagram models the interaction for the creation of a new account. The actors are a {\it Guest} and the {\it System}.
+	The first sequence diagram models the interaction for the creation of a new account. The actors are a {\it Guest} and the {\it System}. 
 		\begin{figure}[H]
 			\centering
 			\includegraphics[scale=0.55]{Images/Diagrams/sd_signup.png}
@@ -938,19 +951,19 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 			\includegraphics[scale=0.55]{Images/Diagrams/UC4-7.png}
 			\caption{Report violation sequence diagram}
 		\end{figure}
-		The forth sequence diagram models the access and interaction from the user to the application Map. We created a single sequence diagram for both {\it User} and {\it Authority} because the procedure is almost the same.
+		The forth sequence diagram models the access and interaction between the application {\it User} and the Map function. We created a single sequence diagram for {\it User} and {\it Authority} because the procedure is almost the same for both Safe Map and Authority Map.
 		\begin{figure}[H]
 			\centering
 			\includegraphics[scale=0.55]{Images/Diagrams/57SeqDiagram.png}
 			\caption{Map access sequence diagram}
 		\end{figure}
-		The fifth sequence diagram models the access and interaction from the user to the application statistics. We created a single sequence diagram for both {\it User} and {\it Authority} because the procedure is almost the same.
+		The fifth sequence diagram models the access and interaction between the application {\it User} and the Statistics function. We created a single sequence diagram for  {\it User} and {\it Authority} because the procedure is almost the same for both. The difference between the two is the level of visibility.
 		\begin{figure}[H]
 			\centering
 			\includegraphics[scale=0.55]{Images/Diagrams/68SeqDiagram.png}
 			\caption{Statistic access sequence diagram}
 		\end{figure}
-		The sixth sequence diagram models process of ticket generation using data from notifications. 		The actors are the {\it Authority} and the {\it System}.
+		The sixth sequence diagram models process of ticket generation using data from notifications. The actors are the {\it Authority} and the {\it System}.
 		\begin{figure}[H]
 			\centering
 			\includegraphics[scale=0.55]{Images/Diagrams/UC7.png}
@@ -984,18 +997,21 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
    			 \item {\bf [R8]} The {\it System} gives a feedback to the {\it User} if the report process is done correctly.
    			 \item {\bf [R9]} Only {\it User} with an account can create and send a report.
    			 \item {\bf [D3]} A violation should be clearly visible and identifiable from the picture.
+   			 \item {\bf [D4]} A violation is processed if everything is correct, otherwise the Municipality fixes the errors.
    			 \item {\bf [D8]} Each car has a license plate.
    			 \item {\bf [D11]} A {\it User} takes responsibility for the reports of violation he/she submits.
 			 \end{itemize}
 			 \item {\bf [G3]} Allowing {\it Users} to enter data/information about the violation.
 			 \begin{itemize}
+			 \item {\bf [R7]} The {\it System} must be able to analyse the picture and recognise the plate number. 
 			 \item {\bf [R10]} The {\it System} must allow the {\it User} to take a picture of the violation.
 			 \item {\bf [R11]} The {\it System} can accept or refuse the image loaded from the {\it User}.
 			 \item {\bf [R12]} The {\it System} must allow the {\it User} to select the violation type.
 			 \item {\bf [R13]} Metadata, such as date and time, must be automatically retrieved from the device. 
 			 \item {\bf [R14]} The {\it System} must allow the {\it User} to edit information before sending the report.
-			 \item {\bf [R15]} The {\it System} must be able to store all the notification data.
+			 \item {\bf [R15]} The {\it System} must be able to store all the notifications' data.
 			 \item {\bf [D3]} A violation should be clearly visible and identifiable from the picture.
+			 \item {\bf [D4]} A violation is processed if everything is correct, otherwise the Municipality fixes the errors.
 			 \item {\bf [D6]} GPS system of the device has an accuracy of 50 meters.
 			 \item {\bf [D7]} Permission to access GPS and device data is granted to the System.
    			 \item {\bf [D8]} Each car has a license plate.
@@ -1008,19 +1024,25 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
    			 \item {\bf [R17]} The {\it System} imports new data and update map and statistics every 12h.
    			 \item {\bf [R18]} The {\it System} must allow the {\it User} to visualise statistics derived from the data.
    			 \item {\bf [R19]} The {\it System} must allow {\it Authority} to see sensible information that {\it User} can't access. 
-   			 \item {\bf [D12]} Violation data are collected in order to be analysed. 
+   			 \item {\bf [D7]} Permission to access GPS and device data is granted to the System.
+   			 \item {\bf [D12]} Violation data have a relative error of 5\%. 
 			 \end{itemize}		  
    			 \item {\bf [G5]} Identifying potentially unsafe areas and making suggestions to address those issues.
    		    	\begin{itemize}
+   		    	\item {\bf [R15]} The {\it System} must be able to store all the notifications' data.
+   		        \item {\bf [R19]} The {\it System} must allow {\it Authority} to see sensible information that {\it User} can't access.
    		    	\item {\bf [R20]} The {\it System} must be able to identify viability issues based on data.
    		    	\item {\bf [R21]} The {\it System} must suggest solution to address viability issue.
    		    	\item {\bf [R22]} The {\it System} must allow the {\it Authority} to access the list of possible interventions. 
    		    	\item {\bf [R23]} The {\it System} must allow the {\it Authority} to establish if the intervention is feasible solutions or not.
    		    	\item {\bf [D5]} Data from Municipality about incidents or issued tickets are correct.
    		    	\item {\bf [D10]} Suggestions from the System are not ignored from the Municipality, but they are evaluated by the Authority.
+   		    	\item {\bf [D12]} Violation data have a relative error of 5\%. 
 			 \end{itemize}
 			  \item {\bf [G6]} Allowing {\it Municipality} to generate tickets based on the {\it Users'} notifications. 
 			  \begin{itemize}
+			  \item {\bf [R15]} The {\it System} must be able to store all the notifications' data.
+   		      \item {\bf [R19]} The {\it System} must allow {\it Authority} to see sensible information that {\it User} can't access.
 			  \item {\bf [R23]} The {\it System} must allow the {\it Authority} to access information about the violation notification.
 			  \item {\bf [R24]} The {\it System} must allow the {\it Authority} to validate a ticket.
 			  \item {\bf [R25]} The {\it System} must allow the {\it Authority} to access sensible data about the violation.
@@ -1030,16 +1052,20 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 			  \end{itemize}
 			  \item {\bf [G7]} Providing statistics built on data from issued tickets to the {\it Municipality}.		
 			  \begin{itemize}
+			  \item {\bf [R15]} The {\it System} must be able to store all the notifications' data.
+			  \item {\bf [R19]} The {\it System} must allow {\it Authority} to see sensible information that {\it User} can't access.
+			  \item {\bf [R23]} The {\it System} must allow the {\it Authority} to access information about the violation notification.
 			  \item {\bf [R27]} The {\it System} must be able to store all the tickets' data.
 			  \item {\bf [R28]} All tickets data used for statistics are validated by the {\it Municipality}
 			  \item {\bf [R29]} The {\it System} must allow the {\it Authority} to visualise statistics derived from tickets' data.
 			  \item {\bf [D5]} Data from Municipality about incidents or issued tickets are correct.
 			  \end{itemize}
 	\end{itemize}
+	\pagebreak
 	\subsection{Performance Requirements}
 	In this section we will explore the requirements that the application should respect to work properly. The {\it System} is implemented as a mobile application, {\it SafeStreets}, with a two-tier architecture, and designed to be used by citizens (or tourists) and authority in a city where the {\it Municipality}, in collaboration with {\it SafeStreets}, activated the service. \\
-	The back-end of the application must be able to store all the information about the different kind of Users, with all their credentials, preferences, reported violations. Every User has a space of 50MB on the server to store all the data. All the images stored will be compressed in JPEG format to not exceed the space reserved for the User. All the reported violation and request for issuing tickets must be processed in maximum 5 days.\\ 
-	The {\it System} reserves a maximum space for 75\% of the number of people living in a city where {\it SafeStreets} is activated. These requirements could be fixed increasing the percentage in order to reach more people, but it depends on how the initiatives is perceived from the population. \\
+	The back-end of the application must be able to store all the information about the different kind of Users, with all their credentials, preferences, reported violations. Every User has a space of 50MB on the server to store all the data. All the images stored will be compressed in JPEG format to not exceed the space reserved for the User. All the reported violation and request for issuing tickets must be processed in maximum 3 days.\\ 
+	The {\it System} reserves a maximum space for 75\% of the number of people living in a city where {\it SafeStreets} is activated. These requirements could be fixed, for example increasing the percentage in order to reach more people, but it depends on how the initiatives is perceived from the population. \\
 	All the data must be stored for years in order to access a lot of data from which you can derive significant statistics and insights. \\ 
 	The reported violation image and its analysis must be done in in less than 3 seconds, so the user could be notified of an error and do again the picture. \\
 	The front-end is responsible for the computational tasks related to the graphical-user-interface.
@@ -1057,7 +1083,7 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 	\begin{itemize}
 		\item 2Gb of RAM
 		\item 60Mb of memory mass space
-		\item Internet connection (Wi-Fi, 3G, 4G, LTE), at least 7Mb/s
+		\item Internet connection (Wi-Fi, 3G, 4G, LTE), at least 10Mb/s
 		\item GPS connectivity
 	\end{itemize}
 	\subsection{Software System Attributes}
@@ -1087,24 +1113,76 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 			\hline
 			{\bf Date} & {\bf Task} & {\bf Hours}\\
 			\hline
-			00/00/10 & Git & 1 \\
-						\hline
+			27/10/19 & First Meeting & 3 \\
+			\hline
+			29/10/19 & Github setup & 2 \\
+			\hline
+			30/10/19 & Second Meeting & 4 \\
+			\hline
+			01/11/19 & Introduction, Scope, Purpose & 3 \\
+			\hline
+			02/11/19 & Constraints & 2 \\
+			\hline
+			03/11/19 & User Characteristics & 2 \\
+			\hline
+			04/11/19 & Section 3.3,3.4,3.5 & 3 \\
+			\hline
+			05/11/19 & External Interface & 6 \\
+			\hline
+			06/11/19 & External Interface & 6 \\
+			\hline
+			06/11/19 & Use Cases & 2 \\
+			\hline
+			07/11/19 & Sequence Diagrams  & 1 \\
+			\hline
+			08/11/19 & Requirements & 4 \\
+			\hline
+			09/11/19 & Meeting & 2 \\
+			\hline
+			10/11/19 & Refining and Corrections & 2 \\
+			\hline
 			& & {\bf Total} \\
 			\hline
-			& & XX \\
+			& & 42 \\
 			\hline
-			\caption{Adriano Mundo's effort}
+			\caption{Adriano Mundo's effort} 
 \end{longtable}
 
 \begin{longtable}{| p{2 cm} | p{6 cm} | p{1 cm} |} 
 			\hline
 			{\bf Date} & {\bf Task} & {\bf Hours}\\
 			\hline
-			00/00/10 & Git & 1 \\
-						\hline
+			27/10/19 & First Meeting & 3 \\
+			\hline
+			29/10/19 & Github setup & 2 \\
+			\hline
+			30/10/19 & Second Meeting & 4 \\
+			\hline
+			02/11/19 & Phenomena & 2 \\
+			\hline
+			03/11/19 & Product Functions and Perspective & 3 \\
+			\hline
+			04/11/19 & Use Cases & 3 \\
+			\hline
+			05/11/19 & Scenarios & 3 \\
+			\hline
+			05/11/19 & Use Cases & 2 \\
+			\hline
+			07/11/19 & Assumptions & 3 \\
+			\hline
+			08/11/19 & Sequence Diagrams & 2 \\
+			\hline
+			08/11/19 & Alloy Discussion & 4 \\
+			\hline
+			09/11/19 & Meeting & 2 \\
+			\hline
+			09/11/19 & Alloy & 5 \\
+			\hline
+			10/11/19 & Refactoring e Refinements & 1 \\
+			\hline
 			& & {\bf Total} \\
 			\hline
-			& & XX \\
+			& & 39 \\
 			\hline
 			\caption{Francesco Rota's effort}
 \end{longtable}
@@ -1113,11 +1191,37 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 			\hline
 			{\bf Date} & {\bf Task} & {\bf Hours}\\
 			\hline
-			00/00/10 & Git & 1 \\
-						\hline
+			27/10/19 & First Meeting & 3 \\
+			\hline
+			29/10/19 & Github setup & 2 \\
+			\hline
+			30/10/19 & Second Meeting & 4 \\
+			\hline
+			31/10/19 & Section 1.3 & 2 \\
+			\hline
+			02/11/19 & Section 1.4 & 1 \\
+			\hline
+			04/11/19 & Class Diagrams & 4 \\
+			\hline
+			05/11/19 & State Diagrams & 2 \\
+			\hline
+			05/11/19 & Use Cases & 3 \\
+			\hline
+			06/11/19 & Use Cases & 1 \\
+			\hline
+			08/11/19 & Sequence Diagrams & 2 \\
+			\hline
+			08/11/19 & Alloy & 6 \\
+			\hline
+			09/11/19 & Meeting & 2 \\
+			\hline
+			09/11/19 & Alloy & 5 \\
+			\hline
+			10/11/19 & Corrections & 1 \\
+			\hline
 			& & {\bf Total} \\
 			\hline
-			& & XX \\
+			& & 38 \\
 			\hline
 			\caption{Salvatore Fadda's effort}
 \end{longtable}
