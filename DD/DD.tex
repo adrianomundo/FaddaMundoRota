@@ -107,6 +107,15 @@
 % Architectural Design - Section 2
 \section{Architectural Design}
 	\subsection{Overview}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.2]{Images/polimi_logo}
+			\caption{{\it SafeStreets} Overview of the System}
+		\end{figure}
+	The image above shows an high-level overview of the {\it System}'s architecture.
+	The components interact with some external services. \\
+	The Mobile Client application accesses the GPS service in order to retrive geographical information and communicates with the Application Server through a Proxy. \\ The Application Server uses an external Notification Service to send notifications directly to the Client. It uses a Mail System service and a Map service to execute all the functions. Finally, it accesses the Municipality Service to retrieve data and to communicate with the Municipality through the an API service offered by the Municipality itself.\\ 
+	Further details on the {\it System} components will be explained in the next sections. 		
 	
 		
 	\subsection{Component view}
