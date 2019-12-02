@@ -106,26 +106,87 @@
 	
 % Architectural Design - Section 2
 \section{Architectural Design}
+
 	\subsection{Overview}
 		\begin{figure}[H]
 			\centering
-			\includegraphics[scale=0.5]{Images/Overview.png}
-			\caption{{\it SafeStreets} Overview of the System}
+			\includegraphics[scale=0.35]{Images/Diagrams/overview_diagram.png}
+			\caption{Overview of the System}
 		\end{figure}
 	The image above shows an high-level overview of the {\it System}'s architecture.
 	The components interact with some external services. \\
 	The Mobile Client application accesses the GPS service in order to retrive geographical information and communicates with the Application Server through a Proxy. \\ The Application Server uses an external Notification Service to send notifications directly to the Client. It uses a Mail System service and a Map service to execute all the functions. Finally, it accesses the Municipality Service to retrieve data and to communicate with the Municipality through the an API service offered by the Municipality itself.\\ 
 	Further details on the {\it System} components will be explained in the next sections. 		
+	\pagebreak	
 	
-		
 	\subsection{Component view}
-	
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.20]{Images/Diagrams/component_diagram.png}
+			\caption{{\it SafeStreets} Component Diagram}
+		\end{figure}
+		The purpose of the UML component diagram is to capture the internal architecture of the {\it System}, showing the structure pf components, how they are connected together as a part of larger components. \\
+		It's divided in three main components: the {\it SafeStreets} Client Application, the Business Logic and the external Database. \\ 
+		Each main component is divided in modular components to provide specific functionalities. Components communicate between each other by providing interfaces with the required information. \\
+		This diagram uses assembly connectors for internal interfaces and delegation connectors for external interfaces. 
+		\\ \\
+		{\bf SafeStreets Client} \\
+		This component located on the {\it User}'s device represents the client machines that access to the Business Logic container. Its sub-modules are the Presentation and Data Manager. It is implemented as a thin-client, so does not contain any logic of the {\it System}.
+		\begin{itemize}
+		\item {\bf Presentation:} this module corresponds to the View of the MVC Pattern, requires data from the Business Logic to display the correct UI to the {\it User}.
+		\item {\bf Data Manager:} this module has to communicate with the GPS Service in order to retrieve the data required to the application. 
+		\end{itemize} 
+		{\bf SafeStreets Business Logic} \\
+		This component contains all the {\it SafeStreets} application logic. It's a module between the Client Application and the Database. It collects together all the components needed to satisfy the application functionalities. In the section below each component will be described.
+		\begin{itemize}
+		\item {\bf Authentication Manager:} this component contains all the methods needed to access the application, so for the purpose of the system authentication. It's responsible for both the registrazione and log-in process. It continuously interacts with the Database through the Data Manager interface. It guarantees that all the constraints are respected and finally, when you need to confirm to the {\it Users} they have successfully registered, it communicates with the Mail Service Interface to send the confirmation e-mail. 
+		\item {\bf User Manager:} this component handles all the functionalities related to the User account, both for simple {\it Users} and {\it Authorities}. Its services are performed by interacting with the Database through the Data Manager. 
+		\item {\bf Report Manager:} this component contains the logic needed to perform and handle the violation reported by the {\it User}. Its service are linked to the image loading, the violation indication type and so on. It interacts with another component that's responsible for analysing the image, the Plate Img Controller and stores all the data in the Database through the Data Manager.  Finally, the Report Manager communicates with the Notification Service Interface because it gives a direct feedback to the {\it User} about the loaded image through a push notification.
+		\item {\bf Plate Img Controller:} this component handles the request coming from the {\it User} that wants to load a violation image. The request comes from the Report Manager, in fact the component exposes the methods to verify that the image was not modified by third parties, so it makes a consistency check. In order to do this task, the component runs an algorithm.
+		\item {\bf Statistics Manager:} this component manage and calculate all the statistics that the application is intended to provide to both {\it Users} and {\it Authorities}. It has two main task: retrieve and store the data from the Database through the Data Manager, where are stored all the data inserted from the application's users; and to calculate all the statistics that are accessible from the UI. It manipulates all the data in order to show simple graphs or to find useful insights. It accesses to Map Services Interface because it needs to retrieve geographical information in order to show statistics directly associated with the city's zone.
+		\item {\bf Ticket Manager:} this component is responsible for the ticket verification by the {\it Authorities} thanks to reported {\it User} violation data. In fact he retrieve from the Database through the Data Manager all the violation reported from the {\it Users}, then let the verification to be done manually by an {\it Authorities}, exposing all the needed functions. Finally, it communicates with the Municipality Service Interface in order to advise that the ticket is verified. Therefore the Municipality is able to generate a ticket from this information.
+		\item {\bf Intervention Manager:} this component handles the information coming from the Municipality, in fact it interacts with the Municipality Service Interface to retrieve data about accidents. Then, it cross the information with the data stored in the Databases and retrieved through the Data Manager in order to provide suggestions on interventions. 
+		\item {\bf Data Manager:} this component provides all the methods to interact with the Database such as data retrieval, storage and update, it is the unique point of access to the Database. 
+		\end{itemize}
+		{\bf Data Base} \\
+		This component represents the DBMS, which provides the interfaces to retrieve and store the data. Data about the application and data about Users are securely stored and encrypted.
+		\\ \\
+		{\bf External Services Interfaces} \\
+		Some components of the diagrams that represent the {\it SafeStreets System} and described above communicate with external components. This are are third party services that expose their API. These communications are bilateral and essential to guarantee all the functionalities. 
+		\begin{itemize}
+			\item {\bf GPS Service:} this interface communicates with the Client Application that have to access data from the {\it User}'s device, in particular GPS data through the Data Manager interface. GPS data are essential for tracking position and retrieve all suitable metadata necessary to the application to work properly. 
+			\item {\bf Mail Services Interface:} this interface is responsible for the interaction with the {\it User} when it's sent a confirmation e-mail after the registration phase. It's accessed by the Authentication Manager.
+			\item {\bf Notification Services Interface:} this interface is needed to send push-notification to the {\it User} as an alert when the image processing is not done correctly, so it needs to communicate with the Report Manager in order to advise the {\it User} that have to re-do the process of reporting. 
+			\item {\bf Map Services Interface:} this interface is essential for {\it SafeStreets}, in fact access to a mapping service is necessary to show and calculate statistics with respect to the different city's zone. It's a service accessed by the Statistics Manager.
+			\item {\bf Municipality Services Interface:} this interface is essential to have a means of communication with the Municipality services. It lets to retrieve data and to pass information to the Municipality in order to do all the services offered by the {\it System}. It's accessed by Ticket, Intervention Mngs. 
+		\end{itemize}
+		
+		\pagebreak
 		
 	\subsection{Deployment view}
-	
+		\begin{figure}[H]
+			\centering
+			%%\includegraphics[scale=0.20]{}
+			\caption{{\it SafeStreets} Deployment Diagram}
+		\end{figure}
 		
+	The {\it System} presents a Multi-tier architecture. The role of each node will be specified in the next section.
+
 	\subsection{Runtime view}
 	
+	{\bf Account Creation Runtime View}
+	\\ \\
+	{\bf Log-in Runtime View}
+	\\ \\
+	{\bf Violation Report Runtime View}
+	\\ \\
+	{\bf Maps Access Runtime View}
+	\\ \\
+	{\bf Statistics Access Runtime View}
+	\\ \\
+	{\bf Tickets Verification Runtime View}
+	\\ \\ 
+	{\bf Intervention Suggestion Runtime View}
 	
 	\subsection{Selected architectural styles and patterns}
 	
