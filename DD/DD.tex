@@ -166,11 +166,24 @@
 	\subsection{Deployment view}
 		\begin{figure}[H]
 			\centering
-			%%\includegraphics[scale=0.20]{}
+			\includegraphics[scale=0.25]{Images/Diagrams/deployment_diagram.png}
 			\caption{{\it SafeStreets} Deployment Diagram}
-		\end{figure}
+				\end{figure}
 		
-	The {\it System} presents a Multi-tier architecture. The role of each node will be specified in the next section.
+	The {\it System} presents a Multi-tier architecture. The role of each node will be specified in the next section. \\ \\
+			{\bf Mobile Device} \\
+			It represents the Client in the architecture, hosting the System’s mobile application. This is equally valid for both Users and Authorities. \\ \\
+			{\bf Firewall}\\
+			It filters the access to the Reverse Proxy and is used to protect a trusted network from an untrusted network. A firewall provides protection from unauthorized requests or from malicious attacks. \\ \\
+			{\bf Reverse Proxy}\\
+			It retrieves resources on behalf of a client from the servers and balances the load of the various requests. It helps to achieve increased parallelism and scalability of the application. \\ \\
+			{\bf Application Servers}\\
+			They include all the business logic of the system, which is completely replicated to allow workload balancing. \\ \\
+			{\bf Network Firewall}\\
+			It does the same job of the Proxy Firewall but protecting and filtering the access to the DBMS. \\ \\
+			{\bf Data Base Server}\\
+			All data are stored in the Data Base Server equipped with a relational DBMS and can be retrieved with appropriate queries. \\ \\
+	
 
 	\subsection{Runtime view}
 	
