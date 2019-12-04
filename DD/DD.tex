@@ -119,7 +119,7 @@
 	Further details on the {\it System} components will be explained in the next sections. 		
 	\pagebreak	
 	
-	\subsection{Component view}
+	\subsection{Component View}
 		\begin{figure}[H]
 			\centering
 			\includegraphics[scale=0.20]{Images/Diagrams/component_diagram.png}
@@ -163,7 +163,7 @@
 		
 		\pagebreak
 		
-	\subsection{Deployment view}
+	\subsection{Deployment View}
 		\begin{figure}[H]
 			\centering
 			\includegraphics[scale=0.25]{Images/Diagrams/deployment_diagram.png}
@@ -185,30 +185,71 @@
 			All data are stored in the Data Base Server equipped with a relational DBMS and can be retrieved with appropriate queries. \\ \\
 	
 
-	\subsection{Runtime view}
+	\subsection{Runtime View}
 	
-	{\bf Account Creation Runtime View}
+	{\bf Account Creation Runtime View} \\
+	The first sequence diagram
 	\\ \\
-	{\bf Log-in Runtime View}
+	{\bf Log-in Runtime View} \\
+	The second sequence diagam
 	\\ \\
-	{\bf Violation Report Runtime View}
+	{\bf Violation Report Runtime View} \\
+	The third sequence diagram
 	\\ \\
-	{\bf Maps Access Runtime View}
+	{\bf Maps Access Runtime View} \\
+	The fourth sequence diagram
 	\\ \\
-	{\bf Statistics Access Runtime View}
+	{\bf Statistics Access Runtime View} \\
+	The fifth sequence diagram
 	\\ \\
-	{\bf Tickets Verification Runtime View}
+	{\bf Tickets Verification Runtime View} \\
+	The sixth sequence diagram
 	\\ \\ 
-	{\bf Intervention Suggestion Runtime View}
+	{\bf Intervention Suggestion Runtime View} \\
+	The seventh sequence diagram
 	
-	\subsection{Selected architectural styles and patterns}
+	\subsection{Component Interfaces}
+	{\bf Interface Diagram} \\
+	The diagram below represents the Component View of the {\it System}, with methods that have been shown in the Runtime View. 
+	\begin{comment}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.35]{Images/Diagrams/overview_diagram.png}
+			\caption{Overview of the System}
+		\end{figure}
+	\end{comment}
 	
 	
-	\subsection{Other design decisions}
+	\subsection{Selected Architectural Styles and Patterns}
+	{\bf Multi-tier Architecture} \\
+	bla bla bla 
+	\\ \\
+	{\bf Thin Client} \\
+	bla bla bla 
+	\\ \\
+	{\bf REST} \\
+	bla bla 
+	\\ \\ 
+	{\bf MVC} \\
+	bla bla bla
+	\\ \\ 
 	
+	\subsection{Other Design Decisions}
+	{\bf Database} \\
+	bla bla 
+	\\ \\ 
+	{\bf Firewall} \\ 
+	bla bla 
+	\\ \\
+	
+\pagebreak
 
 % User Interface Design - Section 3
 \section{User Interface Design}
+In the section 3.1 of the RASD document are explained in details all the User Interfaces and their design. So, for further information about the UI Design, refers to the RASD document. \\
+In this section is provided an overview of the UX Application flow, using the UI mockups of the RASD. It's explained the flow of the application from the point of view of the {\it User} and from the point of view of the {\it Authorities}.
+
+\pagebreak
 
 % Requirements Traceability
 \section{Requirements Traceability}
@@ -227,16 +268,64 @@
 		
 	\end{longtable}
 	
+	\pagebreak
+	
 	
 % Testing - Section 5
 \section{Implementation, Integration and Test Plan}
 	\subsection{Overview}
+	The {\it System} is divided in many components, that can be divided in the following sub-systems:
+	\begin{itemize}
+		\item Frontend Components: this is Client application subsystem, containing the presentation and the data manager components.
+		\item Back-end Components: this is the Business Logic subsystem with all its components that interacts with the database. 
+		\item External Components: this are the external components that interacts with the {\it System}, such as the Map and GPS services.  
+	\end{itemize}
+	The implementation and testing approach will follow a {\it Top-Down} approach. The strategy followed is the first implement
 		
 	\subsection{Implementation}
 	
+	\pagebreak
 		
 % Effort - Section 6
 \section{Effort Spent}
+\begin{longtable}{| p{2 cm} | p{6 cm} | p{1 cm} |} 
+			\hline
+			{\bf Date} & {\bf Task} & {\bf Hours}\\
+			\hline
+			XX/XX/XX & XX & X \\
+			\hline
+			& & {\bf Total} \\
+			\hline
+			& & XX \\
+			\hline
+			\caption{Adriano Mundo's effort} 
+\end{longtable}
+
+\begin{longtable}{| p{2 cm} | p{6 cm} | p{1 cm} |} 
+			\hline
+			{\bf Date} & {\bf Task} & {\bf Hours}\\
+			\hline
+			XX/XX/XX & XX & X \\
+			\hline
+			& & {\bf Total} \\
+			\hline
+			& & XX \\
+			\hline
+			\caption{Francesco Rota's effort} 
+\end{longtable}
+
+\begin{longtable}{| p{2 cm} | p{6 cm} | p{1 cm} |} 
+			\hline
+			{\bf Date} & {\bf Task} & {\bf Hours}\\
+			\hline
+			XX/XX/XX & XX & X \\
+			\hline
+			& & {\bf Total} \\
+			\hline
+			& & XX \\
+			\hline
+			\caption{Salvatore Fadda's effort} 
+\end{longtable}
 	
 	
 \end{document}
