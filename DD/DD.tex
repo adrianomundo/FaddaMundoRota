@@ -168,7 +168,7 @@
 			\centering
 			\includegraphics[scale=0.25]{Images/Diagrams/deployment_diagram.png}
 			\caption{{\it SafeStreets} Deployment Diagram}
-				\end{figure}
+		\end{figure}
 		
 	The {\it System} presents a Multi-tier architecture. The role of each node will be specified in the next section. \\ \\
 			{\bf Mobile Device} \\
@@ -188,26 +188,68 @@
 	\subsection{Runtime View}
 	
 	{\bf Account Creation Runtime View} \\
-	The first sequence diagram
-	\\ \\
+	The first sequence diagram \\
+	\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.25]{Images/Diagrams/Runtime/registration_runtime.png}
+			\caption{{\it SafeStreets} Account Creation Runtime View}
+	\end{figure}	
+	\pagebreak
+	\noindent
 	{\bf Log-in Runtime View} \\
-	The second sequence diagam
-	\\ \\
-	{\bf Violation Report Runtime View} \\
-	The third sequence diagram
-	\\ \\
+	The second sequence diagram \\
+	\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.35]{Images/Diagrams/Runtime/login_runtime.png}
+			\caption{{\it SafeStreets} Login Runtime View}
+	\end{figure}
+	\pagebreak
+	\noindent	
+	{\bf Report Violation Runtime View} \\
+	The third sequence diagram \\
+	\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.25]{Images/Diagrams/Runtime/report_runtime.png}
+			\caption{{\it SafeStreets} Report Violation Runtime View}
+	\end{figure}
+	\pagebreak
+	\noindent
 	{\bf Maps Access Runtime View} \\
-	The fourth sequence diagram
-	\\ \\
+	The fourth sequence diagram \\
+	\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.25]{Images/Diagrams/Runtime/maps_runtime.png}
+			\caption{{\it SafeStreets} Maps Access Runtime View}
+	\end{figure}
+	\pagebreak
+	\noindent
 	{\bf Statistics Access Runtime View} \\
-	The fifth sequence diagram
-	\\ \\
-	{\bf Tickets Verification Runtime View} \\
-	The sixth sequence diagram
-	\\ \\ 
+	The fifth sequence diagram \\
+	\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.25]{Images/Diagrams/Runtime/stats_runtime.png}
+			\caption{{\it SafeStreets} Statistics Access Runtime View}
+	\end{figure}
+	\pagebreak
+	\noindent
+	{\bf Tickets Validation Runtime View} \\
+	The sixth sequence diagram \\
+	\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.25]{Images/Diagrams/Runtime/tickets_runtime.png}
+			\caption{{\it SafeStreets} Tickets Validation Runtime View}
+	\end{figure}
+	\pagebreak
+	\noindent	
 	{\bf Intervention Suggestion Runtime View} \\
-	The seventh sequence diagram
-	
+	The seventh sequence diagram \\
+	\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.25]{Images/Diagrams/Runtime/interventions_runtime.png}
+			\caption{{\it SafeStreets} Intervention Suggestion Runtime View}
+	\end{figure}
+	\pagebreak
+	\noindent
 	\subsection{Component Interfaces}
 	{\bf Interface Diagram} \\
 	The diagram below represents the Component View of the {\it System}, with methods that have been shown in the Runtime View. 
@@ -290,10 +332,35 @@ In this section is provided an overview of the UX Application flow, using the UI
 		\item Back-end Components: this is the Business Logic subsystem with all its components that interacts with the database. 
 		\item External Components: this are the external components that interacts with the {\it System}, such as the Map and GPS services.  
 	\end{itemize}
-	The implementation and testing approach will follow a {\it Top-Down} approach. The strategy followed is the first implement
+	The strategy used to design the {\it System} was {\it Top-Down}, defining the sub-systems described above at a high-level, then refining and detailing them with all the details needed.\\
+	The implementation and testing approach will follow a combination of both {\it Top-Down} and {\it Bottom-Up} strategies because it's the most reasonable choice for relatively small components and sub-systems. \\ 
+	In the following paragraphs it will be presented the order of the implementation and of the integration testing between components.
 		
 	\subsection{Implementation}
-	
+	The implementation of the different components will be parallelised in order to divide the work between developers and for speeding up the implementation process. \\
+	The order of the implementation is:
+	\begin{itemize}
+		\item Implementation of the Database component
+		\item Implementation of Business Logic and Client components
+		\item Integration of component with external service interfaces 
+	\end{itemize}
+	The implementation of the Database consist of instance creation on an external  platform provider and the creation of tables and schemes. 
+	The implementation of the Back-end Components is parallelised, so the Business Logic (Server) and Client will be developed by different developers and then linked together. 
+	The integration with external services consists of a series of API calls to the external services that are already implemented. \\ \\ \\ \\ \\ \\ \\ \\
+	The Business Logic implementation will follow this order. If there are some components on the same line means that they will be implemented in parallel:
+	\begin{enumerate}
+		\item Data Manager
+		\item Authentication Manager, User Manager
+		\item Report Manager, Plate Img Controller
+		\item Statistics, Ticket, Intervention Manager
+	\end{enumerate}
+	The Client implementation will follow this order:
+	\begin{enumerate}
+		\item Data Manager
+		\item Presentation
+	\end{enumerate}
+	The Data Manager is critical because it represents to unique point of access to the Database and it is the component that interacts with all the components that compute the application logic and operate on the basis of the Data Manager retrieval capacity.
+	\subsection{Integration and Testing}
 	\pagebreak
 		
 % Effort - Section 6
