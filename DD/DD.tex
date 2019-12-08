@@ -202,7 +202,7 @@
 	The {\it User's} application selects the login tab and fill the the form with credentials, then the request is validated, if not there's an alter. If the validation process is done correctly it's created an access token and the {\it User} obtain access to the application.
 	\begin{figure}[H]
 			\centering
-			\includegraphics[scale=0.30]{Images/Diagrams/Runtime/login_runtime.png}
+			\includegraphics[scale=0.33]{Images/Diagrams/Runtime/login_runtime.png}
 			\caption{{\it SafeStreets} Log-in Runtime View}
 	\end{figure}
 	\pagebreak
@@ -222,7 +222,7 @@
 	The {\it User's} application selects the map tab, the authorisation is checked, then the Statistics manager get the Notification Data from the Database and the Map from the external interface. After that it computes the Map Statistics and the Client show the interface to the {\it User}, based on the visibility level, because {\it User} and {\it Authority} can see different data.
 	\begin{figure}[H]
 			\centering
-			\includegraphics[scale=0.30]{Images/Diagrams/Runtime/maps_runtime.png}
+			\includegraphics[scale=0.33]{Images/Diagrams/Runtime/maps_runtime.png}
 			\caption{{\it SafeStreets} Maps Access Runtime View}
 	\end{figure}
 	\pagebreak
@@ -232,7 +232,7 @@
 	The {\it User's} application selects the map tab, the authorisation is checked, then the Statistics manager get the Stats Data from the Database and computes the Statistics that must be shown to the {\it User}. Based on the different visibility level, {\it User} or {\it Authority} can see different statistics and insights generate from the notifications and/or tickets data.
 	\begin{figure}[H]
 			\centering
-			\includegraphics[scale=0.32]{Images/Diagrams/Runtime/stats_runtime.png}
+			\includegraphics[scale=0.34]{Images/Diagrams/Runtime/stats_runtime.png}
 			\caption{{\it SafeStreets} Statistics Access Runtime View}
 	\end{figure}
 	\pagebreak
@@ -252,38 +252,129 @@
 	The {\it Authority} selects the Interventions tab, the authorisation is checked, then the Intervention Manager request the intervention data from the Database showing the list of the suggestions to the User that has the task to confirm one or more of them as feasible or not. Then the confirmation is sent to the Municipality that starts the procedure to solve the issue.  
 	\begin{figure}[H]
 			\centering
-			\includegraphics[scale=0.23]{Images/Diagrams/Runtime/interventions_runtime.png}
+			\includegraphics[scale=0.30]{Images/Diagrams/Runtime/interventions_runtime.png}
 			\caption{{\it SafeStreets} Intervention Suggestion Runtime View}
 	\end{figure}
 	\pagebreak
 	\noindent
 	\subsection{Component Interfaces}
 	{\bf Interface Diagram} \\
-	The diagram below represents the Component View of the {\it System}, with methods that have been shown in the Runtime View. 
+	The diagram below represents the Component View of the {\it System}, with methods that have been shown in the Runtime View. Some self calls are omitted. 
 		\begin{figure}[H]
 			\centering
 			\includegraphics[scale=0.20]{Images/Diagrams/interface_diagram.png}
 			\caption{Component Interface Diagram}
-		\end{figure}
+		\end{figure}	
+	\noindent
+	{\bf SafeStreets Client} 
+	\\ 
+	In this section we will describe all the methods of the Client, in particular related to the Presentation layer.
+	\begin{itemize}
+		\item {\bf Presentation}
+		\begin{itemize}
+		\item {\it showMsg(msg, msgID)}: this method has to show the alert or confirmation messages to the {\it User}, using as parameter the type of message and the different id on the basis of the case that has been taken into account. 
+		\item {\it loginAlert()}: display the alert when the Authentication Manager does not validate the credentials entered to access the application.
+		\item {\it showStats(visibilityLevel)}: display the statistics generated from the notifications' data and tickets' data based on the visibilityLevel of User or Authority.
+		\item {\it showMapStats(visibilityLevel)}: display the statistics on the map generated from the data based on the visibilityLevel of User or Authority, in order to show sensitive information.
+		\item {\it showNotificationList()}: display to the Authority the list of tickets that can be validated or refused.
+		\item {\it showInterventionList()}: display the intervention list suggested by the System to the Authority.
+		\end{itemize} 
+		\item {\bf Data Manager}
+		\begin{itemize}
+		\item {\it getGPSData()}: get the coordinates data in order to retrieve the position of the physical device.
+		\end{itemize}
+	\end{itemize} 
+	{\bf SafeStreets Business Logic} \\
+	In this section we will describe the methods of the Business Logic, divided per each component.
+	\begin{itemize}
+    	\item {\bf Authentication Manager}
+       		\begin{itemize}
+        		\item {\it registration(registerInfo)}: method that processes the registration using the information filled by the Guest.
+        		\item {\it login(loginInfo)}: method that processes the login using the information filled by the User or Authority.
+        		\item {\it validate(Info)}: method that validate the authorisation of the User's application to use the functionalities of the application.
+        		\item {\it createUser(userInfo)}: method that create a new User using the information filled by the Guest in the form, if the process has been done correctly.
+        		\item {\it sendEmail(mail, token)}: method that invoke the external service to send the confirmation e-mail to the new User.
+        		\item {\it confirmation(code)}: method used to confirm some actions.
+        		\item {\it getUser(userInfo)}: method that retrieve information about privileges of the User starting from his/her information.
+        		\item {\it setUserToken(user, token)}: method that set the token linked to the User.
+        		\item {\it checkAuthentication()}: method that process the check to be sure that the User has all the authorisation to proceed with the use of the application. 
+    		\end{itemize}
+    	\item {\bf User Manager}
+    		\begin{itemize}
+        		\item {\it setPassword(password)}: method that sets the new password to a User.
+        		\item {\it setUserInfo(userInfo)}: method that sets the user information.
+    		\end{itemize}
+    	\item {\bf Report Manager}
+    		\begin{itemize}
+        		\item {\it accessReport(request, token)}: method invoked to access the report function of the application.
+        		\item {\it checkImg(data)}: method that start the process of image checking.
+        		\item {\it notifyImgNotReadble()}: method that invoke the external Notification Service to alert the user to re-enter the image of the violation because it's not readable.
+        		\item {\it createReport()}: method that create the effective report with all the information provided by the User in the notification. 
+        		\item {\it insertNotification()}: method invoked to memorise the notification if the process has been done correctly.
+    		\end{itemize}
+    	\item {\bf Plate Img Controller}
+    		\begin{itemize}
+        		\item {\it processCheckImg(img)}: method that using as input the image of the violation, analyse the image and determine if it has been modified or not, and that's readable or not.  
+        	\end{itemize}
+    	\item {\bf Statistics Manager}
+    		\begin{itemize}
+        		\item {\it accessStats(request, token)}: method invoked to access the statistics function of the application.
+        		\item {\it accessMaps(request, token)}: method invoked to access the maps function of the application.
+        		\item {\it getStatsData()}: method that get all the data needed for the statistics generation.
+        		\item {\it getNotificationData()}: method that get all the data generated from the Users' notification.
+        		\item {\it getMap()}: method that invoke the external Map Service to cross the data with the map visualisation.
+        		\item {\it computeStats()}: method that compute the Statistics to show the User or Authority.
+        		\item {\it computeMapStats()}: method that compute the Map Statistics to show the User or Authority.
+        		\item {\it setStats(visibilityLevel)}: method that set the Statistics to show to the User or Authority, based on the visibility level. 
+    		\end{itemize}
+    	\item {\bf Ticket Manager}
+    		\begin{itemize}
+        		\item {\it accessTickets(request, token)}: method invoked to access the tickets function of the application
+        		\item {\it getNotificationList()}: method that get all the notification list to show to the User
+        		\item {\it getNotificationDetails(notID)}: method that get the information about a specific notification based on the notID.
+        		\item {\it confirmNotification(notID)}: method invoked when a notification is confirmed by the Authority, based on the notID.
+        		\item {\it refuseNotification(notID)}: method invoked when a notification is refused by the Authority, based on the notID.
+        		\item {\it setNotification(notID)}: method that invoke the external Municipality Service to set the notification in the list of the feasible one, so that the process of ticket generation can be done.
+        		\item {\it discardNotification(notID)}: method that discard the notification after it has been refused, based on the notID.
+    		\end{itemize}
+    	\item {\bf Intervention Manager}
+    		\begin{itemize}
+        		\item {\it accessInterventions(request, token)}: method invoked to access the intervention function of the application.
+        		\item {\it getInterventionData()}: method that get all the data needed for the interventions suggestion function.
+        		\item {\it setInterventionList()}: method that set the intervention list to show to the User. 
+        		\item {\it confirmIntervention(intID)}: method invoked when the Authority confirm that the intervention is feasible based on the ID of the intervention.
+        		\item {\it setIntervention(intID)}: method that invoke the external Municipality Service to set the Intervention in the list of the feasible one, in order to start the phase before the physical intervention, based on the notification ID.  
+    		\end{itemize}
+    	\item {\bf Data Manager}
+    		\begin{itemize}
+        		\item {\it SELECT(data)}: method that select the data as input from the external database service.
+        		\item {\it UPDATE(data)}: method that update the data as input from the external database service.
+        		\item {\it DELETE(data)}: method that delete the data as input from the external database service.
+    		\end{itemize}
+	\end{itemize}
 	
 	\pagebreak
 	
 	\subsection{Selected Architectural Styles and Patterns}
 	{\bf Multi-tier Architecture} \\
-	bla bla bla 
-	\\ \\
+	As stated in the Overview section, the {\it System}'s architecture is a multi-tier \mbox{architecture}. A multi-tier architecture is a client-server architecture where presentation, application logic, and data management functions are physically separated. This division let each tier perform specific tasks, avoid the dependancy from a single node for all the architecture and facilitates the modification of a single tier. This guarantees a better maintenance of {\it System}. \\ \\
+	{\it SafeStreets} implements a three-tier architecture, with the following layer: Presentation tier, Business (or Domain) logic tier, Data management tier. We'll now analyse each one in details:
+	\begin{itemize}
+		\item {\bf Presentation tier:} this is the top level of the application; this tier is completely managed by the Client device, which is a mobile application, both for {\it Users} and {\it Authorities}. The main task is to display to the User's application all the information provided by the Application Server, thanks to the GUI of the mobile device. It also displays also the information of the external services. This is the only tier directly accessible from the User 
+		\item {\bf Business Logic tier:} this tier host the Application Servers of {\it SafeStreets}. As explained by the name it implements only the Business/Domain logic layer and not the storage. The deployment is done by replicating each server as many times as necessary to guarantee the non-functional requirements. Also, each on the server is stateless. In case of many request, it's possible to add more machines to handle the traffic rise. It controls all the application functionality with all his processing. This tier contains the reverse proxy.		
+		\item {\bf Data management tier:} this tier is represented by the Database. A cloud solution is adopted in order to eliminate from the {\it System} tasks like the reliability and management of the physical database. So, it is the data access layer and encapsulate all the related mechanisms.  
+	\end{itemize}
 	{\bf Thin Client} \\
-	bla bla bla 
+	The thin client paradigm is implemented for the interaction between the physical device machine and the {\it System}. A thin client needs to perform very few computation, very close to no computation, but it has to handle the communication. The main advantage of this architecture is that it’s easier to keep data synchronised across multiple clients. It also requires less effort to create new client implementation because there's no logic. A thin client does not rely neither on local storage since all the business logic is on the application servers, which have enough computing power. Even if our Client implementation has a Data Manager and it's used to retrieve the GPS data and because the contribution to the data access is very low, we consider the Client tier as a Thin Client, which host the Presentation layer.
 	\\ \\
-	{\bf REST} \\
-	bla bla 
-	\\ \\ 
 	{\bf MVC} \\
-	bla bla bla
-	\\ \\ 
-	
-	\pagebreak
-	
+	The {\it System} architecture follow the MVC (Model-View-Controller) pattern. This pattern of functionality separation has numerous advantages like simultaneous development, high cohesion and loose coupling between classes, multiple views for the model and ease of modification. It's considered a best practice in the development process and respect the fundamental design principles of software engineering.
+	\begin{itemize}
+		\item {\bf Model}: that's everything related to the application's data and integrity. It's implemented in our {\it System} by the external database.
+		\item {\bf View}: this corresponds to the Presentation tier, that's the only interface between the User's application and the {\it System}.
+		\item {\bf Controller}: that's responsible for the application logic. In our case is stateless and replicable and corresponds to the business logic layer of the {\it System}.
+	\end{itemize}
+		
 	\subsection{Other Design Decisions}
 	{\bf Database} \\
 	It's used a relational model for the {\it SafeStreets} database because it's the right schema for the purpose of our {\it System}. Even if the {\it System} has to compute a lot of calculation, the majority of the operations needs to select small amount of data; these are repetitive operations that should be computed fast, so the chose of a non-relation model is not take into account. Also, a relation model could be accessed using SQL that's a standard across the industry, instead of using a specific language that a non-relational database needs.
@@ -311,73 +402,73 @@ In this section is provided an overview of the UX Application flow, using the UI
 
 \pagebreak
 
-% Requirements Traceability
+% Requirements Traceability - Section 4
 \section{Requirements Traceability}
 	
 	\begin{longtable}{| p{5 cm} | p{8 cm} |} \hline
 		Component (DD) & Requirements (RASD)  \\ \hline
 		\newline Data Manager (Client) & 
 		\begin{itemize}
-			\item {[R13] Metadata, such as date and time, must be automatically re- trieved from the device.}
+			\item {{\bf[R13]} Metadata, such as date and time, must be automatically re- trieved from the device.}
 		\end{itemize}	\\ \hline
 		\newline Authentication Manager & 
 		\begin{itemize}
-			\item  {[R1] The System allows account to be created as a simple User or Authority.}
-			\item  {[R2] A User account can be created if the User provides the correct data: unique email and fiscal code.}
-			\item  {[R4] Users and Authority can access the service if they log-in with their credentials.}
-			\item  {[R5] The System must be able to check if the credentials are valid.
+			\item  {{\bf[R1]} The System allows account to be created as a simple User or Authority.}
+			\item  {{\bf [R2]} A User account can be created if the User provides the correct data: unique email and fiscal code.}
+			\item  {{\bf [R4]} Users and Authority can access the service if they log-in with their credentials.}
+			\item  {{\bf [R5]} The System must be able to check if the credentials are valid.
 }
-			\item  {[R9] Only User with an account can create and send a report.}
+			\item  {{\bf [R9]} Only User with an account can create and send a report.}
 		\end{itemize}		\\	 \hline	
 		\newline User Manager  & 
 		\begin{itemize}
-			\item  {[R6] The System must store all User credentials.}
+			\item  {{\bf [R6]} The System must store all User credentials.}
 
 		\end{itemize}		\\	 \hline	
 		\newline Report Manager  & 
 		\begin{itemize}
-			\item  {[R8] The System gives a feedback to the User if the report process is done correctly.}
-			\item  {[R9] Only User with an account can create and send a report.}
-			\item  {[R10] The System must allow the User to take a picture of the violation.}
-			\item  {[R12] The System must allow the User to select the violation type.}
-			\item  {[R14] The System must allow the User to edit information before sending the report.}
+			\item  {{\bf [R8]} The System gives a feedback to the User if the report process is done correctly.}
+			\item  {{\bf [R9]} Only User with an account can create and send a report.}
+			\item  {{\bf [R10]} The System must allow the User to take a picture of the violation.}
+			\item  {{\bf [R12]} The System must allow the User to select the violation type.}
+			\item  {{\bf[R14]} The System must allow the User to edit information before sending the report.}
 		\end{itemize}		\\	 \hline	
 		\newline Plate Image Controller & 
 		\begin{itemize}
-			\item  {[R7] The System must be able to analyse the picture and recognise
+			\item  {{\bf[R7]} The System must be able to analyse the picture and recognise
 the plate number.
 }
-			\item  {[R8] The System gives a feedback to the User if the report process is done correctly.} 
-			\item  {[R11] The System can accept or refuse the image loaded from the User.}
+			\item  {{\bf [R8]} The System gives a feedback to the User if the report process is done correctly.} 
+			\item  {{\bf [R11]} The System can accept or refuse the image loaded from the User.}
 		\end{itemize}		\\	 \hline	
 		\newline Statistics Manager & 
 		\begin{itemize}
-			\item  {[R18] The System must allow the User to visualise statistics derived from the data.}
-			\item  {[R29] The System must allow the Authority to visualise statistics derived from tickets’ data.}
+			\item  {{\bf [R18]} The System must allow the User to visualise statistics derived from the data.}
+			\item  {{\bf [R29]} The System must allow the Authority to visualise statistics derived from tickets’ data.}
 		\end{itemize}		\\	 \hline		
 			\newline Ticket Manager & 
 		\begin{itemize}
-			\item  {[R23] The System must allow the Authority to access information
+			\item  {{\bf [R23]} The System must allow the Authority to access information
 about the violation notification.}
-			\item  {[R24] The System must allow the Authority to validate a ticket.}
-			\item  {[R25] The System must allow the Authority to access sensible data
+			\item  {{\bf [R24]} The System must allow the Authority to validate a ticket.}
+			\item  {{\bf [R25]} The System must allow the Authority to access sensible data
 about the violation.}
-			\item  {[R26] The System must advise the Authority that the violation de- tails process is done correctly.}
+			\item  {{\bf [R26]} The System must advise the Authority that the violation de- tails process is done correctly.}
 		\end{itemize}		\\	 \hline	
 			\newline Intervention Manager & 
 		\begin{itemize}
-			\item  {[R20] The System must be able to identify viability issues based on data.}
-			\item  {[R21] The System must suggest solution to address viability issue.}
-			\item  {[R22] The System must allow the Authority to access the list of possible interventions.
+			\item  {{\bf [R20]} The System must be able to identify viability issues based on data.}
+			\item  {{\bf [R21]} The System must suggest solution to address viability issue.}
+			\item  {{\bf [R22]} The System must allow the Authority to access the list of possible interventions.
 }
-			\item  {[R23B] The System must allow the Authority to establish if the inter- vention is feasible solutions or not.}
+			\item  {{\bf [R23B]} The System must allow the Authority to establish if the inter- vention is feasible solutions or not.}
 		\end{itemize}		\\	 \hline	
 			\newline Data Manager & 
 		\begin{itemize}
-			\item {[R6] The System must store all User credentials.}
+			\item {{\bf [R6]} The System must store all User credentials.}
 
-			\item  {[R15] The System must be able to store all the notifications’ data.}
-			\item   {[R27] The System must be able to store all the tickets’ data.}
+			\item  {{\bf [R15]} The System must be able to store all the notifications’ data.}
+			\item   {{\bf [R27]} The System must be able to store all the tickets’ data.}
 		\end{itemize}		\\	 \hline			
 		\caption{Requirements Traceability}	
 		
