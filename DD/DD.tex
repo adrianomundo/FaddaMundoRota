@@ -174,7 +174,7 @@
 			{\bf Mobile Device} \\
 			It represents the Client in the architecture, hosting the System’s mobile application. This is equally valid for both Users and Authorities. \\ \\
 			{\bf Firewall}\\
-			It filters the access to the Reverse Proxy and is used to protect a trusted network from an untrusted network. A firewall provides protection from unauthorized requests or from malicious attacks. \\ \\
+			It filters the access to the Reverse Proxy and is used to protect a trusted network from an untrusted network. A firewall provides protection from unauthorised requests or from malicious attacks. \\ \\
 			{\bf Reverse Proxy}\\
 			It retrieves resources on behalf of a client from the servers and balances the load of the various requests. It helps to achieve increased parallelism and scalability of the application. \\ \\
 			{\bf Application Servers}\\
@@ -188,64 +188,71 @@
 	\subsection{Runtime View}
 	
 	{\bf Account Creation Runtime View} \\
-	The first sequence diagram \\
+	The first sequence diagram describes the order of the events that occurs when a {\it Guest} tries to register as a {\it User} of the {\it SafeStreets} application. The actors involved in this scenario are the {\it SafeStreets}  mobile application on the Client side, while on the Server side the Authentication Manager, the User Controller and the Data Manager. The external component are the Database and the Mail Service Interfaces. \\
+	The {\it Guest} selects the register button and fill the the registration form, then the request is validated, if not there's an alter. If the validation process is done correctly it's created a new {\it User}, inserted in the Database and e-mail confirmation with a code is sent to the new {\it User}.
 	\begin{figure}[H]
 			\centering
-			\includegraphics[scale=0.25]{Images/Diagrams/Runtime/registration_runtime.png}
+			\includegraphics[scale=0.26]{Images/Diagrams/Runtime/registration_runtime.png}
 			\caption{{\it SafeStreets} Account Creation Runtime View}
 	\end{figure}	
 	\pagebreak
 	\noindent
 	{\bf Log-in Runtime View} \\
-	The second sequence diagram \\
+	The second sequence diagram describes the order of the events that occurs when a {\it User} or {\it Authority} tries to log-in to the application. The actors involved in this scenario are the {\it SafeStreets} Client and on the Server side the Authentication Manager and Data Manager. The external component is the Database. \\ 
+	The {\it User's} application selects the login tab and fill the the form with credentials, then the request is validated, if not there's an alter. If the validation process is done correctly it's created an access token and the {\it User} obtain access to the application.
 	\begin{figure}[H]
 			\centering
-			\includegraphics[scale=0.35]{Images/Diagrams/Runtime/login_runtime.png}
-			\caption{{\it SafeStreets} Login Runtime View}
+			\includegraphics[scale=0.30]{Images/Diagrams/Runtime/login_runtime.png}
+			\caption{{\it SafeStreets} Log-in Runtime View}
 	\end{figure}
 	\pagebreak
 	\noindent	
 	{\bf Report Violation Runtime View} \\
-	The third sequence diagram \\
+	The third sequence diagram describes the order of the events that occurs when a {\it User} tries to report a violation. The actors involved in this scenario are the {\it SafeStreets} application on the Client while on the Server side the Authentication Manager, Report Manager, Plate Img Controller, Data Manager. The external components are the Database, GPS Service and Notification Service Interfaces. \\ 
+	The {\it User} selects the report tab, the authorisation is checked, then the {\it User} insert all the data needed for reporting the violation. Position data are retrieved from the GPS Service. Once the {\it User} has loaded the data, the image is processed by the Plate Img Controller in order to check if the image has been modified or not. If the validation process is done correctly it's created a notification in the Database, otherwise the {\it User} must re-take the photo and submit again the report.
 	\begin{figure}[H]
 			\centering
-			\includegraphics[scale=0.25]{Images/Diagrams/Runtime/report_runtime.png}
+			\includegraphics[scale=0.22]{Images/Diagrams/Runtime/report_runtime.png}
 			\caption{{\it SafeStreets} Report Violation Runtime View}
 	\end{figure}
 	\pagebreak
 	\noindent
 	{\bf Maps Access Runtime View} \\
-	The fourth sequence diagram \\
+	The fourth sequence diagram describes the order of the events that occurs when a {\it User} or {\it Authority} tries to access Maps Statistics. The actors involved in this scenario are the {\it SafeStreets} application on the Client while on the Server side the Authentication Manager, Statistics Manager and Data Manager. The external components are the Database and Map Service Interfaces. \\ 
+	The {\it User's} application selects the map tab, the authorisation is checked, then the Statistics manager get the Notification Data from the Database and the Map from the external interface. After that it computes the Map Statistics and the Client show the interface to the {\it User}, based on the visibility level, because {\it User} and {\it Authority} can see different data.
 	\begin{figure}[H]
 			\centering
-			\includegraphics[scale=0.25]{Images/Diagrams/Runtime/maps_runtime.png}
+			\includegraphics[scale=0.30]{Images/Diagrams/Runtime/maps_runtime.png}
 			\caption{{\it SafeStreets} Maps Access Runtime View}
 	\end{figure}
 	\pagebreak
 	\noindent
 	{\bf Statistics Access Runtime View} \\
-	The fifth sequence diagram \\
+	The fifth sequence diagram describes the order of the events that occurs when a {\it User} or {\it Authority} tries to access Statistics. The actors involved in this scenario are the {\it SafeStreets} application on the Client while on the Server side the Authentication Manager, Statistics Manager and Data Manager. The external components is the Database. \\ 
+	The {\it User's} application selects the map tab, the authorisation is checked, then the Statistics manager get the Stats Data from the Database and computes the Statistics that must be shown to the {\it User}. Based on the different visibility level, {\it User} or {\it Authority} can see different statistics and insights generate from the notifications and/or tickets data.
 	\begin{figure}[H]
 			\centering
-			\includegraphics[scale=0.25]{Images/Diagrams/Runtime/stats_runtime.png}
+			\includegraphics[scale=0.32]{Images/Diagrams/Runtime/stats_runtime.png}
 			\caption{{\it SafeStreets} Statistics Access Runtime View}
 	\end{figure}
 	\pagebreak
 	\noindent
-	{\bf Tickets Validation Runtime View} \\
-	The sixth sequence diagram \\
+	{\bf Tickets Generation Runtime View} \\
+	The sixth sequence diagram describes the order of the events that occurs when an {\it Authority} validates a ticket that could be generated from the notifications' data. The actors involved in this scenario are the {\it SafeStreets} mobile application on the Client side while on the Server the Authentication Manager, Ticket Manager and Data Manager. The external component are the Database and the Municipality Service Interfaces. \\
+	The {\it Authority} selects the Tickets tab, the authorisation is checked, then the Ticket Manager request the list of the notifications and show them to the User. In order to validate or refuse the ticket the User have to select one of them and confirm or not that is an effective violation. The Municipality has the privileges to check and generate the effective ticket based on the {\it Authority}'s validation.
 	\begin{figure}[H]
 			\centering
-			\includegraphics[scale=0.25]{Images/Diagrams/Runtime/tickets_runtime.png}
-			\caption{{\it SafeStreets} Tickets Validation Runtime View}
+			\includegraphics[scale=0.20]{Images/Diagrams/Runtime/tickets_runtime.png}
+			\caption{{\it SafeStreets} Tickets Generation Runtime View}
 	\end{figure}
 	\pagebreak
 	\noindent	
 	{\bf Intervention Suggestion Runtime View} \\
-	The seventh sequence diagram \\
+	The seventh sequence diagram describes the order of the events that occurs when is suggested to the {\it Authority} and he/she can confirm the solution as feasible or not. The actors involved in this scenario are the {\it SafeStreets} mobile application on the Client side while on the Server the Authentication Manager, Intervention Manager and Data Manager. The external component are the Database and the Municipality Service Interfaces. \\
+	The {\it Authority} selects the Interventions tab, the authorisation is checked, then the Intervention Manager request the intervention data from the Database showing the list of the suggestions to the User that has the task to confirm one or more of them as feasible or not. Then the confirmation is sent to the Municipality that starts the procedure to solve the issue.  
 	\begin{figure}[H]
 			\centering
-			\includegraphics[scale=0.25]{Images/Diagrams/Runtime/interventions_runtime.png}
+			\includegraphics[scale=0.23]{Images/Diagrams/Runtime/interventions_runtime.png}
 			\caption{{\it SafeStreets} Intervention Suggestion Runtime View}
 	\end{figure}
 	\pagebreak
@@ -253,14 +260,13 @@
 	\subsection{Component Interfaces}
 	{\bf Interface Diagram} \\
 	The diagram below represents the Component View of the {\it System}, with methods that have been shown in the Runtime View. 
-	\begin{comment}
 		\begin{figure}[H]
 			\centering
-			\includegraphics[scale=0.35]{Images/Diagrams/overview_diagram.png}
-			\caption{Overview of the System}
+			\includegraphics[scale=0.20]{Images/Diagrams/interface_diagram.png}
+			\caption{Component Interface Diagram}
 		\end{figure}
-	\end{comment}
 	
+	\pagebreak
 	
 	\subsection{Selected Architectural Styles and Patterns}
 	{\bf Multi-tier Architecture} \\
@@ -276,12 +282,14 @@
 	bla bla bla
 	\\ \\ 
 	
+	\pagebreak
+	
 	\subsection{Other Design Decisions}
 	{\bf Database} \\
-	bla bla 
+	It's used a relational model for the {\it SafeStreets} database because it's the right schema for the purpose of our {\it System}. Even if the {\it System} has to compute a lot of calculation, the majority of the operations needs to select small amount of data; these are repetitive operations that should be computed fast, so the chose of a non-relation model is not take into account. Also, a relation model could be accessed using SQL that's a standard across the industry, instead of using a specific language that a non-relational database needs.
 	\\ \\ 
 	{\bf Firewall} \\ 
-	bla bla 
+	The {\it System} architecture has two firewalls that guarantee a separation between the mobile device and the reverse proxy and between the application server and the database. There's an application proxy that provide one of the most secure types of access you can have in a security gateway, in fact every time an application makes a request, the application intercepts the request to the destination system. There's also a network firewall that filters the packets trying to pass through them, keeping the application safe.
 	\\ \\
 	
 \pagebreak
