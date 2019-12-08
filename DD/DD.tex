@@ -515,6 +515,34 @@ about the violation.}
 	\end{enumerate}
 	The Data Manager is critical because it represents to unique point of access to the Database and it is the component that interacts with all the components that compute the application logic and operate on the basis of the Data Manager retrieval capacity.
 	\subsection{Integration and Testing}
+	Throughout all the implementation activity every single component, with the exception of the external ones, will be tested as a single Unit, in order to immediately correct as many defects as possible and to save time and effort costs. Fixing bugs and malfunctions gets in fact increasingly harder as the development of the {\it System} proceeds. There is no need to test the external components because the reliability of their services will be the main factor in the process of choosing them; instead they will be used for testing the implemented components as Unit and the subsystems derived from their integration. 
+In order to Unit-test a single component, most of the time the behavior of the modules it has to interact with will have to be simulated. This can take some time, but still it is critical, to proceed with the integration of components, to be able to rely on the internal functionalities of the modules. \\ \\
+The integration phase will take place following the temporal order of the implementation and a flow that can be considered {\it bottom-up}. This means there will first be an integration between some components of the back-end and the test of the resulting subsystems. Then the integration of all components part of the front-end and back-end subsystems and their test. Eventually the integration of front-end and back-end and the test of the {\it System} operation, before integrate it with the external components interfaces as well. \\
+Specifically: \\
+\begin{enumerate}
+		\item Integration of the Auth Manager and the User Manager and test of their interactions (for example during the Registration process);
+		\item Integration of the Report Manager and the Plate Img Controller and test of their interactions;
+		\item Integration of the two subsystems above with the Data Manager and test of its functionalities;
+		\item Integration of the subsystem and the Statistics Manager, Ticket Manager and Intervention Manager, which are responsible for the Advanced Services provided by the System (see RASD section 1.1), and test of the remaining functionalities of the back-end;
+		\item Integration of the components of the front-end, the Presentation and the Data Manager, and test of the front-end operation;
+		\item Integration of back-end and front-end and test of the interactions between the two;
+		\item Integration of components with external services interfaces and final test of the System.
+	\end{enumerate}
+	\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.35]{Images/Diagrams/IntegrationDiagram1.png}
+			\caption{Integration of the back-end components}
+	\end{figure}
+	\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.5]{Images/Diagrams/IntegrationDiagram2.png}
+			\caption{Integration of the front-end components}
+	\end{figure}
+	\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.5]{Images/Diagrams/IntegrationDiagram3.png}
+			\caption{Final integration}
+	\end{figure}
 	\pagebreak
 		
 % Effort - Section 6
