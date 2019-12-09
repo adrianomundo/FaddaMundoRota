@@ -7,18 +7,10 @@
 \usepackage{caption}
 \usepackage{float}
 \usepackage{comment}
+\usepackage[bookmarks, colorlinks, breaklinks]{hyperref} 
+\hypersetup{linkcolor=black, citecolor=black, filecolor=black, urlcolor=black} 
 \graphicspath {{./Images/}}
 			
-\begin{comment}
-\usepackage{hyperref}
-\hypersetup{
-    citecolor=black,
-    filecolor=black,
-    linkcolor=black,
-    urlcolor=black
-}	
-\end{comment}
-
 
 \begin{document}
 
@@ -28,7 +20,7 @@
 \end{figure}
 
 
-\title {{\Huge \it SafeStreets} \\ \Large Software Engineering 2 Project - Prof. Matteo Rossi \\  {\bf RASD Document}
+\title {{\Huge \it SafeStreets} \\ \Large Software Engineering 2 Project - Prof. Matteo Rossi \\  {\bf Requirements Analysis and Specification Document}
 }
 \author{Salvatore Fadda - 944786\\Adriano Mundo - 944684 \\ Francesco Rota - 948714
 		\\ \\ A.Y. 2019/2020 \\ Version 2.0}
@@ -52,16 +44,15 @@ This document represents the {\it Requirements Analysis and Specification Docume
 	
 	\subsection{Purpose}
 	
-	{\it SafeStreets} is a crowd-sourced application that aims at keeping safe the city's streets. The application goal is to allow {\it Users} to notify the {\it Municipality} when a violation occur on the streets under its jurisdiction. The {\it User} can notice and notify the violation by sending a photo of the violation including date, time and position. These violations are for the majority parking violation, such as double parking or vehicle parked in the middle of bike lanes. \\ \\
-	{\it SafesStreets}, once the {\it User} has notified the violation, stores all the data, completing them with all the necessary metadata. In order to be sure that the violation is correctly elaborated, the application uses a plate recognition algorithm. The {\it User} is notified if something goes wrong during the whole process, so an alternative solution can be found. All the data stored by {\it SafeStreets} are provided by the {\it Users} or they can be retrieved directly from the device, like the position from the GPS.\\
-	All the data collected by {\it SafeStreets} can be mined by {\it Users} and the {\it Authorities}, so they can be provided with statistics built from this data. The application can show different statistics based on different level of visibility, so the {\it Authorities} can access some information that the {\it Users} can not access. This is the purpose of the {\bf Basic Service}. \\ \\
-	The application has also two specific Advanced Functions. In the {\bf AF1}, the application {\it SafeStreets} can cross the information about the road accident, thanks to a service offered by the {\it Municipality}, with the data stored and retrieved from the {\it User}. So {\it SafeStreets} elaborates them in order to identify potentially unsafe areas and suggest possibile interventions to solve the issues founded. The suggestions can be various and depend on each case. \\ \\
+	{\it SafeStreets} is a crowd-sourced application that aims at keeping safe the city's streets. The application allows {\it Users} to notify the {\it Municipality} when a violation occur on the streets under its jurisdiction. The {\it User} can notice and notify the violation by sending a photo of the violation including date, time and position. These violations are for the majority parking violation, such as double parking or vehicle parked in the middle of bike lanes. \\ \\
+	{\it SafesStreets}, once the {\it User} has notified the violation, stores all the data, completing them with all the necessary metadata. In order to be sure that the violation is correctly elaborated, the application uses an image recognition algorithm. The {\it User} is notified if something goes wrong during the whole process, so an alternative solution can be found. All the data stored by {\it SafeStreets} are provided by the {\it Users} or they can be retrieved directly from the device, like the position from the GPS.\\
+	All the data collected by {\it SafeStreets} can be mined by {\it Users} and the {\it Authorities}, so they can be provided with statistics built from this data. The application can show different statistics based on different visibility level, so the {\it Authorities} can access some information that the {\it Users} can not access. This is the purpose of the {\bf Basic Service}. \\ \\
+	The application has also two specific Advanced Functions. In the {\bf AF1}, the application {\it SafeStreets} can cross the information about the road accident, thanks to a service offered by the {\it Municipality}, with the data stored and retrieved from the {\it User}. So {\it SafeStreets} elaborates them in order to identify potentially unsafe areas and suggest possible interventions to solve the issues founded. The suggestions can be various and depend on each case. \\ \\
 	In the   {\bf AF2}, {\it SafeStreets} allows the {\it Municipality} to generate traffic tickets directly from the application data, derived from the {\it User} notifications'. Additionally, starting from the application data about issued tickets, {\it SafeStreets} can build, looking for trends in the data, statistics and provide insights to the {\it Municipality}. This can help {\it Municipality} to improve the process of issued tickets and understand the effectiveness of {\it SafeStreets}, finding some information useful to improve their services. \\ \\
-	From the description above about the purpose of {\it SafeStreets}, we can summarise those goals
-		
+	From the description above about the purpose of {\it SafeStreets}, we can summarise those goals:
 		\begin{itemize}
-			 \item {\bf [G1]} The System has to be used both by {\it Users} and {\it Authorities}.
-   			 \item {\bf [G2]} Allowing {\it Users} to report to the system when a traffic violation occur.		
+			 \item {\bf [G1]} Allowing application users to be identified as simple {\it User} or {\it Authority}.
+   			 \item {\bf [G2]} Allowing {\it Users} to report a traffic violation.		
 			 \item {\bf [G3]} Allowing {\it Users} to enter data/information about the violation.
    			 \item {\bf [G4]} Providing both {\it Users} and {\it Authorities} with statistics built from notifications’ data.    			  
    			 \\
@@ -92,15 +83,15 @@ With regards to {\it {\it Advanced Function 1}}, we identify:
 		{\bf Controlled by the world and observed by the machine}
 		\begin{itemize}
 			\item A {\it Guest} signs up on the system giving all the personal data needed and/or signs in with his credentials.
-			\item A {\it User} sends a violation notification to the system, including type of violation, position, date, time and picture.
+			\item A {\it User} sends a violation notification to the {\it System}, including type of violation, position, date, time and picture.
 			\item {\it Municipality} transmits data about the accidents occurring on the streets to the {\it System}.
+			\item {\it Municipality} transfers data about tickets generated to the {\it System}.
 			\item {\it Authority}, as a representative of the {\it Municipality} evaluates a violation notification coming from the {\it System}. 
 			\item {\it Authority}, as a representative of the {\it Municipality}, evaluates a suggestion for an intervention coming from the {\it System}. 
-			\item {\it Municipality} transfers data about tickets generated to the {\it System}.
 		\end{itemize} 
 		{\bf Controlled by the machine and observed by the world}
 		\begin{itemize}
-			\item The {\it System} notifies the {\it User} that the plate recognition tool was not successful, in order for the user to take a better picture.
+			\item The {\it System} notifies the {\it User} that the image recognition tool was not successful, in order for the user to re-load the picture.
 			\item The {\it System} transmits a violation notification to the {\it Municipality}.
 			\item The {\it System} provides suggestions on possible interventions to address issues to the {\it Municipality} through {\it Authorities}.
 			\item The {\it System} shows statistics mined from violation notifications data to {\it Users} and/or the {\it Authorities}.
@@ -183,9 +174,11 @@ With regards to {\it {\it Advanced Function 1}}, we identify:
 		
 		\subsubsection{Changes}
 		\begin{itemize}
-			\item First page title modification
-			\item Fixed words errors in Use Cases, State Charts, Class Diagrams
-			\item Added Alloy model comments and graphics
+			\item Changed {\bf[G1]} and {\bf[G2]} to ensure they are described in terms of world/shared phenomena.
+			\item Refactor of the Alloy models, adding comments and graphics.
+			\item Fixed semantic errors to be consistent across the documentation in Use Cases, Class Diagrams, Tables.
+			\item Removed the old {\bf[R17]} and added {\bf [R30]}. Corrected a double {\bf [R23]}.
+			\item Fixed Statistics and Interventions Sequence Diagrams. 
 		\end{itemize}
 	
 		\subsection{Reference Documents}
@@ -195,7 +188,7 @@ With regards to {\it {\it Advanced Function 1}}, we identify:
 			 \item Alloy Official Documentation: http://alloy.lcs.mit.edu/alloy/documentation.html
 			 \item ISO/IEC/IEE 29148: System and Software engineering - Life cycle process - Requirements engineering
 		\end{itemize}
-
+\pagebreak
 	\subsection{Document Structure}
 			The rest of the document is organised as follows:
 				\begin{itemize}
@@ -212,7 +205,7 @@ With regards to {\it {\it Advanced Function 1}}, we identify:
 	In this section we will provide a detailed descriptions of World and Shared Phenomena. Also, there are a Class Diagram and State Charts to clarify the modelling of the application. \\ \\
 	{\bf A generic traffic violation occurs on the streets under the \mbox{Municipality's} jurisdiction (WP)} \\
 		A violation of traffic laws occurs on the streets on which the municipality has responsibilities.
-Violations includes (but are not limited to) parking where it is forbidden (outside parking lanes, on pedestrian crossings, on sidewalks, exc). \\ \\
+Violations includes (but are not limited to) parking where it is forbidden (outside parking lanes, on pedestrian crossings, on sidewalks, etc). \\ \\
 	{\bf An accident occurs on the streets under the Municipality's jurisdiction (WP)} \\
 		A car accident occurs on the streets on which the municipality has responsibilities. Because guaranteeing safety is one of those, the municipality aims the number of accidents to be the lowest possible. Car accidents do not only occur between two vehicles, but may also include pedestrians, bikes and urban infrastructure. \\ \\
 	{\bf A User notices the violation and takes action (WP)} \\
@@ -221,8 +214,8 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 		Authorities, as representatives of the municipality confirm a ticket and municipality issues a ticket to the owner of the vehicle involved in a traffic laws violations. \\ \\
 	{\bf An intervention is made by the Municipality to address possible issues on the streets under its jurisdiction (WP)} \\
 		In order to fulfil its responsibility of guaranteeing safety, the municipality makes a modification in the viability or to the urban infrastructure layout on the streets under its jurisdiction to address a safety issue.\\ \\
-	{\bf The System notifies the User that the plate recognition tool was not successful, in order for the user to take a better picture (SP2)}. \\
-		As soon as the system receives from a user a notification of a traffic laws violation, it instantly runs the plate recognition algorithm and in case that fails, the system notifies the user asking him to take a new picture in which the plate is more readable. \\ \\ \\
+	{\bf The System notifies the User that the image recognition tool was not successful, in order for the user to re-load the picture (SP2)}. \\
+		As soon as the system receives from a user a notification of a traffic laws violation, it instantly runs the iamge recognition algorithm and in case that fails, the system notifies the user asking him to take a new picture in which the plate is more readable. \\ \\ \\
 	{\bf The System transmits a violation notification to the Municipality (SP2)} \\
 		The system shares every notification that is reported by users with the municipality, which has the responsibility to take action if necessary.\\ \\
 	{\bf The System provides suggestions on possible interventions to address issues to the Municipality through Authorities (SP2)} \\
@@ -276,7 +269,7 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 	\begin{itemize}
 	\item {\bf User Functions:} \\ \\
 		{\bf Report a traffic violation} \\
-		The User noticing a violation on the streets is able to, once accessed the System, fill in the information to report a violation: he takes a picture of the vehicle, with the plate decently readable, and select the type of violation from the list provided. The date, time and position are automatically taken by the system when the image is loaded (the picture of the violation can only be taken using the application, not retrieved and uploaded from the photo archive) and integrated to the information given by the User. All the data are eventually sent to the System’s DBMS and the plate recognition algorithm is ran to complete the data with the plate number. If the tool fails, the User is instantly notified and asked to take a better picture. \\ \\ 
+		The User noticing a violation on the streets is able to, once accessed the System, fill in the information to report a violation: he takes a picture of the vehicle, with the plate decently readable, and select the type of violation from the list provided. The date, time and position are automatically taken by the system when the image is loaded (the picture of the violation can only be taken using the application, not retrieved and uploaded from the photo archive) and integrated to the information given by the User. All the data are eventually sent to the System’s DBMS and the image recognition algorithm is ran to complete the data with the plate number. If the tool fails, the User is instantly notified and asked to take a better picture. \\ \\ 
 		{\bf Access statistics from notifications' data}\\
 		The User, once logged in, is able to enter the section of the application where statistics from the notifications received are available: number of violations per period (week, month, year), violations average per day of the week, the previous two per type of violation and a map showing where the violations were reported. Of course no plate number and no information about who reported the violations is shown to the User.\\ 
 	\item {\bf Authority Functions:} \\ \\
@@ -300,7 +293,7 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 		\item {\it Guest:} a user who has downloaded the application on his/her smartphone, but has to create an account. No functionalities can be accessed without registering to the service
 		\item {\it User:} a user who has created an account, but has to log-in to access the feature. Signing-up with all the necessary data or inserting his credentials, he/she can access all the functionalities offered by the application.
 		\item {\it Logged-in User:} a user who has logged-in the application providing the credentials established during the registration phase. He's able to access all the functionalities. 
-		\item {\it Authorities:} a user that's a representative of the Municipality, with its own privileges and levels of visibility. Logging-in with his/her credentials, provided directly from the Municipality, there's possibility to access the functionalities.
+		\item {\it Authorities:} a user that's a representative of the Municipality, with its own privileges and levels of visibility. Logging-in with his/her credentials, provided directly from the Municipality, has the possibility to access the functionalities.
 		\item {\it Logged-in Authorities:} a user that's a representative of the Municipality, that has provided the credentials and can access all the functionalities.
 	\end{itemize}
 	\pagebreak
@@ -317,9 +310,9 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 		\subsubsection{Dependencies}
 		\begin{itemize}
 		\item The {\it System} needs a DBMS service to retrieve and store data.
-		\item The {\it System} make use of the GPS provided by the smartphone.
+		\item The {\it System} makes use of the GPS provided by the smartphone.
 		\item The {\it System} uses a map visualisation service.
-		\item The {\it System} make use of internet connection provided by the smartphone.
+		\item The {\it System} makes use of internet connection provided by the smartphone.
 		\end{itemize}
 		
 		\subsubsection{Domain Assumptions}
@@ -678,9 +671,10 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 								  \item The {\it User} notices a traffic laws violation 
 								  \item The {\it User} decides to do something about it and accesses the {\it System}.
 								  \item The {\it User}, in the “Report a violation” tab, takes a picture of the violation and submits it to the {\it System}.
-								  \item The {\it System} runs the plate recognition algorithm on the picture to integrate the data with the plate number.
+								  \item The {\it System} runs the image recognition algorithm on the picture to obtain the plate number.
 								  \item The {\it User} selects the type of violation from the drop down menu.
 								  \item The {\it User} submits the notification to the {\it System}.
+								  \item The {\it System} retrieves date, time and position from the mobile device.
 								  \end{enumerate}	\\
 			\hline
 			{\bf Postconditions} & \begin{itemize}
@@ -822,7 +816,7 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 			\hline
 			{\bf ID} & UC8 \\
 			\hline
-			{\bf Description} & A {\it Logged-in Authority} converts the violation notification into a ticket \\
+			{\bf Description} & A {\it Logged-in Authority} validates the  notification to issue a ticket \\
 			\hline
 			{\bf Actors} & {\it Logged-in Authority}\\
 			\hline
@@ -837,12 +831,12 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 								  \item The {\it Authority} takes under examination a notification.
 								  \item The {\it Authority} recognises the violation in the picture.
 								  \item The {\it Authority} confirms the information provided by the {\it User}.
-								  \item The {\it Authority} establishes the case matches the criteria needed to generate a ticket.
-								  \item The {\it Authority} generates a real ticket to the vehicle reported in the violation notification.
+								  \item The {\it Authority} establishes the case matches the criteria needed to guarantee an effective violation and validate it.
 								  \end{enumerate}	\\
 			\hline
 			{\bf Postconditions} & \begin{itemize}
 								  \item The {\it Municipality} transmits data about the ticket to the {\it System}.
+								  \item The {\it Municipality} generates a real ticket to the vehicle reported in the violation notification.
 								  \end{itemize}	 \\
 			\hline
 			{\bf Exceptions} & 	\begin{itemize}
@@ -921,13 +915,6 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 						\item The {\it System} shows all the details regarding the intervention. 
 						\item The {\it Authority} evaluates the utility and feasibility of the suggestion.
 						\item The {\it Authority} check an intervention if it's considered feasible.
-						
-			\begin{comment}
-				
-					\item It’s time for the Authority to do the periodic evaluation of possible improvements in viability, so it goes on the Intervention tab on the System
-						\item The System shows a list of possible interventions including the location of the issue and an explanation
-						\item The Municipality evaluates the suggestions and decides to realize one of them. The Authority then checks the specific suggestion as “done”
-			\end{comment}
 					\end{enumerate}	\\
 			\hline
 			{\bf Postconditions} & 
@@ -953,12 +940,14 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 			\includegraphics[scale=0.55]{Images/Diagrams/sd_signup.png}
 			\caption{Account creation sequence diagram}
 		\end{figure}
+		\noindent
 	The second sequence diagram models the interaction for the log-in to the application. We created a single sequence diagram for both {\it User} and {\it Authority} because the procedure is almost the same.
 		\begin{figure}[H]
 			\centering
 			\includegraphics[scale=0.55]{Images/Diagrams/sd_login.png}
 			\caption{Application log-in sequence diagram}
 		\end{figure}
+		\noindent
 		The third sequence diagram models the interaction for reporting a violation. The actors are a {\it User} and the {\it System}.
 		\begin{figure}[H]
 			\centering
@@ -966,13 +955,15 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 			\caption{Report violation sequence diagram}
 		\end{figure}
 		\pagebreak
-		The forth sequence diagram models the access and interaction between the application {\it User} and the Map function. We created a single sequence diagram for {\it User} and {\it Authority} because the procedure is almost the same for both Safe Map and Authority Map.
+		\noindent
+		The fourth sequence diagram models the access and interaction between the application {\it User} and the Map function. We created a single sequence diagram for {\it User} and {\it Authority} because the procedure is almost the same for both Safe Map and Authority Map.
 		\begin{figure}[H]
 			\centering
 			\includegraphics[scale=0.55]{Images/Diagrams/57SeqDiagram.png}
 			\caption{Map access sequence diagram}
 		\end{figure}
 		\pagebreak
+		\noindent
 		The fifth sequence diagram models the access and interaction between the application {\it User} and the Statistics function. We created a single sequence diagram for  {\it User} and {\it Authority} because the procedure is almost the same for both. The difference between the two is the level of visibility.
 		\begin{figure}[H]
 			\centering
@@ -980,6 +971,7 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 			\caption{Statistic access sequence diagram}
 		\end{figure}
 		\pagebreak
+		\noindent
 		The sixth sequence diagram models process of ticket generation using data from notifications. The actors are the {\it Authority} and the {\it System}.
 		\begin{figure}[H]
 			\centering
@@ -987,6 +979,7 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 			\caption{Ticket generation sequence diagram}
 		\end{figure}
 		\pagebreak
+		\noindent
 		The seventh sequence diagram models the interaction occurring when the {\it System} provides suggestions on possible intervention to the {\it Authority}.
 		\begin{figure}[H]
 			\centering
@@ -998,20 +991,21 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 	
 	\subsubsection{Mapping on Requirements}
 	\begin{itemize}
-			 \item {\bf [G1]} The {\it System} has to be used both by {\it Users} and {\it Authorities}.
+			 \item {\bf [G1]} Allowing application users to be identified as simple {\it User} or {\it Authority}.
 			 \begin{itemize}
 			 \item {\bf [R1]} The {\it System} allows account to be created as a simple {\it User} or {\it Authority}.
 			 \item {\bf [R2]} A {\it User} account can be created if the {\it User} provides the correct data: unique email and fiscal code. 
-			 \item {\bf [R3]} An {\it Authority} account can be created if Municipality granted {\it Authority} with credentials. 
+			 \item {\bf [R3]} An {\it Authority} account exists if Municipality granted {\it Authority} with credentials. 
 			 \item {\bf [R4]} {\it Users} and {\it Authority} can access the service if they log-in with their credentials.
+			 \item {\bf [R30]} A {\it User} can modify his credential and/or his/her personal information, expect for the fiscal code.
 			 \item {\bf [R5]} The {\it System} must be able to check if the credentials are valid.
 			 \item {\bf [R6]} The {\it System} must store all {\it User} credentials. 
 			 \item {\bf [D1]} Each user, simple one or authority, has only one account.
 			 \item {\bf [D2]} Data provided during the registration are correct and belong to the person who created the account.
 			 \end{itemize}
-   			 \item {\bf [G2]} Allowing {\it Users} to report to the {\it System} when a traffic violation occur.		
+   			 \item {\bf [G2]} Allowing {\it Users} to report a traffic violation.		
    			 \begin{itemize}
-   			 \item {\bf [R7]} The {\it System} must be able to analyse the picture and recognise the plate number. 
+   			 \item {\bf [R7]} The {\it System} must be able to analyse the picture and recognize the plate number. 
    			 \item {\bf [R8]} The {\it System} gives a feedback to the {\it User} if the report process is done correctly.
    			 \item {\bf [R9]} Only {\it User} with an account can create and send a report.
    			 \item {\bf [D3]} A violation should be clearly visible and identifiable from the picture.
@@ -1021,7 +1015,7 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 			 \end{itemize}
 			 \item {\bf [G3]} Allowing {\it Users} to enter data/information about the violation.
 			 \begin{itemize}
-			 \item {\bf [R7]} The {\it System} must be able to analyse the picture and recognise the plate number. 
+			 \item {\bf [R7]} The {\it System} must be able to analyse the picture and recognize the plate number. 
 			 \item {\bf [R10]} The {\it System} must allow the {\it User} to take a picture of the violation.
 			 \item {\bf [R11]} The {\it System} can accept or refuse the image loaded from the {\it User}.
 			 \item {\bf [R12]} The {\it System} must allow the {\it User} to select the violation type.
@@ -1039,7 +1033,6 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
    			 \begin{itemize}
    			 \item {\bf [R15]} The {\it System} must be able to store all the notifications' data.
    			 \item {\bf [R16]} All violation data used for statistics are validated by the {\it Municipality}.
-   			 \item {\bf [R17]} The {\it System} imports new data and update map and statistics every 12h.
    			 \item {\bf [R18]} The {\it System} must allow the {\it User} to visualise statistics derived from the data.
    			 \item {\bf [R19]} The {\it System} must allow {\it Authority} to see sensible information that {\it User} can't access. 
    			 \item {\bf [D7]} Permission to access GPS and device data is granted to the System.
@@ -1050,9 +1043,9 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
    		    	\item {\bf [R15]} The {\it System} must be able to store all the notifications' data.
    		        \item {\bf [R19]} The {\it System} must allow {\it Authority} to see sensible information that {\it User} can't access.
    		    	\item {\bf [R20]} The {\it System} must be able to identify viability issues based on data.
-   		    	\item {\bf [R21]} The {\it System} must suggest solution to address viability issue.
+   		    	\item {\bf [R21]} The {\it System} must suggest solution to address viability issues.
    		    	\item {\bf [R22]} The {\it System} must allow the {\it Authority} to access the list of possible interventions. 
-   		    	\item {\bf [R23]} The {\it System} must allow the {\it Authority} to establish if the intervention is feasible solutions or not.
+   		    	\item {\bf [R17]} The {\it System} must allow the {\it Authority} to establish if the intervention is feasible or not.
    		    	\item {\bf [D5]} Data from Municipality about incidents or issued tickets are correct.
    		    	\item {\bf [D10]} Suggestions from the System are not ignored from the Municipality, but they are evaluated by the Authority.
    		    	\item {\bf [D12]} Violation data have a relative error of 5\%. 
@@ -1064,7 +1057,7 @@ Violations includes (but are not limited to) parking where it is forbidden (outs
 			  \item {\bf [R23]} The {\it System} must allow the {\it Authority} to access information about the violation notification.
 			  \item {\bf [R24]} The {\it System} must allow the {\it Authority} to validate a ticket.
 			  \item {\bf [R25]} The {\it System} must allow the {\it Authority} to access sensible data about the violation.
-			  \item {\bf [R26]} The {\it System} must advise the {\it Authority} that the violation details process is done correctly. 
+			  \item {\bf [R26]} The {\it System} must inform the {\it Authority} that the violation details process is done correctly. 
 			  \item {\bf [D5]} Data from Municipality about incidents or issued tickets are correct.
 			  \item {\bf [D9]} Municipality is entitled to issue tickets even if the violation is not physically acknowledged.
 			  \end{itemize}
