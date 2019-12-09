@@ -6,6 +6,8 @@
 \usepackage{caption}
 \usepackage{float}
 \usepackage{comment}
+\usepackage[bookmarks, colorlinks, breaklinks]{hyperref} 
+\hypersetup{linkcolor=black, citecolor=black, filecolor=black, urlcolor=black} 
 \graphicspath{{./Images/}}
 
 \begin{document}
@@ -15,7 +17,7 @@
 	\includegraphics[height=8cm]{Images/polimi_logo}
 \end{figure}
 	
-\title {{\Huge \it SafeStreets} \\ \Large Software Engineering 2 Project - Prof. Matteo Rossi \\ {\bf DD Document}}
+\title {{\Huge \it SafeStreets} \\ \Large Software Engineering 2 Project - Prof. Matteo Rossi \\ {\bf Design Document}}
 \author{Salvatore Fadda - 944786\\Adriano Mundo - 944684 \\ Francesco Rota - 948714
 		\\ \\ A.Y. 2019/2020 \\ Version 1.0}
 \date{December 9, 2019}	
@@ -33,7 +35,7 @@
 	This document represent the {\it Design Document} (DD). It aims at providing an in-depth description of the architecture below {\it SafeStreets} application and its services. It will present a section related to the architectural design with different perspective on the components of the {\it System}, how they interact and how they will be implemented. All the requirements of the RASD document are mapped with the components to explain how they will be satisfied. Finally, a section for the testing plan for Q\&A team is provided.
 		
 	\subsection{Scope}
-	{\it SafeStreets} is a crowd-sourced application that aims at keeping safe the city's streets. The idea behind this service is to allow {\it Users} to notify the {\it Municipality} when a violation occur on the streets under its jurisdiction. The {\it User} can notice and notify the violation by sending a photo of the violation including date, time and position. {\it SafesStreets} stores all the data and uses a plate recognition algorithm to recognise the image content. \\ \\
+	{\it SafeStreets} is a crowd-sourced application that aims at keeping safe the city's streets. The idea behind this service is to allow {\it Users} to notify the {\it Municipality} when a violation occur on the streets under its jurisdiction. The {\it User} can notice and notify the violation by sending a photo of the violation and select the type of violation and; date, time and position are automatically retrieved from the mobile device. {\it SafesStreets} stores all the data and uses an image recognition algorithm to distinguish the content of the image, such as the plate number and other details. \\ \\
 	The {\bf Basic Service} allows {\it Users} and {\it Authorities} to mine the information \mbox{collected} by the service, so they can access statistics built from the data. \\ \\
 	As {\bf AF1}, the application {\it SafeStreets} identifies potentially unsafe areas and \mbox{suggests} possible interventions to {\it Authorities} to solve the founded issues. \\ \\ 
 	As {\bf AF2}. the application {\it SafeStreets} allows the {\it Municipality} to generate \mbox{traffic} tickets directly from the application data. Also, using the data of issued tickets the {\it System} can build statistics and find insights to suggest to {\it Municipality} in order to improve their service.
@@ -44,8 +46,6 @@
 				\item {\bf Client:} a piece of computer hardware or software that accesses a service made available by a Server. 
 				\item {\bf Server:} a computer program or a device that provides functionality and handle the requests of other programs or devices, called Clients. 
 				\item {\bf N-Tier:} or multilayer is an architecture in which presentation, application processing, and data management functions are physically separated in n-layers. 
-				%%\item {\bf Design Pattern:}
-				%%\item {\bf Proxy:}
 			\end{itemize}
 	
 	
@@ -55,9 +55,7 @@
 				\item {\bf API:} Application Programming Interface
 				\item {\bf RASD:} Requirements Analysis and Specification Document
 				\item {\bf DBMS:} Data Bases Management System
-				\item {\bf GDPR:} General Data Protection Regulation
 				\item {\bf MVC:} Model-View-Controller
-				\item {\bf REST:} REpresentational State Transfer
 				\item {\bf Q\&A:} Quality and Assurance
 				\item {\bf UI:} User Interface
 				\item {\bf HTTPS:} Hyper Text Transfer Protocol Secure
@@ -90,15 +88,17 @@
 				\item Mandatory Project Assignment
 				\item RASD Document of {\it SafeStreets} application
 			\end{itemize} 
+		
+		\pagebreak
 	
 		\subsection{Document Structure}
 		The other sections of the Design Document (DD) are organised in this way:
 			\begin{itemize}
-				\item {\bf Architectural Design} (Section 2): an in-depth description of the System's architecture. It defines the main components, the relationship between them and the deployment of components. There are different views and levels of analysis of the components plus some subsection useful for identifying how the components interact and the architectural styles and patterns. 
-				\item {\bf User Interface Design} (Section 3): a complementary section of what was included in the RASD. It includes the definition of the UX process through a model that represents the flows of the interfaces. 
-				\item {\bf Requirements Traceability} (Section 4): a complementary section of what was included in the RASD. It contains all the identified requirements and show the relationship between them and design choices in order to satisfy them. 
-				\item {\bf Implementation, Integration and Test Plan} (Section 5): shows the order of the implementation and integration of all the components and subcomponents, providing how the application will be tested.
-				\item {\bf Effort Spent} (Section 6): a section containing a table for identifying the hours and the effort spent by each team member to deliver the DD.
+				\item {\bf Architectural Design} (Section 2): presents an in-depth description of the {\it System}'s architecture. It defines the main components, the relationship between them and the deployment of components. There are different views and levels of analysis of the components plus some subsection useful for identifying how the components interact and for the architectural styles and patterns. 
+				\item {\bf User Interface Design} (Section 3): it's a complementary section of what was included in the RASD. It includes the definition of the UX processes through a model that represents the flows between interfaces. 
+				\item {\bf Requirements Traceability} (Section 4): a complementary section of what was included in the RASD. It contains all the requirements and shows the relationship between them and design choices done in order to satisfy them. 
+				\item {\bf Implementation, Integration and Test Plan} (Section 5): it shows the order of the implementation and integration of all the components and subcomponents, explaining how the application will be tested.
+				\item {\bf Effort Spent} (Section 6): it's a section that contains a table for identifying the hours and the effort spent by each team member to deliver the Design Document.
 			\end{itemize}
 		
 		\pagebreak
@@ -115,7 +115,7 @@
 		\end{figure}
 	The image above shows an high-level overview of the {\it System}'s architecture.
 	The components interact with some external services. \\
-	The Mobile Client application accesses the GPS service in order to retrive geographical information and communicates with the Application Server through a Proxy. \\ The Application Server uses an external Notification Service to send notifications directly to the Client. It uses a Mail System service and a Map service to execute all the functions. Finally, it accesses the Municipality Service to retrieve data and to communicate with the Municipality through the an API service offered by the Municipality itself.\\ 
+	The Mobile Client application accesses the GPS service in order to retrieve geographical information and communicates with the Application Server through a Proxy. \\ The Application Server uses an external Notification Service to send notifications directly to the Client. It also uses external services like a Mail service and a Map service to execute all the other functions. Finally, it accesses the Municipality Service to retrieve data and communicate with the Municipality, thanks to the API service offered by the Municipality itself.\\ 
 	Further details on the {\it System} components will be explained in the next sections. 		
 	\pagebreak	
 	
@@ -125,7 +125,7 @@
 			\includegraphics[scale=0.20]{Images/Diagrams/component_diagram.png}
 			\caption{{\it SafeStreets} Component Diagram}
 		\end{figure}
-		The purpose of the UML component diagram is to capture the internal architecture of the {\it System}, showing the structure pf components, how they are connected together as a part of larger components. \\
+		The purpose of the UML component diagram is to capture the internal architecture of the {\it System}, showing the structure of components and how they are connected together as a part of larger components. \\
 		It's divided in three main components: the {\it SafeStreets} Client Application, the Business Logic and the external Database. \\ 
 		Each main component is divided in modular components to provide specific functionalities. Components communicate between each other by providing interfaces with the required information. \\
 		This diagram uses assembly connectors for internal interfaces and delegation connectors for external interfaces. 
@@ -133,46 +133,44 @@
 		{\bf SafeStreets Client} \\
 		This component located on the {\it User}'s device represents the client machines that access to the Business Logic container. Its sub-modules are the Presentation and Data Manager. It is implemented as a thin-client, so does not contain any logic of the {\it System}.
 		\begin{itemize}
-		\item {\bf Presentation:} this module corresponds to the View of the MVC Pattern, requires data from the Business Logic to display the correct UI to the {\it User}.
-		\item {\bf Data Manager:} this module has to communicate with the GPS Service in order to retrieve the data required to the application. 
+		\item {\bf Presentation:} this module corresponds to the View of the MVC Pattern, it requires data from the Business Logic to display the correct UI to the {\it User}.
+		\item {\bf Data Manager:} this module has to communicate with the GPS Service in order to retrieve the data required from the application. 
 		\end{itemize} 
 		{\bf SafeStreets Business Logic} \\
 		This component contains all the {\it SafeStreets} application logic. It's a module between the Client Application and the Database. It collects together all the components needed to satisfy the application functionalities. In the section below each component will be described.
 		\begin{itemize}
-		\item {\bf Authentication Manager:} this component contains all the methods needed to access the application, so for the purpose of the system authentication. It's responsible for both the registrazione and log-in process. It continuously interacts with the Database through the Data Manager interface. It guarantees that all the constraints are respected and finally, when you need to confirm to the {\it Users} they have successfully registered, it communicates with the Mail Service Interface to send the confirmation e-mail. 
+		\item {\bf Authentication Manager:} this component contains all the methods needed to access the application, so it's necessary for the purpose of the system authentication. It's responsible for both the registration and log-in process. It continuously interacts with the Database through the Data Manager interface. It guarantees that all the constraints are respected and finally, when you need to confirm to the {\it Users} they have successfully registered, it communicates with the Mail Service Interface to send the confirmation e-mail. 
 		\item {\bf User Manager:} this component handles all the functionalities related to the User account, both for simple {\it Users} and {\it Authorities}. Its services are performed by interacting with the Database through the Data Manager. 
 		\item {\bf Report Manager:} this component contains the logic needed to perform and handle the violation reported by the {\it User}. Its service are linked to the image loading, the violation indication type and so on. It interacts with another component that's responsible for analysing the image, the Plate Img Controller and stores all the data in the Database through the Data Manager.  Finally, the Report Manager communicates with the Notification Service Interface because it gives a direct feedback to the {\it User} about the loaded image through a push notification.
-		\item {\bf Plate Img Controller:} this component handles the request coming from the {\it User} that wants to load a violation image. The request comes from the Report Manager, in fact the component exposes the methods to verify that the image was not modified by third parties, so it makes a consistency check. In order to do this task, the component runs an algorithm.
+		\item {\bf Plate Img Controller:} this component handles the request coming from the {\it User} that loads the violation image. The request comes from the Report Manager, in fact the component exposes the methods to verify that the image was not modified by third parties, so it makes a consistency check. In order to do this task, the component runs an image recognition algorithm.
 		\item {\bf Statistics Manager:} this component manage and calculate all the statistics that the application is intended to provide to both {\it Users} and {\it Authorities}. It has two main task: retrieve and store the data from the Database through the Data Manager, where are stored all the data inserted from the application's users; and to calculate all the statistics that are accessible from the UI. It manipulates all the data in order to show simple graphs or to find useful insights. It accesses to Map Services Interface because it needs to retrieve geographical information in order to show statistics directly associated with the city's zone.
-		\item {\bf Ticket Manager:} this component is responsible for the ticket verification by the {\it Authorities} thanks to reported {\it User} violation data. In fact he retrieve from the Database through the Data Manager all the violation reported from the {\it Users}, then let the verification to be done manually by an {\it Authorities}, exposing all the needed functions. Finally, it communicates with the Municipality Service Interface in order to advise that the ticket is verified. Therefore the Municipality is able to generate a ticket from this information.
-		\item {\bf Intervention Manager:} this component handles the information coming from the Municipality, in fact it interacts with the Municipality Service Interface to retrieve data about accidents. Then, it cross the information with the data stored in the Databases and retrieved through the Data Manager in order to provide suggestions on interventions. 
-		\item {\bf Data Manager:} this component provides all the methods to interact with the Database such as data retrieval, storage and update, it is the unique point of access to the Database. 
+		\item {\bf Ticket Manager:} this component is responsible for the ticket verification by the {\it Authorities} from the notifications' data reported by the {\it User}. In fact he retrieve from the Database through the Data Manager all the violation reported from the {\it Users}, then let the verification to be done manually by an {\it Authority}, exposing all the needed functions. Finally, it communicates with the Municipality Service Interface in order to advise that the ticket is verified. Therefore the Municipality is able to generate a ticket from this information.
+		\item {\bf Intervention Manager:} this component interacts with the Municipality Service Interface to retrieve data about accidents and for setting the intervention considered feasible by the {\it Authority}. It crosses the information with the data stored in the Databases and retrieved through the Data Manager in order to provide suggestions on interventions. 
+		\item {\bf Data Manager:} this component provides all the methods to interact with the Database such as data retrieval, storage and update. It is the unique point of access to the Database. 
 		\end{itemize}
 		{\bf Data Base} \\
-		This component represents the DBMS, which provides the interfaces to retrieve and store the data. Data about the application and data about Users are securely stored and encrypted.
-		\\ \\
+		This component represents the DBMS, which provides the interfaces to retrieve and store the data. Data about the application and data about Users are securely stored and encrypted. \\ \\ 
 		{\bf External Services Interfaces} \\
-		Some components of the diagrams that represent the {\it SafeStreets System} and described above communicate with external components. This are are third party services that expose their API. These communications are bilateral and essential to guarantee all the functionalities. 
+		Some components of the diagrams that represent the {\it SafeStreets System} and described above communicate with external components. These are are third party services that expose their API. The communications are bilateral and essential to guarantee all the functionalities. 
 		\begin{itemize}
 			\item {\bf GPS Service:} this interface communicates with the Client Application that have to access data from the {\it User}'s device, in particular GPS data through the Data Manager interface. GPS data are essential for tracking position and retrieve all suitable metadata necessary to the application to work properly. 
 			\item {\bf Mail Services Interface:} this interface is responsible for the interaction with the {\it User} when it's sent a confirmation e-mail after the registration phase. It's accessed by the Authentication Manager.
-			\item {\bf Notification Services Interface:} this interface is needed to send push-notification to the {\it User} as an alert when the image processing is not done correctly, so it needs to communicate with the Report Manager in order to advise the {\it User} that have to re-do the process of reporting. 
-			\item {\bf Map Services Interface:} this interface is essential for {\it SafeStreets}, in fact access to a mapping service is necessary to show and calculate statistics with respect to the different city's zone. It's a service accessed by the Statistics Manager.
-			\item {\bf Municipality Services Interface:} this interface is essential to have a means of communication with the Municipality services. It lets to retrieve data and to pass information to the Municipality in order to do all the services offered by the {\it System}. It's accessed by Ticket, Intervention Mngs. 
+			\item {\bf Notification Services Interface:} this interface is needed to send push-notification to the {\it User} as an alert when the image processing is not done correctly, so it needs to communicate with the Report Manager in order to advise the {\it User} that has to re-do the reporting process. 
+			\item {\bf Map Services Interface:} this interface is essential for {\it SafeStreets}, in fact access to a mapping service is necessary to show and calculate statistics with respect to the different city's zone. It's a service accessed by the Statistics Manager. \\
+			\item {\bf Municipality Services Interface:} this interface is essential to have a means of communication with the Municipality services. It lets to retrieve data and to pass information to the Municipality in order to do all the services offered by the {\it System}. It's accessed by Ticket, Intervention Mng. 
 		\end{itemize}
 		
-		\pagebreak
 		
 	\subsection{Deployment View}
 		\begin{figure}[H]
 			\centering
-			\includegraphics[scale=0.25]{Images/Diagrams/deployment_diagram.png}
+			\includegraphics[scale=0.22]{Images/Diagrams/deployment_diagram.png}
 			\caption{{\it SafeStreets} Deployment Diagram}
 		\end{figure}
 		
-	The {\it System} presents a Multi-tier architecture. The role of each node will be specified in the next section. \\ \\
+	The {\it System} presents a Multi-Tier architecture. The role of each node will be specified in the next section. \\ \\
 			{\bf Mobile Device} \\
-			It represents the Client in the architecture, hosting the System’s mobile application. This is equally valid for both Users and Authorities. \\ \\
+			It represents the Client in the architecture, hosting the {\it System}'s mobile application. This is equally valid for both {\it Users} and {\it Authorities}. \\ \\
 			{\bf Firewall}\\
 			It filters the access to the Reverse Proxy and is used to protect a trusted network from an untrusted network. A firewall provides protection from unauthorised requests or from malicious attacks. \\ \\
 			{\bf Reverse Proxy}\\
@@ -182,24 +180,21 @@
 			{\bf Network Firewall}\\
 			It does the same job of the Proxy Firewall but protecting and filtering the access to the DBMS. \\ \\
 			{\bf Data Base Server}\\
-			All data are stored in the Data Base Server equipped with a relational DBMS and can be retrieved with appropriate queries. \\ \\
-	
-
+			All data are stored in the Data Base Server equipped with a relational DBMS and can be retrieved with appropriate queries.
 	\subsection{Runtime View}
-	
 	{\bf Account Creation Runtime View} \\
-	The first sequence diagram describes the order of the events that occurs when a {\it Guest} tries to register as a {\it User} of the {\it SafeStreets} application. The actors involved in this scenario are the {\it SafeStreets}  mobile application on the Client side, while on the Server side the Authentication Manager, the User Controller and the Data Manager. The external component are the Database and the Mail Service Interfaces. \\
+	The first sequence diagram describes the order of the events that occurs when a {\it Guest} tries to register as a {\it User} of the {\it SafeStreets} application. The actors involved in this scenario are the {\it SafeStreets}  mobile application on the Client side, while on the Server side the Authentication Manager, the User Manager and the Data Manager. The external component are the Database and the Mail Service Interfaces. \\
 	The {\it Guest} selects the register button and fill the the registration form, then the request is validated, if not there's an alter. If the validation process is done correctly it's created a new {\it User}, inserted in the Database and e-mail confirmation with a code is sent to the new {\it User}.
 	\begin{figure}[H]
 			\centering
 			\includegraphics[scale=0.26]{Images/Diagrams/Runtime/registration_runtime.png}
-			\caption{{\it SafeStreets} Account Creation Runtime View}
+			\caption{{\it SafeStreet} Account Creation Runtime View}
 	\end{figure}	
 	\pagebreak
 	\noindent
 	{\bf Log-in Runtime View} \\
-	The second sequence diagram describes the order of the events that occurs when a {\it User} or {\it Authority} tries to log-in to the application. The actors involved in this scenario are the {\it SafeStreets} Client and on the Server side the Authentication Manager and Data Manager. The external component is the Database. \\ 
-	The {\it User's} application selects the login tab and fill the the form with credentials, then the request is validated, if not there's an alter. If the validation process is done correctly it's created an access token and the {\it User} obtain access to the application.
+	The second sequence diagram describes the order of the events that occurs when a {\it User} or {\it Authority} tries to log-in to the application. The actors involved in this scenario are the {\it SafeStreets} applitacion on the Client and on the Server side the Authentication Manager and Data Manager. The external component is the Database. \\ 
+	The {\it User's} application selects the login tab and fill the the form with credentials, then the request is validated, if not there's an alter. If the validation process is done correctly it's created an access token and the {\it User} grant access to the application.
 	\begin{figure}[H]
 			\centering
 			\includegraphics[scale=0.33]{Images/Diagrams/Runtime/login_runtime.png}
@@ -209,7 +204,7 @@
 	\noindent	
 	{\bf Report Violation Runtime View} \\
 	The third sequence diagram describes the order of the events that occurs when a {\it User} tries to report a violation. The actors involved in this scenario are the {\it SafeStreets} application on the Client while on the Server side the Authentication Manager, Report Manager, Plate Img Controller, Data Manager. The external components are the Database, GPS Service and Notification Service Interfaces. \\ 
-	The {\it User} selects the report tab, the authorisation is checked, then the {\it User} insert all the data needed for reporting the violation. Position data are retrieved from the GPS Service. Once the {\it User} has loaded the data, the image is processed by the Plate Img Controller in order to check if the image has been modified or not. If the validation process is done correctly it's created a notification in the Database, otherwise the {\it User} must re-take the photo and submit again the report.
+	The {\it User} selects the report tab, the authorisation is checked, then the {\it User} insert all the data needed for reporting the violation. Position data are retrieved from the GPS Service. Once the {\it User} has loaded the data, the image is processed by the Plate Img Controller in order to check if the image has been modified or not. If the validation process is done correctly it's created a notification in the Database, otherwise the {\it User} must re-take the photo and submit again the notification.
 	\begin{figure}[H]
 			\centering
 			\includegraphics[scale=0.22]{Images/Diagrams/Runtime/report_runtime.png}
@@ -229,7 +224,7 @@
 	\noindent
 	{\bf Statistics Access Runtime View} \\
 	The fifth sequence diagram describes the order of the events that occurs when a {\it User} or {\it Authority} tries to access Statistics. The actors involved in this scenario are the {\it SafeStreets} application on the Client while on the Server side the Authentication Manager, Statistics Manager and Data Manager. The external components is the Database. \\ 
-	The {\it User's} application selects the map tab, the authorisation is checked, then the Statistics manager get the Stats Data from the Database and computes the Statistics that must be shown to the {\it User}. Based on the different visibility level, {\it User} or {\it Authority} can see different statistics and insights generate from the notifications and/or tickets data.
+	The {\it User's} application selects the Statistics tab, the authorisation is checked, then the Statistics manager get the Stats Data from the Database and computes the Statistics that must be shown to the {\it User}. Based on the different visibility level, {\it User} or {\it Authority} can see different statistics and insights generate from the notifications and/or tickets data.
 	\begin{figure}[H]
 			\centering
 			\includegraphics[scale=0.34]{Images/Diagrams/Runtime/stats_runtime.png}
@@ -237,23 +232,23 @@
 	\end{figure}
 	\pagebreak
 	\noindent
-	{\bf Tickets Generation Runtime View} \\
-	The sixth sequence diagram describes the order of the events that occurs when an {\it Authority} validates a ticket that could be generated from the notifications' data. The actors involved in this scenario are the {\it SafeStreets} mobile application on the Client side while on the Server the Authentication Manager, Ticket Manager and Data Manager. The external component are the Database and the Municipality Service Interfaces. \\
-	The {\it Authority} selects the Tickets tab, the authorisation is checked, then the Ticket Manager request the list of the notifications and show them to the User. In order to validate or refuse the ticket the User have to select one of them and confirm or not that is an effective violation. The Municipality has the privileges to check and generate the effective ticket based on the {\it Authority}'s validation.
+	{\bf Ticket Generation Runtime View} \\
+	The sixth sequence diagram describes the order of the events that occurs when an {\it Authority} validate or refuse the report generated from the notifications' data, that's used to generate the ticket. The actors involved in this scenario are the {\it SafeStreets} mobile application on the Client side while on the Server the Authentication Manager, Ticket Manager and Data Manager. The external component are the Database and the Municipality Service Interfaces. \\
+	The {\it Authority} selects the Tickets tab, the authorisation is checked, then the Ticket Manager request the list of the notifications and show them to the User. In order to validate or refuse the ticket the {\it Authority} has to select one of them and confirm or not that is an effective violation. The Municipality has the privileges to check and generate the effective ticket based on the {\it Authority}'s validation.
 	\begin{figure}[H]
 			\centering
-			\includegraphics[scale=0.20]{Images/Diagrams/Runtime/tickets_runtime.png}
-			\caption{{\it SafeStreets} Tickets Generation Runtime View}
+			\includegraphics[scale=0.19]{Images/Diagrams/Runtime/tickets_runtime.png}
+			\caption{{\it SafeStreets} Ticket Generation Runtime View}
 	\end{figure}
 	\pagebreak
 	\noindent	
-	{\bf Intervention Suggestion Runtime View} \\
-	The seventh sequence diagram describes the order of the events that occurs when is suggested to the {\it Authority} and he/she can confirm the solution as feasible or not. The actors involved in this scenario are the {\it SafeStreets} mobile application on the Client side while on the Server the Authentication Manager, Intervention Manager and Data Manager. The external component are the Database and the Municipality Service Interfaces. \\
-	The {\it Authority} selects the Interventions tab, the authorisation is checked, then the Intervention Manager request the intervention data from the Database showing the list of the suggestions to the User that has the task to confirm one or more of them as feasible or not. Then the confirmation is sent to the Municipality that starts the procedure to solve the issue.  
+	{\bf Interventions Suggestion Runtime View} \\
+	The seventh sequence diagram describes the order of the events that occurs when a list of intervention is suggested to the {\it Authority} and he/she can confirm the solution as feasible or not. The actors involved in this scenario are the {\it SafeStreets} mobile application on the Client side while on the Server the Authentication Manager, Intervention Manager and Data Manager. The external component are the Database and the Municipality Service Interfaces. \\
+	The {\it Authority} selects the Interventions tab, the authorisation is checked, then the Intervention Manager request the intervention data from the Database showing the list of the suggestions to the {\it Authority} that has the task to confirm one or more of them as feasible or not. Then the confirmation is sent to the Municipality that can starts the procedure to solve the issue.  
 	\begin{figure}[H]
 			\centering
 			\includegraphics[scale=0.30]{Images/Diagrams/Runtime/interventions_runtime.png}
-			\caption{{\it SafeStreets} Intervention Suggestion Runtime View}
+			\caption{{\it SafeStreets} Interventions Suggestion Runtime View}
 	\end{figure}
 	\pagebreak
 	\noindent
@@ -275,7 +270,7 @@
 		\item {\it showMsg(msg, msgID)}: this method has to show the alert or confirmation messages to the {\it User}, using as parameter the type of message and the different id on the basis of the case that has been taken into account. 
 		\item {\it loginAlert()}: display the alert when the Authentication Manager does not validate the credentials entered to access the application.
 		\item {\it showStats(visibilityLevel)}: display the statistics generated from the notifications' data and tickets' data based on the visibilityLevel of User or Authority.
-		\item {\it showMapStats(visibilityLevel)}: display the statistics on the map generated from the data based on the visibilityLevel of User or Authority, in order to show sensitive information.
+		\item {\it showMapStats(visibilityLevel)}: display the statistics on the map generated from the data based on the visibilityLevel of User or Authority, for showing sensitive information.
 		\item {\it showNotificationList()}: display to the Authority the list of tickets that can be validated or refused.
 		\item {\it showInterventionList()}: display the intervention list suggested by the System to the Authority.
 		\end{itemize} 
@@ -294,27 +289,27 @@
         		\item {\it validate(Info)}: method that validate the authorisation of the User's application to use the functionalities of the application.
         		\item {\it createUser(userInfo)}: method that create a new User using the information filled by the Guest in the form, if the process has been done correctly.
         		\item {\it sendEmail(mail, token)}: method that invoke the external service to send the confirmation e-mail to the new User.
-        		\item {\it confirmation(code)}: method used to confirm some actions.
-        		\item {\it getUser(userInfo)}: method that retrieve information about privileges of the User starting from his/her information.
-        		\item {\it setUserToken(user, token)}: method that set the token linked to the User.
-        		\item {\it checkAuthentication()}: method that process the check to be sure that the User has all the authorisation to proceed with the use of the application. 
+        		\item {\it confirmation(code)}: method used to confirm an action.
+        		\item {\it getUser(userInfo)}: method that retrieve information about privileges of the User/Authority starting from his/her information.
+        		\item {\it setUserToken(user, token)}: method that set a token for the User/Authority.
+        		\item {\it checkAuthentication()}: method that process a check to be sure that the User has the authorisation to proceed with the use of the application. 
     		\end{itemize}
     	\item {\bf User Manager}
     		\begin{itemize}
-        		\item {\it setPassword(password)}: method that sets the new password to a User.
-        		\item {\it setUserInfo(userInfo)}: method that sets the user information.
+        		\item {\it setPassword(password)}: method that set the password for the User's application.
+        		\item {\it setUserInfo(userInfo)}: method that sets the information for the User's application.
     		\end{itemize}
     	\item {\bf Report Manager}
     		\begin{itemize}
         		\item {\it accessReport(request, token)}: method invoked to access the report function of the application.
         		\item {\it checkImg(data)}: method that start the process of image checking.
-        		\item {\it notifyImgNotReadble()}: method that invoke the external Notification Service to alert the user to re-enter the image of the violation because it's not readable.
+        		\item {\it notifyImgNotReadable()}: method that invoke the external Notification Service to alert the user to re-enter the image of the violation because it's not readable.
         		\item {\it createReport()}: method that create the effective report with all the information provided by the User in the notification. 
         		\item {\it insertNotification()}: method invoked to memorise the notification if the process has been done correctly.
     		\end{itemize}
     	\item {\bf Plate Img Controller}
     		\begin{itemize}
-        		\item {\it processCheckImg(img)}: method that using as input the image of the violation, analyse the image and determine if it has been modified or not, and that's readable or not.  
+        		\item {\it processCheckImg(img)}: method that using as input the image of the violation, analyse the image and determine if it has been modified or not, and if that's readable or not.  
         	\end{itemize}
     	\item {\bf Statistics Manager}
     		\begin{itemize}
@@ -334,7 +329,7 @@
         		\item {\it getNotificationDetails(notID)}: method that get the information about a specific notification based on the notID.
         		\item {\it confirmNotification(notID)}: method invoked when a notification is confirmed by the Authority, based on the notID.
         		\item {\it refuseNotification(notID)}: method invoked when a notification is refused by the Authority, based on the notID.
-        		\item {\it setNotification(notID)}: method that invoke the external Municipality Service to set the notification in the list of the feasible one, so that the process of ticket generation can be done.
+        		\item {\it setNotification(notID)}: method that invoke the external Municipality Service to set the notification in the list of the feasible one, so the process of ticket generation can be done.
         		\item {\it discardNotification(notID)}: method that discard the notification after it has been refused, based on the notID.
     		\end{itemize}
     	\item {\bf Intervention Manager}
@@ -350,6 +345,7 @@
         		\item {\it SELECT(data)}: method that select the data as input from the external database service.
         		\item {\it UPDATE(data)}: method that update the data as input from the external database service.
         		\item {\it DELETE(data)}: method that delete the data as input from the external database service.
+        		\item {\it INSERT(data)}: method that insert the data as input from the external database service.
     		\end{itemize}
 	\end{itemize}
 	
@@ -358,14 +354,14 @@
 	\subsection{Selected Architectural Styles and Patterns}
 	{\bf Multi-tier Architecture} \\
 	As stated in the Overview section, the {\it System}'s architecture is a multi-tier \mbox{architecture}. A multi-tier architecture is a client-server architecture where presentation, application logic, and data management functions are physically separated. This division let each tier perform specific tasks, avoid the dependancy from a single node for all the architecture and facilitates the modification of a single tier. This guarantees a better maintenance of {\it System}. \\ \\
-	{\it SafeStreets} implements a three-tier architecture, with the following layer: Presentation tier, Business (or Domain) logic tier, Data management tier. We'll now analyse each one in details:
+	{\it SafeStreets} implements a three-tier architecture, with the following layer: Presentation tier, Business (or Domain) logic tier and Data management tier. We'll now analyse each one in details:
 	\begin{itemize}
-		\item {\bf Presentation tier:} this is the top level of the application; this tier is completely managed by the Client device, which is a mobile application, both for {\it Users} and {\it Authorities}. The main task is to display to the User's application all the information provided by the Application Server, thanks to the GUI of the mobile device. It also displays also the information of the external services. This is the only tier directly accessible from the User 
-		\item {\bf Business Logic tier:} this tier host the Application Servers of {\it SafeStreets}. As explained by the name it implements only the Business/Domain logic layer and not the storage. The deployment is done by replicating each server as many times as necessary to guarantee the non-functional requirements. Also, each on the server is stateless. In case of many request, it's possible to add more machines to handle the traffic rise. It controls all the application functionality with all his processing. This tier contains the reverse proxy.		
-		\item {\bf Data management tier:} this tier is represented by the Database. A cloud solution is adopted in order to eliminate from the {\it System} tasks like the reliability and management of the physical database. So, it is the data access layer and encapsulate all the related mechanisms.  
+		\item {\bf Presentation tier:} this is the top level of the application; this tier is completely managed by the Client device, which is a mobile application, both for {\it Users} and {\it Authorities}. The main task is to display to the User's application all the information provided by the Application Server, thanks to the GUI of the mobile device. It also displays also the information of the external services. This is the only tier directly accessible from the User's application. 
+		\item {\bf Business Logic tier:} this tier host the Application Servers of {\it SafeStreets}. As explained by the name it implements the Business/Domain logic layer and not the storage. The deployment is done by replicating each server as many times as necessary to guarantee the non-functional requirements. Also, each one of the server is stateless. In case of many request, it's possible to add more machines to handle the traffic rise. It controls all the application functionality with all his processing. This tier contains the reverse proxy.		
+		\item {\bf Data management tier:} this tier is represented by the Database. A cloud solution is adopted in order to eliminate from the {\it System} tasks like the reliability and management of the physical database. So, it implements the data access layer and encapsulate all the related mechanisms.  
 	\end{itemize}
 	{\bf Thin Client} \\
-	The thin client paradigm is implemented for the interaction between the physical device machine and the {\it System}. A thin client needs to perform very few computation, very close to no computation, but it has to handle the communication. The main advantage of this architecture is that it’s easier to keep data synchronised across multiple clients. It also requires less effort to create new client implementation because there's no logic. A thin client does not rely neither on local storage since all the business logic is on the application servers, which have enough computing power. Even if our Client implementation has a Data Manager and it's used to retrieve the GPS data and because the contribution to the data access is very low, we consider the Client tier as a Thin Client, which host the Presentation layer.
+	The thin client paradigm is implemented for the interaction between the physical device machine and the {\it System}. A thin client needs to perform few computation, very close to no computation, but it has to handle the communication. The main advantage of this architecture is that it’s easier to keep data synchronised across multiple clients. It also requires less effort to create new client implementation because there's no logic. A thin client does not rely on local storage since all the business logic is on the application servers, which have enough computing power. Even if our Client implementation has a Data Manager and it's used to retrieve the GPS data because the contribution to the data access is very low, we consider the Client tier as a Thin Client, which host the Presentation layer.
 	\\ \\
 	{\bf MVC} \\
 	The {\it System} architecture follow the MVC (Model-View-Controller) pattern. This pattern of functionality separation has numerous advantages like simultaneous development, high cohesion and loose coupling between classes, multiple views for the model and ease of modification. It's considered a best practice in the development process and respect the fundamental design principles of software engineering.
@@ -377,7 +373,7 @@
 		
 	\subsection{Other Design Decisions}
 	{\bf Database} \\
-	It's used a relational model for the {\it SafeStreets} database because it's the right schema for the purpose of our {\it System}. Even if the {\it System} has to compute a lot of calculation, the majority of the operations needs to select small amount of data; these are repetitive operations that should be computed fast, so the chose of a non-relation model is not take into account. Also, a relation model could be accessed using SQL that's a standard across the industry, instead of using a specific language that a non-relational database needs.
+	It's used a relational model for the {\it SafeStreets} database because it's considered the  right schema for the purpose of our {\it System}. Even if the {\it System} has to compute a lot of calculation, the majority of the operations needs to select small amount of data; these are repetitive operations that should be computed fast, so the chose of a non-relation model is not take into account. Also, a relation model could be accessed using SQL that's a standard across the industry, instead of using a specific language that a non-relational database needs.
 	\\ \\ 
 	{\bf Firewall} \\ 
 	The {\it System} architecture has two firewalls that guarantee a separation between the mobile device and the reverse proxy and between the application server and the database. There's an application proxy that provide one of the most secure types of access you can have in a security gateway, in fact every time an application makes a request, the application intercepts the request to the destination system. There's also a network firewall that filters the packets trying to pass through them, keeping the application safe.
@@ -482,9 +478,9 @@ about the violation.}
 	\subsection{Overview}
 	The {\it System} is divided in many components, that can be divided in the following sub-systems:
 	\begin{itemize}
-		\item Frontend Components: this is Client application subsystem, containing the presentation and the data manager components.
-		\item Back-end Components: this is the Business Logic subsystem with all its components that interacts with the database. 
-		\item External Components: this are the external components that interacts with the {\it System}, such as the Map and GPS services.  
+		\item {\it Front-end Components}: this is Client application subsystem, containing the presentation and the data manager components.
+		\item {\it Back-end Components}: this is the Business Logic subsystem with all its components that interacts with the database. 
+		\item {\it External Components}: this are the external components that interacts with the {\it System}, such as the Map and GPS services.  
 	\end{itemize}
 	The strategy used to design the {\it System} was {\it Top-Down}, defining the sub-systems described above at a high-level, then refining and detailing them with all the details needed.\\
 	The implementation and testing approach will follow a combination of both {\it Top-Down} and {\it Bottom-Up} strategies because it's the most reasonable choice for relatively small components and sub-systems. \\ 
@@ -499,7 +495,7 @@ about the violation.}
 		\item Integration of component with external service interfaces 
 	\end{itemize}
 	The implementation of the Database consist of instance creation on an external  platform provider and the creation of tables and schemes. 
-	The implementation of the Back-end Components is parallelised, so the Business Logic (Server) and Client will be developed by different developers and then linked together. 
+	The implementation of the Back-end Components is parallelised, so the Business Logic (Server) and Client will be developed by different developers and then merged together. 
 	The integration with external services consists of a series of API calls to the external services that are already implemented. \\ \\ \\ \\ \\ \\ \\ \\
 	The Business Logic implementation will follow this order. If there are some components on the same line means that they will be implemented in parallel:
 	\begin{enumerate}
@@ -551,12 +547,36 @@ Specifically: \\
 			\hline
 			{\bf Date} & {\bf Task} & {\bf Hours}\\
 			\hline
-			XX/XX/XX & XX & X \\
+			16/11/2019 & Pre-analysis & 1 \\
+			\hline
+			26/11/2019 & Meeting & 1 \\
+			\hline
+			30/11/2019 & Introduction & 1 \\
+			\hline
+			02/12/2019 & Overview & 2 \\
+			\hline
+			04/12/2019 & Component View & 3 \\
+			\hline
+			04/12/2019 & Meeting & 1 \\
+			\hline
+			05/12/2019 & Runtime View & 10 \\
+			\hline
+			06/12/2019 & Meeting & 1 \\
+			\hline
+			06/12/2019 & Component Interface & 3 \\
+			\hline
+			07/12/2019 & Requirements Traceability & 3 \\
+			\hline
+			07/12/2019 & Testing Plan & 2 \\
+			\hline
+			08/12/2019 & Architectural Styles & 2 \\
+			\hline
+			08/12/2019 & Revision & 2 \\
 			\hline
 			& & {\bf Total} \\
 			\hline
-			& & XX \\
-			\hline
+			& & 32 \\
+			\hline			
 			\caption{Adriano Mundo's effort} 
 \end{longtable}
 
@@ -564,25 +584,69 @@ Specifically: \\
 			\hline
 			{\bf Date} & {\bf Task} & {\bf Hours}\\
 			\hline
-			XX/XX/XX & XX & X \\
+			16/11/2019 & Pre-analysis & 1 \\
+			\hline
+			26/11/2019 & Meeting & 1 \\
+			\hline
+			01/12/2019 & Overview & 1 \\
+			\hline
+			03/12/2019 & Component View & 1 \\
+			\hline
+			04/12/2019 & Meeting & 1 \\
+			\hline
+			05/12/2019 & Runtime View & 9 \\
+			\hline
+			06/12/2019 & Meeting & 1 \\
+			\hline
+			06/12/2019 & Component Interface & 2 \\
+			\hline
+			06/12/2019 & Architectural Styles & 1 \\
+			\hline
+			06/12/2019 & Requirements Traceability & 5 \\
+			\hline
+			08/12/2019 & Testing Plan & 4 \\
+			\hline
+			08/12/2019 & Revision & 2 \\
 			\hline
 			& & {\bf Total} \\
 			\hline
-			& & XX \\
-			\hline
+			& & 29 \\
+			\hline		
 			\caption{Francesco Rota's effort} 
+
 \end{longtable}
+\pagebreak
 
 \begin{longtable}{| p{2 cm} | p{6 cm} | p{1 cm} |} 
 			\hline
 			{\bf Date} & {\bf Task} & {\bf Hours}\\
 			\hline
-			XX/XX/XX & XX & X \\
+			16/11/2019 & Pre-analysis & 1 \\
+			\hline
+			26/11/2019 & Meeting & 1 \\
+			\hline
+			01/12/2019 & Overview & 3 \\
+			\hline
+			04/12/2019 & Meeting & 1 \\
+			\hline
+			04/12/2019 & Runtime View & 6 \\
+			\hline
+			06/12/2019 & User Interface Design & 5 \\
+			\hline
+			06/12/2019 & Meeting & 1 \\
+			\hline
+			07/12/2019 & Component Interface & 2 \\
+			\hline
+			07/12/2019 & Architectural Styles & 2 \\
+			\hline
+			08/12/2019 & Testing Plan & 2 \\
+			\hline
+			08/12/2019 & Revision & 2 \\
 			\hline
 			& & {\bf Total} \\
 			\hline
-			& & XX \\
-			\hline
+			& & 26 \\
+			\hline		
 			\caption{Salvatore Fadda's effort} 
 \end{longtable}
 	
